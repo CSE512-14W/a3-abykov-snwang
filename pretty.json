@@ -436,13 +436,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 1,
                         "sp": 0,
                         "time": "15:00",
-                        "ydsnet": 0,
+                        "ydsnet": 20,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN -6"
                     },
                     "83": {
                         "desc": "(14:53) (Shotgun) P.Manning Aborted. M.Ramirez FUMBLES at DEN 14, recovered by DEN-K.Moreno at DEN -8. K.Moreno tackled in End Zone, SAFETY (C.Avril). Penalty on DEN-P.Manning, Illegal Motion, declined.",
@@ -518,7 +518,7 @@
                         "qtr": 1,
                         "sp": 1,
                         "time": "14:53",
-                        "ydsnet": -14,
+                        "ydsnet": 6,
                         "ydstogo": 10,
                         "yrdln": "DEN 14"
                     }
@@ -571,13 +571,13 @@
                                 }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 3,
                         "sp": 1,
                         "time": "15:00",
-                        "ydsnet": 0,
+                        "ydsnet": 87,
                         "ydstogo": 0,
-                        "yrdln": "DEN 35"
+                        "yrdln": "SEA 13"
                     },
                     "2067": {
                         "desc": "S.Hauschka extra point is GOOD, Center-C.Gresham, Holder-J.Ryan.",
@@ -598,7 +598,7 @@
                         "qtr": 3,
                         "sp": 1,
                         "time": "14:48",
-                        "ydsnet": 0,
+                        "ydsnet": 87,
                         "ydstogo": 0,
                         "yrdln": "DEN 2"
                     }
@@ -669,13 +669,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 3,
                         "sp": 0,
                         "time": "14:48",
-                        "ydsnet": 31,
+                        "ydsnet": 24,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN -1"
                     },
                     "2105": {
                         "desc": "(14:40) (Shotgun) P.Manning pass incomplete short right to W.Welker.",
@@ -712,7 +712,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "14:40",
-                        "ydsnet": 0,
+                        "ydsnet": 24,
                         "ydstogo": 10,
                         "yrdln": "DEN 23"
                     },
@@ -783,7 +783,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "14:36",
-                        "ydsnet": 14,
+                        "ydsnet": 38,
                         "ydstogo": 10,
                         "yrdln": "DEN 23"
                     },
@@ -822,7 +822,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "14:07",
-                        "ydsnet": 14,
+                        "ydsnet": 38,
                         "ydstogo": 10,
                         "yrdln": "DEN 37"
                     },
@@ -893,7 +893,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "13:59",
-                        "ydsnet": 21,
+                        "ydsnet": 45,
                         "ydstogo": 10,
                         "yrdln": "DEN 37"
                     },
@@ -980,7 +980,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "13:33",
-                        "ydsnet": 27,
+                        "ydsnet": 51,
                         "ydstogo": 3,
                         "yrdln": "DEN 44"
                     },
@@ -1051,7 +1051,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "13:03",
-                        "ydsnet": 31,
+                        "ydsnet": 55,
                         "ydstogo": 10,
                         "yrdln": "50"
                     },
@@ -1113,7 +1113,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "12:45",
-                        "ydsnet": 34,
+                        "ydsnet": 58,
                         "ydstogo": 6,
                         "yrdln": "SEA 46"
                     },
@@ -1145,7 +1145,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "12:09",
-                        "ydsnet": 39,
+                        "ydsnet": 53,
                         "ydstogo": 3,
                         "yrdln": "SEA 43"
                     },
@@ -1184,7 +1184,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "11:47",
-                        "ydsnet": 39,
+                        "ydsnet": 53,
                         "ydstogo": 10,
                         "yrdln": "SEA 38"
                     },
@@ -1232,7 +1232,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "11:38",
-                        "ydsnet": 39,
+                        "ydsnet": 53,
                         "ydstogo": 10,
                         "yrdln": "SEA 38"
                     },
@@ -1294,7 +1294,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "11:32",
-                        "ydsnet": 38,
+                        "ydsnet": 52,
                         "ydstogo": 10,
                         "yrdln": "SEA 38"
                     },
@@ -1329,13 +1329,13 @@
                                 }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 3,
                         "sp": 0,
                         "time": "10:54",
-                        "ydsnet": 38,
+                        "ydsnet": 0,
                         "ydstogo": 11,
-                        "yrdln": "SEA 39"
+                        "yrdln": "SEA 8"
                     }
                 },
                 "posteam": "DEN",
@@ -1621,13 +1621,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 3,
                         "sp": 0,
                         "time": "07:17",
-                        "ydsnet": 11,
+                        "ydsnet": 9,
                         "ydstogo": 17,
-                        "yrdln": "SEA 19"
+                        "yrdln": "DEN 36"
                     }
                 },
                 "posteam": "SEA",
@@ -1778,7 +1778,7 @@
                     "2577": {
                         "desc": "(6:08) (No Huddle, Shotgun) P.Manning pass deep left to D.Thomas to SEA 21 for 23 yards (B.Maxwell). FUMBLES (B.Maxwell), RECOVERED by SEA-M.Smith at SEA 20. M.Smith to SEA 27 for 7 yards (J.Thomas). PENALTY on DEN-O.Franklin, Unnecessary Roughness, 15 yards, enforced at SEA 27.",
                         "down": 1,
-                        "note": "FUMBLE",
+                        "note": null,
                         "players": {
                             "00-0010346": [
                                 {
@@ -1884,6 +1884,116 @@
                         "ydsnet": 34,
                         "ydstogo": 10,
                         "yrdln": "SEA 44"
+                    },
+                    "2578": {
+                        "desc": "(6:08) (No Huddle, Shotgun) P.Manning pass deep left to D.Thomas to SEA 21 for 23 yards (B.Maxwell). FUMBLES (B.Maxwell), RECOVERED by SEA-M.Smith at SEA 20. M.Smith to SEA 27 for 7 yards (J.Thomas). PENALTY on DEN-O.Franklin, Unnecessary Roughness, 15 yards, enforced at SEA 27.",
+                        "down": 1,
+                        "note": "FUMBLE",
+                        "players": {
+                            "00-0010346": [
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "P.Manning",
+                                    "sequence": 4,
+                                    "statId": 15,
+                                    "yards": 23
+                                },
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "P.Manning",
+                                    "sequence": 12,
+                                    "statId": 111,
+                                    "yards": 16
+                                }
+                            ],
+                            "00-0027874": [
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "D.Thomas",
+                                    "sequence": 1,
+                                    "statId": 21,
+                                    "yards": 23
+                                },
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "D.Thomas",
+                                    "sequence": 8,
+                                    "statId": 113,
+                                    "yards": 7
+                                },
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "D.Thomas",
+                                    "sequence": 9,
+                                    "statId": 115,
+                                    "yards": 0
+                                },
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "D.Thomas",
+                                    "sequence": 10,
+                                    "statId": 52,
+                                    "yards": 0
+                                },
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "D.Thomas",
+                                    "sequence": 11,
+                                    "statId": 106,
+                                    "yards": 0
+                                }
+                            ],
+                            "00-0027984": [
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "O.Franklin",
+                                    "sequence": 7,
+                                    "statId": 93,
+                                    "yards": 15
+                                }
+                            ],
+                            "00-0028067": [
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "J.Thomas",
+                                    "sequence": 3,
+                                    "statId": 79,
+                                    "yards": 0
+                                }
+                            ],
+                            "00-0028111": [
+                                {
+                                    "clubcode": "SEA",
+                                    "playerName": "B.Maxwell",
+                                    "sequence": 2,
+                                    "statId": 79,
+                                    "yards": 0
+                                },
+                                {
+                                    "clubcode": "SEA",
+                                    "playerName": "B.Maxwell",
+                                    "sequence": 5,
+                                    "statId": 91,
+                                    "yards": 0
+                                }
+                            ],
+                            "00-0028180": [
+                                {
+                                    "clubcode": "SEA",
+                                    "playerName": "M.Smith",
+                                    "sequence": 6,
+                                    "statId": 59,
+                                    "yards": 7
+                                }
+                            ]
+                        },
+                        "posteam": "SEA",
+                        "qtr": 3,
+                        "sp": 0,
+                        "time": "06:08",
+                        "ydsnet": 7,
+                        "ydstogo": 10,
+                        "yrdln": "SEA 20"
                     }
                 },
                 "posteam": "DEN",
@@ -1947,7 +2057,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "05:55",
-                        "ydsnet": 58,
+                        "ydsnet": 3,
                         "ydstogo": 10,
                         "yrdln": "SEA 42"
                     },
@@ -2321,13 +2431,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 3,
                         "sp": 0,
                         "time": "02:58",
                         "ydsnet": 0,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN 20"
                     },
                     "2802": {
                         "desc": "(2:58) (No Huddle, Shotgun) P.Manning pass short middle to M.Ball to DEN 24 for 4 yards (K.Chancellor). PENALTY on DEN-C.Clark, Offensive Holding, 10 yards, enforced at DEN 20 - No Play.",
@@ -2513,7 +2623,7 @@
                         "qtr": 3,
                         "sp": 0,
                         "time": "01:34",
-                        "ydsnet": 80,
+                        "ydsnet": 21,
                         "ydstogo": 9,
                         "yrdln": "DEN 21"
                     },
@@ -2871,15 +2981,24 @@
                                     "statId": 79,
                                     "yards": 0
                                 }
+                            ],
+                            "00-0025425": [
+                                {
+                                    "clubcode": "SEA",
+                                    "playerName": "Z.Miller",
+                                    "sequence": 1,
+                                    "statId": 93,
+                                    "yards": 0
+                                }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 4,
                         "sp": 0,
                         "time": "15:00",
-                        "ydsnet": 48,
+                        "ydsnet": 0,
                         "ydstogo": 0,
-                        "yrdln": "DEN 35"
+                        "yrdln": "DEN 48"
                     },
                     "3081": {
                         "desc": "(14:59) R.Turbin left end pushed ob at DEN 15 for 33 yards (M.Adams). PENALTY on SEA-A.Bailey, Offensive Holding, 10 yards, enforced at DEN 48 - No Play.",
@@ -3354,13 +3473,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 4,
                         "sp": 0,
                         "time": "11:45",
-                        "ydsnet": 0,
+                        "ydsnet": 12,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN 1"
                     },
                     "3283": {
                         "desc": "(11:38) (Shotgun) P.Manning pass incomplete short right to E.Decker (C.Avril).",
@@ -3406,7 +3525,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "11:38",
-                        "ydsnet": 0,
+                        "ydsnet": 12,
                         "ydstogo": 10,
                         "yrdln": "DEN 13"
                     },
@@ -3463,7 +3582,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "11:34",
-                        "ydsnet": 0,
+                        "ydsnet": 12,
                         "ydstogo": 10,
                         "yrdln": "DEN 13"
                     },
@@ -3495,7 +3614,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "11:28",
-                        "ydsnet": 15,
+                        "ydsnet": 27,
                         "ydstogo": 10,
                         "yrdln": "DEN 13"
                     },
@@ -3575,7 +3694,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "11:23",
-                        "ydsnet": 40,
+                        "ydsnet": 44,
                         "ydstogo": 10,
                         "yrdln": "DEN 28"
                     },
@@ -3637,7 +3756,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "11:02",
-                        "ydsnet": 33,
+                        "ydsnet": 45,
                         "ydstogo": 10,
                         "yrdln": "DEN 45"
                     },
@@ -3699,7 +3818,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "10:29",
-                        "ydsnet": 40,
+                        "ydsnet": 52,
                         "ydstogo": 9,
                         "yrdln": "DEN 46"
                     },
@@ -3747,7 +3866,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "09:59",
-                        "ydsnet": 40,
+                        "ydsnet": 52,
                         "ydstogo": 2,
                         "yrdln": "SEA 47"
                     },
@@ -3795,7 +3914,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "09:55",
-                        "ydsnet": 40,
+                        "ydsnet": 52,
                         "ydstogo": 2,
                         "yrdln": "SEA 47"
                     }
@@ -3861,7 +3980,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "09:48",
-                        "ydsnet": 23,
+                        "ydsnet": 6,
                         "ydstogo": 10,
                         "yrdln": "SEA 47"
                     },
@@ -4455,13 +4574,13 @@
                                 }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 1,
                         "sp": 0,
                         "time": "14:48",
-                        "ydsnet": 0,
+                        "ydsnet": 20,
                         "ydstogo": 0,
-                        "yrdln": "DEN 20"
+                        "yrdln": "SEA 16"
                     },
                     "141": {
                         "desc": "(14:43) M.Lynch up the middle to SEA 39 for 3 yards (S.Williams, D.Trevathan).",
@@ -4500,7 +4619,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "14:43",
-                        "ydsnet": 51,
+                        "ydsnet": 23,
                         "ydstogo": 10,
                         "yrdln": "SEA 36"
                     },
@@ -4541,7 +4660,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "14:08",
-                        "ydsnet": 51,
+                        "ydsnet": 53,
                         "ydstogo": 7,
                         "yrdln": "SEA 39"
                     },
@@ -4564,7 +4683,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "13:44",
-                        "ydsnet": 28,
+                        "ydsnet": 48,
                         "ydstogo": 10,
                         "yrdln": "DEN 31"
                     },
@@ -4603,7 +4722,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "13:22",
-                        "ydsnet": 28,
+                        "ydsnet": 48,
                         "ydstogo": 15,
                         "yrdln": "DEN 36"
                     },
@@ -4665,7 +4784,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "13:14",
-                        "ydsnet": 34,
+                        "ydsnet": 54,
                         "ydstogo": 15,
                         "yrdln": "DEN 36"
                     },
@@ -4743,7 +4862,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "12:34",
-                        "ydsnet": 46,
+                        "ydsnet": 66,
                         "ydstogo": 9,
                         "yrdln": "DEN 30"
                     },
@@ -4800,7 +4919,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "12:01",
-                        "ydsnet": 45,
+                        "ydsnet": 65,
                         "ydstogo": 10,
                         "yrdln": "DEN 18"
                     },
@@ -4832,7 +4951,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "11:21",
-                        "ydsnet": 50,
+                        "ydsnet": 70,
                         "ydstogo": 11,
                         "yrdln": "DEN 19"
                     },
@@ -4880,7 +4999,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "10:55",
-                        "ydsnet": 55,
+                        "ydsnet": 75,
                         "ydstogo": 6,
                         "yrdln": "DEN 14"
                     },
@@ -4903,7 +5022,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "10:25",
-                        "ydsnet": 51,
+                        "ydsnet": 71,
                         "ydstogo": 1,
                         "yrdln": "DEN 9"
                     },
@@ -4926,7 +5045,7 @@
                         "qtr": 1,
                         "sp": 1,
                         "time": "10:25",
-                        "ydsnet": 51,
+                        "ydsnet": 71,
                         "ydstogo": 5,
                         "yrdln": "DEN 13"
                     }
@@ -5236,7 +5355,7 @@
                         "qtr": 4,
                         "sp": 0,
                         "time": "01:59",
-                        "ydsnet": 23,
+                        "ydsnet": 14,
                         "ydstogo": 10,
                         "yrdln": "DEN 24"
                     },
@@ -5391,13 +5510,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 1,
                         "sp": 0,
                         "time": "10:21",
-                        "ydsnet": 0,
+                        "ydsnet": 15,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN 20"
                     },
                     "455": {
                         "desc": "(10:21) (Shotgun) K.Moreno left tackle to DEN 38 for 3 yards (C.Avril, C.Clemons).",
@@ -5436,7 +5555,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "10:21",
-                        "ydsnet": 3,
+                        "ydsnet": 18,
                         "ydstogo": 10,
                         "yrdln": "DEN 35"
                     },
@@ -5498,7 +5617,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "09:53",
-                        "ydsnet": 5,
+                        "ydsnet": 20,
                         "ydstogo": 7,
                         "yrdln": "DEN 38"
                     },
@@ -5578,7 +5697,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "09:22",
-                        "ydsnet": 8,
+                        "ydsnet": 23,
                         "ydstogo": 5,
                         "yrdln": "DEN 40"
                     },
@@ -5606,13 +5725,13 @@
                                 }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 1,
                         "sp": 0,
                         "time": "08:45",
-                        "ydsnet": 8,
+                        "ydsnet": 0,
                         "ydstogo": 2,
-                        "yrdln": "DEN 43"
+                        "yrdln": "SEA 28"
                     }
                 },
                 "posteam": "DEN",
@@ -5683,7 +5802,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "08:31",
-                        "ydsnet": 58,
+                        "ydsnet": 0,
                         "ydstogo": 10,
                         "yrdln": "SEA 28"
                     },
@@ -6091,7 +6210,7 @@
                         "qtr": 1,
                         "sp": 0,
                         "time": "04:40",
-                        "ydsnet": 58,
+                        "ydsnet": 29,
                         "ydstogo": 5,
                         "yrdln": "DEN 43"
                     },
@@ -6421,13 +6540,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 1,
                         "sp": 0,
                         "time": "02:16",
                         "ydsnet": 0,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN 20"
                     },
                     "904": {
                         "desc": "(2:16) (Shotgun) P.Manning pass short middle to W.Welker to DEN 25 for 5 yards (K.Chancellor).",
@@ -6666,13 +6785,13 @@
                                 }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 1,
                         "sp": 0,
                         "time": "01:10",
-                        "ydsnet": 3,
+                        "ydsnet": 2,
                         "ydstogo": 7,
-                        "yrdln": "DEN 23"
+                        "yrdln": "DEN 39"
                     }
                 },
                 "posteam": "DEN",
@@ -6699,6 +6818,47 @@
                 "numplays": 9,
                 "penyds": 4,
                 "plays": {
+                    "991": {
+                        "desc": "(:59) P.Harvin left end pushed ob at DEN 22 for 15 yards (M.Adams). End around.",
+                        "down": 1,
+                        "note": null,
+                        "players": {
+                            "0": [
+                                {
+                                    "clubcode": "SEA",
+                                    "playerName": null,
+                                    "sequence": 3,
+                                    "statId": 3,
+                                    "yards": 0
+                                }
+                            ],
+                            "00-0022247": [
+                                {
+                                    "clubcode": "DEN",
+                                    "playerName": "M.Adams",
+                                    "sequence": 1,
+                                    "statId": 79,
+                                    "yards": 0
+                                }
+                            ],
+                            "00-0026998": [
+                                {
+                                    "clubcode": "SEA",
+                                    "playerName": "P.Harvin",
+                                    "sequence": 2,
+                                    "statId": 10,
+                                    "yards": 15
+                                }
+                            ]
+                        },
+                        "posteam": "SEA",
+                        "qtr": 1,
+                        "sp": 0,
+                        "time": "00:59",
+                        "ydsnet": 15,
+                        "ydstogo": 10,
+                        "yrdln": "DEN 37"
+                    },
                     "1016": {
                         "desc": "(:19) (Shotgun) R.Wilson pass short middle to L.Willson to DEN 17 for 5 yards (N.Irving).",
                         "down": 1,
@@ -6997,7 +7157,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "12:49",
-                        "ydsnet": 37,
+                        "ydsnet": 36,
                         "ydstogo": 1,
                         "yrdln": "DEN 1"
                     },
@@ -7055,47 +7215,6 @@
                         "ydsnet": 37,
                         "ydstogo": 0,
                         "yrdln": "DEN 2"
-                    },
-                    "991": {
-                        "desc": "(:59) P.Harvin left end pushed ob at DEN 22 for 15 yards (M.Adams). End around.",
-                        "down": 1,
-                        "note": null,
-                        "players": {
-                            "0": [
-                                {
-                                    "clubcode": "SEA",
-                                    "playerName": null,
-                                    "sequence": 3,
-                                    "statId": 3,
-                                    "yards": 0
-                                }
-                            ],
-                            "00-0022247": [
-                                {
-                                    "clubcode": "DEN",
-                                    "playerName": "M.Adams",
-                                    "sequence": 1,
-                                    "statId": 79,
-                                    "yards": 0
-                                }
-                            ],
-                            "00-0026998": [
-                                {
-                                    "clubcode": "SEA",
-                                    "playerName": "P.Harvin",
-                                    "sequence": 2,
-                                    "statId": 10,
-                                    "yards": 15
-                                }
-                            ]
-                        },
-                        "posteam": "SEA",
-                        "qtr": 1,
-                        "sp": 0,
-                        "time": "00:59",
-                        "ydsnet": 15,
-                        "ydstogo": 10,
-                        "yrdln": "DEN 37"
                     }
                 },
                 "posteam": "SEA",
@@ -7171,13 +7290,13 @@
                                 }
                             ]
                         },
-                        "posteam": "SEA",
+                        "posteam": "DEN",
                         "qtr": 2,
                         "sp": 0,
                         "time": "12:00",
-                        "ydsnet": 0,
+                        "ydsnet": 17,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN -1"
                     },
                     "1244": {
                         "desc": "(11:54) (Shotgun) P.Manning pass short right to D.Thomas to DEN 22 for 6 yards (K.Wright).",
@@ -7237,7 +7356,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "11:54",
-                        "ydsnet": 6,
+                        "ydsnet": 23,
                         "ydstogo": 10,
                         "yrdln": "DEN 16"
                     },
@@ -7308,7 +7427,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "11:27",
-                        "ydsnet": 9,
+                        "ydsnet": 26,
                         "ydstogo": 4,
                         "yrdln": "DEN 22"
                     },
@@ -7365,7 +7484,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "10:42",
-                        "ydsnet": 14,
+                        "ydsnet": 31,
                         "ydstogo": 1,
                         "yrdln": "DEN 25"
                     },
@@ -7436,7 +7555,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "10:13",
-                        "ydsnet": 21,
+                        "ydsnet": 38,
                         "ydstogo": 10,
                         "yrdln": "DEN 30"
                     },
@@ -7477,7 +7596,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "09:36",
-                        "ydsnet": 23,
+                        "ydsnet": 40,
                         "ydstogo": 3,
                         "yrdln": "DEN 37"
                     },
@@ -7555,7 +7674,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "08:57",
-                        "ydsnet": 24,
+                        "ydsnet": 41,
                         "ydstogo": 1,
                         "yrdln": "DEN 39"
                     },
@@ -7594,7 +7713,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "08:18",
-                        "ydsnet": 24,
+                        "ydsnet": 41,
                         "ydstogo": 10,
                         "yrdln": "DEN 40"
                     },
@@ -7665,7 +7784,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "08:10",
-                        "ydsnet": 25,
+                        "ydsnet": 42,
                         "ydstogo": 10,
                         "yrdln": "DEN 40"
                     },
@@ -7752,7 +7871,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "07:40",
-                        "ydsnet": 41,
+                        "ydsnet": 58,
                         "ydstogo": 9,
                         "yrdln": "DEN 41"
                     },
@@ -7814,7 +7933,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "07:04",
-                        "ydsnet": 50,
+                        "ydsnet": 67,
                         "ydstogo": 10,
                         "yrdln": "SEA 43"
                     },
@@ -7855,7 +7974,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "06:30",
-                        "ydsnet": 50,
+                        "ydsnet": 67,
                         "ydstogo": 1,
                         "yrdln": "SEA 34"
                     },
@@ -7912,7 +8031,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "05:53",
-                        "ydsnet": 52,
+                        "ydsnet": 69,
                         "ydstogo": 1,
                         "yrdln": "SEA 34"
                     },
@@ -7935,7 +8054,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "05:04",
-                        "ydsnet": 49,
+                        "ydsnet": 59,
                         "ydstogo": 10,
                         "yrdln": "SEA 32"
                     },
@@ -8013,7 +8132,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "04:56",
-                        "ydsnet": 40,
+                        "ydsnet": 57,
                         "ydstogo": 20,
                         "yrdln": "SEA 42"
                     },
@@ -8054,7 +8173,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "04:13",
-                        "ydsnet": 49,
+                        "ydsnet": 66,
                         "ydstogo": 22,
                         "yrdln": "SEA 44"
                     },
@@ -8123,13 +8242,13 @@
                                 }
                             ]
                         },
-                        "posteam": "DEN",
+                        "posteam": "SEA",
                         "qtr": 2,
                         "sp": 1,
                         "time": "03:36",
-                        "ydsnet": 49,
+                        "ydsnet": 69,
                         "ydstogo": 13,
-                        "yrdln": "SEA 35"
+                        "yrdln": "SEA 31"
                     }
                 },
                 "posteam": "DEN",
@@ -8193,9 +8312,9 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "03:21",
-                        "ydsnet": 0,
+                        "ydsnet": 32,
                         "ydstogo": 0,
-                        "yrdln": "SEA 35"
+                        "yrdln": "DEN 1"
                     },
                     "1708": {
                         "desc": "(3:16) (Shotgun) P.Manning pass short middle to J.Thomas to DEN 38 for 5 yards (K.Chancellor, B.Wagner).",
@@ -8264,7 +8383,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "03:16",
-                        "ydsnet": 5,
+                        "ydsnet": 37,
                         "ydstogo": 10,
                         "yrdln": "DEN 33"
                     },
@@ -8303,7 +8422,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "02:54",
-                        "ydsnet": 5,
+                        "ydsnet": 37,
                         "ydstogo": 5,
                         "yrdln": "DEN 38"
                     },
@@ -8390,7 +8509,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "02:49",
-                        "ydsnet": 5,
+                        "ydsnet": 56,
                         "ydstogo": 5,
                         "yrdln": "DEN 38"
                     },
@@ -8452,7 +8571,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "02:49",
-                        "ydsnet": 29,
+                        "ydsnet": 61,
                         "ydstogo": 10,
                         "yrdln": "SEA 43"
                     },
@@ -8532,7 +8651,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "02:06",
-                        "ydsnet": 40,
+                        "ydsnet": 72,
                         "ydstogo": 5,
                         "yrdln": "SEA 38"
                     },
@@ -8571,7 +8690,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "01:55",
-                        "ydsnet": 40,
+                        "ydsnet": 72,
                         "ydstogo": 10,
                         "yrdln": "SEA 27"
                     },
@@ -8633,7 +8752,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "01:48",
-                        "ydsnet": 46,
+                        "ydsnet": 78,
                         "ydstogo": 10,
                         "yrdln": "SEA 27"
                     },
@@ -8656,7 +8775,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "01:18",
-                        "ydsnet": 41,
+                        "ydsnet": 73,
                         "ydstogo": 4,
                         "yrdln": "SEA 21"
                     },
@@ -8736,7 +8855,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "01:16",
-                        "ydsnet": 48,
+                        "ydsnet": 80,
                         "ydstogo": 9,
                         "yrdln": "SEA 26"
                     },
@@ -8759,7 +8878,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "01:06",
-                        "ydsnet": 48,
+                        "ydsnet": 80,
                         "ydstogo": 0,
                         "yrdln": ""
                     },
@@ -8816,7 +8935,7 @@
                         "qtr": 2,
                         "sp": 0,
                         "time": "01:06",
-                        "ydsnet": 48,
+                        "ydsnet": 80,
                         "ydstogo": 2,
                         "yrdln": "SEA 19"
                     }
