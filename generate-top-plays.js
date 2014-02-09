@@ -1,5 +1,5 @@
 fs = require('fs');
-fs.readFile("pretty.json", function (err, data) {
+fs.readFile("super-bowl.json", function (err, data) {
   var json = JSON.parse(data);
   var plays = [];
   var drives = json["2014020200"]["drives"];
@@ -11,7 +11,7 @@ fs.readFile("pretty.json", function (err, data) {
     // add each play with its yardage
     for (var playId in drive.plays) {
       var play = drive.plays[playId];
-      orderedPlays.push([playId, play]);
+      orderedPlays.push([parseInt(playId), play]);
     }
 
     // sort to make sure in correct order
