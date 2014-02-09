@@ -131,7 +131,7 @@ function setUpBottom(chart, width, height) {
   var typeColors = d3.scale.category10()
     .domain(["pass", "run", "interception", "fumble"]);
 
-  var data = d3.json("top-plays.json", function(err, json) {
+  var data = d3.json("top-plays.json", function (err, json) {
     var numPlays = json.length;
     var topPlays = json.slice(0, numPlays);
     var barHeight = Math.round(botHeight / topPlays.length);
