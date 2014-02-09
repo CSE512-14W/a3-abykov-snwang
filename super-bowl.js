@@ -147,11 +147,11 @@ function setUpBottom(chart, width, height) {
       .attr("class", "bar")
       .attr("x", function (d) {
         var leftEnd = (d[1].team === "SEA") ? d[1].startLine : d[1].endLine;
-        return x(leftEnd);
+        return Math.round(x(leftEnd));
       })
       .attr("y", function (d, i) { return i * barHeight; })
       .attr("height", barHeight - 1)
-      .attr("width", function (d) { return length(d[1].yards); })
+      .attr("width", function (d) { return Math.round(length(d[1].yards)); })
       .attr("text", function (d) { return d[1].description; })
       .attr("fill", function (d) { return teamColors(d[1].team); });
       //.attr("fill", function (d) { return typeColors(d[1].type); });
