@@ -1,19 +1,20 @@
 // Partition the visualization space.
-var margin = {top: 20, right: 30, bottom: 30, left: 40},
+var margin = {top: 20, right: 30, bottom: 20, left: 30},
     width = 1280*0.9 - margin.left - margin.right,
-    botHeight = Math.round(width * (53.3 / 120.0)) - margin.top - margin.bottom,
-    topHeight = 800*0.9 - botHeight - margin.top - margin.bottom;
+    height = 800*0.9 - margin.top - margin.bottom,
+    botHeight = Math.round(width * (53.3 / 120.0)) * 0.9,
+    topHeight = height - botHeight;
 
 var chart = d3.select("body").append("svg")
               .attr("width", width + margin.left + margin.right)
-              .attr("height", topHeight + botHeight + margin.top + margin.bottom);
+              .attr("height", height + margin.top + margin.bottom);
 var topChart = chart.append("g")
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 var bottomChart = chart.append("g")
-              .attr("transform", "translate(" + margin.left + "," + (margin.top + topHeight) + ")");
+              .attr("transform", "translate(" + margin.left + "," + (2.5*margin.top + topHeight) + ")");
 
 setUpTop(topChart, width, topHeight);
-setUpBottom(bottomChart, width, botHeight);
+setUpBottom(bottomChart, width, botHeight - 1.5*margin.top);
 
 function setUpTop(chart, width, height) {
   // Horizontal and vertical padding around the player names
