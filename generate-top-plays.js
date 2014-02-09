@@ -1,5 +1,5 @@
 fs = require('fs');
-fs.readFile("super-bowl.json", function (err, data) {
+fs.readFile("super-bowl-pretty.json", function (err, data) {
   var json = JSON.parse(data);
   var plays = [];
   var drives = json["2014020200"]["drives"];
