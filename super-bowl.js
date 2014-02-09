@@ -134,7 +134,7 @@ function setUpBottom(chart, width, height) {
   var data = d3.json("top-plays.json", function (err, json) {
     var numPlays = json.length;
     var topPlays = json.slice(0, numPlays);
-    var barHeight = Math.round(botHeight / topPlays.length);
+    var barHeight = Math.round(height / numPlays);
 
     var xAxis = d3.svg.axis()
       .scale(x)
