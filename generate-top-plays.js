@@ -57,9 +57,13 @@ fs.readFile("super-bowl.json", function (err, data) {
 
       var type = "";
       if (play.note === "INT")
-        type = "interception"
+        type = "interception";
       else if (play.note === "FUMBLE")
-        type = "fumble"
+        type = "fumble";
+      else if (play.note === "KICKOFF")
+        type = "kickoff";
+      else if (play.note === "PUNT")
+        type = "punt";
       else if (play.desc.match(/pass/))
         type = "pass";
       else

@@ -129,7 +129,7 @@ function setUpBottom(chart, width, height) {
     .domain(["SEA", "DEN"])
     .range(["steelblue", "orange"])
   var typeColors = d3.scale.category10()
-    .domain(["pass", "run", "interception", "fumble"]);
+    .domain(["pass", "run", "interception", "fumble", "kickoff", "punt"]);
 
   var data = d3.json("top-plays.json", function (err, json) {
     var numPlays = json.length;

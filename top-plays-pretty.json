@@ -43,7 +43,7 @@
             ],
             "startLine": 99,
             "team": "SEA",
-            "type": "run",
+            "type": "kickoff",
             "yards": 32
         }
     ],
@@ -93,7 +93,7 @@
             ],
             "startLine": 50,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 24
         }
     ],
@@ -162,7 +162,7 @@
             ],
             "startLine": 16,
             "team": "SEA",
-            "type": "run",
+            "type": "kickoff",
             "yards": 20
         }
     ],
@@ -179,7 +179,7 @@
             ],
             "startLine": 50,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 20
         }
     ],
@@ -266,7 +266,7 @@
             ],
             "startLine": 50,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 17
         }
     ],
@@ -383,7 +383,7 @@
             ],
             "startLine": 99,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 12
         }
     ],
@@ -569,7 +569,7 @@
             ],
             "startLine": 64,
             "team": "DEN",
-            "type": "run",
+            "type": "punt",
             "yards": 9
         }
     ],
@@ -1615,7 +1615,7 @@
             ],
             "startLine": 28,
             "team": "SEA",
-            "type": "run",
+            "type": "punt",
             "yards": 0
         }
     ],
@@ -1797,7 +1797,7 @@
             ],
             "startLine": 80,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 0
         }
     ],
@@ -1900,7 +1900,7 @@
             ],
             "startLine": 80,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 0
         }
     ],
@@ -1945,7 +1945,7 @@
             ],
             "startLine": 52,
             "team": "SEA",
-            "type": "run",
+            "type": "kickoff",
             "yards": 0
         }
     ],
@@ -2035,7 +2035,7 @@
             ],
             "startLine": 80,
             "team": "DEN",
-            "type": "run",
+            "type": "kickoff",
             "yards": 0
         }
     ],
@@ -2325,7 +2325,7 @@
             ],
             "startLine": 8,
             "team": "SEA",
-            "type": "run",
+            "type": "punt",
             "yards": 0
         }
     ],
