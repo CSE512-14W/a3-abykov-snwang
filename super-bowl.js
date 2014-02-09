@@ -242,26 +242,42 @@ function setUpBottom(chart, width, height) {
     var xAxis = d3.svg.axis()
       .scale(x)
       .orient("top")
-      .tickValues([0, 10, 20, 30, 40, 50]);
+      .tickFormat(function (d) { return "SEA " + d; })
+      .tickValues([0, 10, 20, 30, 40]);
+    // axis for midfield ticks
+    var midfieldAxis = d3.svg.axis()
+      .scale(x)
+      .orient("top")
+      .tickValues([50]);
     // axis for Broncos yard lines
     var invertedXAxis = d3.svg.axis()
       .scale(xInverted)
       .orient("top")
+      .tickFormat(function (d) { return "DEN " + d; })
       .tickValues([0, 10, 20, 30, 40]);
 
     // add top Seahawks yard lines
     chart.append("g")
-        .attr("class", "x axis")
-        .call(xAxis);
+      .attr("class", "x axis")
+      .call(xAxis);
+    // add top midfield tick
+    chart.append("g")
+      .attr("class", "x axis")
+      .call(midfieldAxis);
     // add top Broncos yard lines
     chart.append("g")
-        .attr("class", "x axis")
-        .call(invertedXAxis)
+      .attr("class", "x axis")
+      .call(invertedXAxis);
     // add bottom Seahawks yard lines
     chart.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis.orient("bottom"));
+    // add bottom midfield tick
+    chart.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(midfieldAxis.orient("bottom"));
     // add bottom Broncos yard lines
     chart.append("g")
       .attr("class", "x axis")
