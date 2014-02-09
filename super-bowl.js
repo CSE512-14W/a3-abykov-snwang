@@ -17,104 +17,195 @@ setUpBottom(bottomChart, width, botHeight);
 
 function setUpTop(chart, width, height) {
   // Horizontal and vertical padding around the player names
-  var betweenPositionHorizPadding = 5;
+  var betweenPositionHorizPadding = 1;
   var betweenCategoryHorizPadding = 10;
   var betweenTeamHorizPadding = 20;
-  var vertPadding = 15;
+  var vertPadding = 2;
 
   // Load in data about the player positions
   var playerRectangles = d3.json("PlayerPositions.json", function (err, playerPositions) {
-    // First we need to calculate the total number of positions per team
-    var positionCount = [];
-    var totalPositionCount = 0;
+    // To figure out the height of each bar, we need to find the maximum depth we will achieve
+    var maxHeight = 0;
+    var namesInLine = 2;
     for (var i = 0; i < playerPositions.length; i++) {
-      positionCount[i] = [];
       for (var team in playerPositions[i]) {
         var teamJson = playerPositions[i][team];
         for (var j = 0; j < teamJson.length; j++) {
-          positionCount[i][j] = 0;
           for (var category in teamJson[j]) {
-            var count = teamJson[j][category].length;
-            positionCount[i][j] += count;
-            totalPositionCount += count;
+            var curHeight = 0;
+            var categoryJson = teamJson[j][category];
+            for (var k = 0; k < categoryJson.length; k++) {
+              for (var position in categoryJson[k]) {
+                curHeight += Math.ceil(categoryJson[k][position].length / namesInLine);
+              }
+            }
+            if (curHeight > maxHeight) {
+              maxHeight = curHeight;
+            }
           }
         }
       }
     }
-
+    
+    // We need to calculate the height of each rectangle
+    var recHeight = Math.floor((height - vertPadding * (maxHeight + 1)) / (maxHeight + 3));
+    var teamHeight = 2 * recHeight;
+    
     // Now we can calculate the full padding
-    // We need between team padding on the left, right and between the teams
-    var totalPadding = (positionCount.length + 1) * betweenTeamHorizPadding;
-    for (var i = 0; i < positionCount.length; i++) {
-      curX += betweenTeamHorizPadding;
-      // Now add in padding between sections
-      totalPadding += (positionCount[i].length - 1) * betweenCategoryHorizPadding;
-      for (var j = 0; j < positionCount[i].length; j++) {
-        // Finally add in padding between positions
-        totalPadding += (positionCount[i][j] - 1) * betweenPositionHorizPadding;
-      }
-    }
-
+    // We need between padding between the teams and between the categories 
+    var totalPadding = betweenTeamHorizPadding + 4 * betweenCategoryHorizPadding + namesInLine * 6 * betweenPositionHorizPadding;
+    
     // Finally we can calculate the height and width of each position
-    var positionWidth = (width - totalPadding) / totalPositionCount;
-    var positionHeight = positionWidth / 2;
-    var categoryHeight = positionHeight * 2;
-    var teamHeight = categoryHeight * 2;
-    positionWidth = Math.round(positionWidth);
-    positionHeight = Math.round(positionHeight);
-    categoryHeight = Math.round(categoryHeight);
-    teamHeight = Math.round(teamHeight);
+    var totalRecWidth = width - totalPadding;
+    var positionWidth = Math.round(0.2 * totalRecWidth / 6);
+    var playerWidth = Math.round(0.8 * totalRecWidth / (6 * namesInLine));
 
     // Now we can calculate the x values of each rectangle
     // Now we can form the rectangles
     var rectangleData = [];
-    var curX = betweenTeamHorizPadding;
+    var textData = [];
+    var curX = 0;
 
+    // Iterate over each team
     for (var i = 0; i < playerPositions.length; i++) {
       for (var team in playerPositions[i]) {
         var teamX = curX;
         var teamJson = playerPositions[i][team];
 
+        // Iterate over each category
         for (var j = 0; j < teamJson.length; j++) {
           for (var category in teamJson[j]) {
             var categoryX = curX;
             var categoryJson = teamJson[j][category];
 
+            // Iterate over each position
+            var curY = teamHeight + recHeight + 2 * vertPadding;
             for (var k = 0; k < categoryJson.length; k++) {
               for (var position in categoryJson[k]) {
-                rectangleData.push({"rx":curX, "ry":3 * vertPadding + teamHeight + categoryHeight,
-                        "rwidth":positionWidth, "rheight":positionHeight, "rtext":position});
-                curX += positionWidth + betweenPositionHorizPadding;
+                rectangleData.push({"rx":curX, "ry":curY, "rwidth":positionWidth, 
+                                    "rheight":recHeight, "rtext":position, "rselectable":false, "rselected":false});
+                textData.push({"tx":Math.round(curX + positionWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
+                               "ttext":position, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false});                                    
+                nameJson = categoryJson[k][position];
+                
+                // Iterate over each player
+                for (var m = 0; m < nameJson.length; m++) {
+                  if (m > 0 && m % 2 == 0) {
+                    curY += recHeight + vertPadding;
+                  }
+                  var playerX = curX + positionWidth + betweenPositionHorizPadding;
+                  if (m % 2 == 1) {
+                    playerX += playerWidth + betweenPositionHorizPadding;
+                  }
+                  if (curY + recHeight > height) {
+                    alert("WENT TOO FAR!");
+                  }
+                  rectangleData.push({"rx":playerX, "ry":curY, "rwidth":playerWidth, 
+                                      "rheight":recHeight, "rtext":nameJson[m], "rselectable":true, "rselected":false});
+                  textData.push({"tx":Math.round(playerX + playerWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
+                               "ttext":nameJson[m], "tfont":"Arial", "tfontsize":"10px", "tselectable":true});   
+                }
+                
+                curY += recHeight + vertPadding;
               }
             }
 
-            curX -= betweenPositionHorizPadding;
-            rectangleData.push({"rx":categoryX, "ry":2 * vertPadding + teamHeight, 
-                    "rwidth":curX - categoryX, "rheight":categoryHeight, "rtext":category});
+            curX += 2 * playerWidth + 2 * betweenPositionHorizPadding + positionWidth;
+            rectangleData.push({"rx":categoryX, "ry":vertPadding + teamHeight, "rwidth":curX - categoryX, 
+                                "rheight":recHeight, "rtext":category, "rselectable":false, "rselected":false});
+            textData.push({"tx":Math.round(categoryX + (curX - categoryX) / 2), "ty":Math.round(vertPadding + teamHeight + recHeight * 0.75),
+                               "ttext":category, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false});
             curX += betweenCategoryHorizPadding;
           }
         }
         curX -= betweenCategoryHorizPadding;
-        rectangleData.push({"rx":teamX, "ry":vertPadding, 
-                "rwidth":curX - teamX, "rheight":teamHeight, "rtext":team});
+        rectangleData.push({"rx":teamX, "ry":0, "rwidth":curX - teamX, 
+                            "rheight":teamHeight, "rtext":team, "rselectable":false, "rselected":false});
+        textData.push({"tx":Math.round(teamX + (curX - teamX) / 2), "ty":Math.round(teamHeight * 0.75),
+                               "ttext":team, "tfont":"Arial Black", "tfontsize":"16px", "tselectable":false});
         curX += betweenTeamHorizPadding;
       }
     }
 
-    //Add the rectangles
+    // Add the rectangles
     var rectangles = chart.selectAll("rect").data(rectangleData).enter().append("rect");
 
-    //Add the rectangle attributes
+    // Add the rectangle attributes
+    var selectedColor = "#ccc";
+    var notSelectedColor = "#eee";
     var rectangleAttributes = rectangles
               .attr("x", function (d) { return d.rx; })
               .attr("y", function (d) { return d.ry; })
               .attr("width", function (d) { return d.rwidth; })
-              .attr("height", function (d) { return d.rheight; });
-  });
-  // First we need to add coordinates to each of the 
-
-  var playData = d3.json("super-bowl.json", function (err, json) {
-
+              .attr("height", function (d) { return d.rheight; })
+              .style("fill", "#eee")
+              .on('mouseover', function (d) {
+                  if (d.rselectable) {
+                    // Change to a darker color to indicate hover
+                    d3.select(this).style("fill", selectedColor);
+                  }
+                })
+              .on('mouseout', function (d) {
+                  // Change back to light color if not clicked
+                  if (!d.rselected) {
+                    d3.select(this).style("fill", notSelectedColor);
+                  }
+                })
+              .on('click', function (d) {
+                  // Toggle color if clicked
+                  if (d.rselectable) {
+                    if (!d.rselected) {
+                      d3.select(this).style("fill", selectedColor);
+                      d.rselected = true;
+                    } else {
+                      d3.select(this).style("fill", notSelectedColor);
+                      d.rselected = false;
+                    }
+                  }
+                });
+              
+    // Add all of the text
+    var textBoxes = chart.selectAll("text").data(textData).enter().append("text");
+    
+    // All of the text attributes
+    var textAttributes = textBoxes
+              .attr("x", function (d) { return d.tx; })
+              .attr("y", function (d) { return d.ty; })
+              .attr("font-family", function (d) { return d.tfont; })
+              .attr("font-size", function (d) { return d.tfontsize; })
+              .text(function (d) { return d.ttext; })
+              .style("text-anchor", "middle")
+              .style("cursor", "default")
+              .on('mouseover', function (d) {
+                  if (d.tselectable) {
+                    // Change to a darker color to indicate hover
+                    rectangles.filter(function (rd) { return rd.rtext == d.ttext; }).style("fill", selectedColor);
+                  }
+                })
+              .on('mouseout', function (d) {
+                  // Change back to light color if not clicked
+                  rectangles.filter(function (rd) { return rd.rtext == d.ttext; }).style("fill", function (rd) {
+                    if (!rd.rselected) {
+                      return notSelectedColor;
+                    } else {
+                      return selectedColor;
+                    }
+                  });
+                })
+              .on('click', function (d) {
+                  // Toggle color if clicked
+                  rectangles.filter(function (rd) { return rd.rtext == d.ttext; }).style("fill", function (rd) {
+                    if (rd.rselectable) {
+                      if (!rd.rselected) {
+                        rd.rselected = true;
+                        return selectedColor;
+                      } else {
+                        rd.rselected = false;
+                        return notSelectedColor;
+                      }
+                    }
+                  });
+                });
   });
 }
 
