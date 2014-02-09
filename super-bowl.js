@@ -4,7 +4,17 @@ var margin = {top: 20, right: 30, bottom: 20, left: 30},
     height = 800*0.9 - margin.top - margin.bottom,
     botHeight = Math.round(width * (53.3 / 120.0)) * 0.9,
     topHeight = height - botHeight;
-
+    
+// Set up a tooltip div
+var tooltip = d3.select("body").append("div")
+                   .attr("id", "tooltip")
+                   .style("width", "auto")
+                   .style("height", "auto")
+                   .style("background-color", "#eee")
+                   .style("border", "2px solid #ccc")
+                   .style("border-radius", "2px")
+                   .style("pointer-events", "none")
+                   .style("position", "absolute");
 var chart = d3.select("body").append("svg")
               .attr("width", width + margin.left + margin.right)
               .attr("height", height + margin.top + margin.bottom);
@@ -17,14 +27,19 @@ setUpTop(topChart, width, topHeight);
 setUpBottom(bottomChart, width, botHeight - 1.5*margin.top);
 
 function setUpTop(chart, width, height) {
-  // Horizontal and vertical padding around the player names
-  var betweenPositionHorizPadding = 1;
-  var betweenCategoryHorizPadding = 10;
-  var betweenTeamHorizPadding = 20;
-  var vertPadding = 2;
+  // Load in data about the player positions and stats
+  queue()
+    .defer(d3.json, "player-positions.json")
+    .defer(d3.json, "player-stats.json")
+    .await(drawTop);
+    
+  function drawTop(err, playerPositions, playerStats) {
+    // Horizontal and vertical padding around the player names
+    var betweenPositionHorizPadding = 1;
+    var betweenCategoryHorizPadding = 10;
+    var betweenTeamHorizPadding = 20;
+    var vertPadding = 2;
 
-  // Load in data about the player positions
-  var playerRectangles = d3.json("PlayerPositions.json", function (err, playerPositions) {
     // To figure out the height of each bar, we need to find the maximum depth we will achieve
     var maxHeight = 0;
     var namesInLine = 2;
@@ -127,7 +142,7 @@ function setUpTop(chart, width, height) {
         curX += betweenTeamHorizPadding;
       }
     }
-
+    
     // Add the rectangles
     var rectangles = chart.selectAll("rect").data(rectangleData).enter().append("rect");
 
@@ -144,6 +159,38 @@ function setUpTop(chart, width, height) {
                   if (d.rselectable) {
                     // Change to a darker color to indicate hover
                     d3.select(this).style("fill", selectedColor);
+                    
+                    // Display the player stats
+                    // First we need to find the relevant stats
+                    var stats = playerStats[d.rtext];
+                    
+                    if (stats == undefined) {
+                      tooltip.style("left", d.rx + d.rwidth + margin.left + "px")
+                             .style("top", d.ry + margin.top + "px")
+                             .append("div")
+                             .text("No stats found")
+                             .style("font-family", "Arial Black")
+                             .style("font-size", "10px");
+                    } else {
+                      // Set up the tooltip
+                      var statTooltip = tooltip.style("left", d.rx + d.rwidth + margin.left + "px")
+                                               .style("top", d.ry + "px")
+                                               .append("div");
+                      for (statType in stats) {
+                        statTooltip.append("div")
+                                   .text(statType)
+                                   .style("font-family", "Arial Black")
+                                   .style("font-size", "10px")
+                                   .append("br");
+                        for (stat in stats[statType]) {
+                          statTooltip.append("div")
+                                     .text(stat + ": " + stats[statType][stat])
+                                     .style("font-family", "Arial")
+                                     .style("font-size", "10px")
+                                     .append("br");
+                        }
+                      }
+                    }
                   }
                 })
               .on('mouseout', function (d) {
@@ -151,6 +198,9 @@ function setUpTop(chart, width, height) {
                   if (!d.rselected) {
                     d3.select(this).style("fill", notSelectedColor);
                   }
+                  
+                  // Reset the tooltip
+                  tooltip.selectAll("div").remove();
                 })
               .on('click', function (d) {
                   // Toggle color if clicked
@@ -177,37 +227,8 @@ function setUpTop(chart, width, height) {
               .text(function (d) { return d.ttext; })
               .style("text-anchor", "middle")
               .style("cursor", "default")
-              .on('mouseover', function (d) {
-                  if (d.tselectable) {
-                    // Change to a darker color to indicate hover
-                    rectangles.filter(function (rd) { return rd.rtext == d.ttext; }).style("fill", selectedColor);
-                  }
-                })
-              .on('mouseout', function (d) {
-                  // Change back to light color if not clicked
-                  rectangles.filter(function (rd) { return rd.rtext == d.ttext; }).style("fill", function (rd) {
-                    if (!rd.rselected) {
-                      return notSelectedColor;
-                    } else {
-                      return selectedColor;
-                    }
-                  });
-                })
-              .on('click', function (d) {
-                  // Toggle color if clicked
-                  rectangles.filter(function (rd) { return rd.rtext == d.ttext; }).style("fill", function (rd) {
-                    if (rd.rselectable) {
-                      if (!rd.rselected) {
-                        rd.rselected = true;
-                        return selectedColor;
-                      } else {
-                        rd.rselected = false;
-                        return notSelectedColor;
-                      }
-                    }
-                  });
-                });
-  });
+              .style("pointer-events", "none");
+  }
 }
 
 function setUpBottom(chart, width, height) {

@@ -2,31 +2,31 @@
     {"Seattle Seahawks": [
         {"Offense" : [
             {"QB" : [
-                "T.Jackson",
-                "R.Wilson"
+                "R.Wilson",
+                "T.Jackson"
             ]},
             {"RB" : [
-                "D.Coleman",
                 "M.Lynch",
                 "R.Turbin"
             ]},
             {"FB" : [
-                "M.Robinson"
+                "M.Robinson",
+                "D.Coleman"
             ]},
             {"WR" : [
                 "D.Baldwin",
-                "P.Harvin",
+                "G.Tate",
                 "J.Kearse",
                 "R.Lockette",
-                "G.Tate"
+                "P.Harvin"
             ]},
             {"TE" : [
                 "Z.Miller",
                 "L.Willson"
             ]},
             {"T" : [
-                "A.Bailey",
-                "R.Okung"
+                "R.Okung",
+                "A.Bailey"
             ]},
             {"G" : [
                 "J.Sweezy"
@@ -37,36 +37,36 @@
         ]}, 
         {"Defense" : [
             {"DE" : [
-                "C.Avril",
-                "M.Bennett",
                 "R.Bryant",
                 "C.Clemons",
-                "B.Irvin"
+                "M.Bennett",
+                "C.Avril"
             ]},
             {"DT": [
                 "T.McDaniel",
-                "C.McDonald",
-                "B.Mebane"
+                "B.Mebane",
+                "C.McDonald"
             ]},
             {"LB" : [
+                "B.Irvin",
+                "B.Wagner",
+                "M.Smith",
                 "H.Farwell",
                 "O.Schofield",
-                "M.Smith",
-                "B.Wagner",
                 "K.Wright"
             ]},
             {"CB" : [
-                "J.Lane",
-                "B.Maxwell",
                 "R.Sherman",
+                "B.Maxwell",
+                "J.Lane",
                 "W.Thurmond"
             ]},
             {"SS" : [
                 "K.Chancellor"
             ]},
             {"FS" : [
-                "C.Maragos",
-                "E.Thomas"
+                "E.Thomas",
+                "C.Maragos"
             ]}
         ]}, 
         {"Special Teams" : [
@@ -84,19 +84,19 @@
                 "P.Manning"
             ]},
             {"RB" : [
-                "C.Anderson",
+                "K.Moreno",
                 "M.Ball",
-                "K.Moreno"
+                "C.Anderson"
             ]},
             {"WR" : [
-                "E.Decker",
-                "T.Holliday",
                 "D.Thomas",
-                "W.Welker"
+                "E.Decker",
+                "W.Welker",
+                "T.Holliday"
             ]},
             {"TE" : [
-                "J.Tamme",
-                "J.Thomas"
+                "J.Thomas",
+                "J.Tamme"
             ]},
             {"T" : [
                 "C.Clark",
@@ -112,31 +112,31 @@
         ]},
         {"Defense" : [
             {"DE" : [
-                "R.Ayers",
                 "M.Jackson",
+                "S.Phillips",
                 "J.Mincey",
-                "S.Phillips"
+                "R.Ayers"
             ]},
             {"DT" : [
+                "S.Williams",
                 "T.Knighton",
-                "M.Unrein",
-                "S.Williams"
+                "M.Unrein"
             ]},
             {"LB" : [
                 "N.Irving",
-                "P.Lenon",
-                "B.Marshall",
+                "W.Woodyard",
                 "D.Trevathan",
-                "W.Woodyard"
+                "B.Marshall",
+                "P.Lenon"
             ]},
             {"CB" : [
                 "C.Bailey",
-                "T.Carter",
-                "D.R-Cromartie"
+                "D.R-Cromartie",
+                "T.Carter"
             ]},
             {"S" : [
-                "M.Adams",
-                "D.Ihenacho"
+                "D.Ihenacho",
+                "M.Adams"
             ]}
         ]},
         {"Special Teams" : [
