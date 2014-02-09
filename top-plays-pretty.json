@@ -35,14 +35,14 @@
         32,
         {
             "description": "S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 33 for 32 yards (C.Maragos). FUMBLES (C.Maragos), RECOVERED by SEA-S.Hauschka at DEN 36. S.Hauschka to DEN 36 for no gain (B.Marshall). The Replay Assistant challenged the fumble ruling, and the play was REVERSED. S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 33 for 32 yards (C.Maragos).",
-            "endLine": 131,
+            "endLine": 67,
             "players": [
                 "S.Hauschka",
                 "C.Maragos",
                 "T.Holliday"
             ],
             "startLine": 99,
-            "team": "SEA",
+            "team": "DEN",
             "type": "kickoff",
             "yards": 32
         }
