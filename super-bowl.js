@@ -119,12 +119,22 @@ function setUpTop(chart, width, height) {
 }
 
 function setUpBottom(chart, width, height) {
+  // scale for bar length
   var length = d3.scale.linear()
                   .domain([0, 100])
                   .range([0, width * (5.0/6)]);
+
+  // scale for Seahawks yard lines
   var x = d3.scale.linear()
     .domain([-20, 120])
     .range([0, width]);
+  // scale for Broncos yard lines (display only)
+  var xInverted = d3.scale.linear()
+    .domain([120, -20])
+    .range([0, width]);
+  // margin below the top yard lines and above the bottom yard lines
+  var playMargin = 10;
+
   var teamColors = d3.scale.ordinal()
     .domain(["SEA", "DEN"])
     .range(["steelblue", "orange"])
@@ -134,12 +144,34 @@ function setUpBottom(chart, width, height) {
   var data = d3.json("top-plays.json", function (err, json) {
     var numPlays = json.length;
     var topPlays = json.slice(0, numPlays);
-    var barHeight = Math.round(height / numPlays);
+    var barHeight = Math.floor((height - 2*playMargin) / numPlays);
 
+    // axis for Seahawks yard lines
     var xAxis = d3.svg.axis()
       .scale(x)
-      .orient("bottom");
+      .orient("top")
+      .tickValues([0, 10, 20, 30, 40, 50]);
+    // axis for Broncos yard lines
+    var invertedXAxis = d3.svg.axis()
+      .scale(xInverted)
+      .orient("top")
+      .tickValues([0, 10, 20, 30, 40]);
+    chart.append("g") // top Seahawks yard lines
+        .attr("class", "x axis")
+        .call(xAxis)
+      .append("g") // top Broncos yard lines
+        .attr("class", "x axis")
+        .call(invertedXAxis)
+      .append("g") // bottom Seahawks yard lines
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis.orient("bottom"))
+      .append("g") // bottom Broncos yard lines
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(invertedXAxis.orient("bottom"));
 
+    // add all the plays
     chart.selectAll(".bar")
       .data(topPlays)
       .enter()
@@ -149,9 +181,9 @@ function setUpBottom(chart, width, height) {
         var leftEnd = (d[1].team === "SEA") ? d[1].startLine : d[1].endLine;
         return Math.round(x(leftEnd));
       })
-      .attr("y", function (d, i) { return i * barHeight; })
+      .attr("y", function (d, i) { return playMargin + i * barHeight; })
       .attr("height", barHeight - 1)
-      .attr("width", function (d) { return Math.round(length(d[1].yards)); })
+      .attr("width", function (d) { return Math.floor(length(d[1].yards)); })
       .attr("text", function (d) { return d[1].description; })
       .attr("fill", function (d) { return teamColors(d[1].team); });
       //.attr("fill", function (d) { return typeColors(d[1].type); });
