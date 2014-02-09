@@ -156,20 +156,25 @@ function setUpBottom(chart, width, height) {
       .scale(xInverted)
       .orient("top")
       .tickValues([0, 10, 20, 30, 40]);
-    chart.append("g") // top Seahawks yard lines
+
+    // add top Seahawks yard lines
+    chart.append("g")
         .attr("class", "x axis")
-        .call(xAxis)
-      .append("g") // top Broncos yard lines
+        .call(xAxis);
+    // add top Broncos yard lines
+    chart.append("g")
         .attr("class", "x axis")
         .call(invertedXAxis)
-      .append("g") // bottom Seahawks yard lines
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis.orient("bottom"))
-      .append("g") // bottom Broncos yard lines
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(invertedXAxis.orient("bottom"));
+    // add bottom Seahawks yard lines
+    chart.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis.orient("bottom"));
+    // add bottom Broncos yard lines
+    chart.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(invertedXAxis.orient("bottom"));
 
     // add all the plays
     chart.selectAll(".bar")
