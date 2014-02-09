@@ -233,10 +233,13 @@ function setUpBottom(chart, width, height) {
   var typeColors = d3.scale.category10()
     .domain(["pass", "run", "interception", "fumble", "kickoff", "punt"]);
 
-  var data = d3.json("top-plays.json", function (err, json) {
-    var numPlays = json.length;
-    var topPlays = json.slice(0, numPlays);
-    var barHeight = Math.floor((height - 2*playMargin) / numPlays);
+  d3.json("top-plays.json", function (err, json) {
+    var data = json.filter(function (d) {
+      return d[1].yards !== 0;
+    });
+    var numPlays = data.length;
+    var topPlays = data.slice(0, numPlays);
+    var barHeight = (height - 2*playMargin) / numPlays;
 
     // axis for Seahawks yard lines
     var xAxis = d3.svg.axis()
@@ -291,12 +294,14 @@ function setUpBottom(chart, width, height) {
       .append("rect")
       .attr("class", "bar")
       .attr("x", function (d) {
-        var leftEnd = (d[1].team === "SEA") ? d[1].startLine : d[1].endLine;
+        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
+        var yardageModifier = (d[1].yards > 0) ? -1 : 1;
+        var leftEnd = (teamModifier * yardageModifier > 0) ? d[1].startLine : d[1].endLine;
         return Math.round(x(leftEnd));
       })
       .attr("y", function (d, i) { return playMargin + i * barHeight; })
       .attr("height", barHeight - 1)
-      .attr("width", function (d) { return Math.floor(length(d[1].yards)); })
+      .attr("width", function (d) { return Math.floor(Math.abs(length(d[1].yards))); })
       .attr("text", function (d) { return d[1].description; })
       .attr("fill", function (d) { return teamColors(d[1].team); });
       //.attr("fill", function (d) { return typeColors(d[1].type); });
