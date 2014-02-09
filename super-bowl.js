@@ -132,16 +132,16 @@ function setUpBottom(chart, width, height) {
     .domain(["pass", "run", "interception", "fumble"]);
 
   var data = d3.json("top-plays.json", function(err, json) {
-    var topPlays = json;
-    var topTen = json.slice(0, 10);
-    var barHeight = Math.round(botHeight / topTen.length);
+    var numPlays = json.length;
+    var topPlays = json.slice(0, numPlays);
+    var barHeight = Math.round(botHeight / topPlays.length);
 
     var xAxis = d3.svg.axis()
       .scale(x)
       .orient("bottom");
 
     chart.selectAll(".bar")
-      .data(topTen)
+      .data(topPlays)
       .enter()
       .append("rect")
       .attr("class", "bar")
