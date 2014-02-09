@@ -1,149 +1,151 @@
-{
-    "seahawks": {
-        "offense" : {
-            "T" : [
-                "A.Bailey",
-                "R.Okung"
-            ],
-            "WR" : [
+[
+    {"Seattle Seahawks": [
+        {"Offense" : [
+            {"QB" : [
+                "T.Jackson",
+                "R.Wilson"
+            ]},
+            {"RB" : [
+                "D.Coleman",
+                "M.Lynch",
+                "R.Turbin"
+            ]},
+            {"FB" : [
+                "M.Robinson"
+            ]},
+            {"WR" : [
                 "D.Baldwin",
                 "P.Harvin",
                 "J.Kearse",
                 "R.Lockette",
                 "G.Tate"
-            ],
-            "RB" : [
-                "D.Coleman",
-                "M.Lynch",
-                "R.Turbin"
-            ],
-            "QB" : [
-                "T.Jackson",
-                "R.Wilson"
-            ],
-            "TE" : [
+            ]},
+            {"TE" : [
                 "Z.Miller",
                 "L.Willson"
-            ],
-            "FB" : [
-                "M.Robinson"
-            ],
-            "G" : [
+            ]},
+            {"T" : [
+                "A.Bailey",
+                "R.Okung"
+            ]},
+            {"G" : [
                 "J.Sweezy"
-            ],
-            "C" : [
+            ]},
+            {"C" : [
                 "M.Unger"
-            ]
-        }, "defense" : {
-            "DE" : [
+            ]}
+        ]}, 
+        {"Defense" : [
+            {"DE" : [
                 "C.Avril",
                 "M.Bennett",
                 "R.Bryant",
                 "C.Clemons",
                 "B.Irvin"
-            ],
-            "SS" : [
-                "K.Chancellor"
-            ],
-            "LB" : [
+            ]},
+            {"DT": [
+                "T.McDaniel",
+                "C.McDonald",
+                "B.Mebane"
+            ]},
+            {"LB" : [
                 "H.Farwell",
                 "O.Schofield",
                 "M.Smith",
                 "B.Wagner",
                 "K.Wright"
-            ],
-            "CB" : [
+            ]},
+            {"CB" : [
                 "J.Lane",
                 "B.Maxwell",
                 "R.Sherman",
                 "W.Thurmond"
-            ],
-            "FS" : [
+            ]},
+            {"SS" : [
+                "K.Chancellor"
+            ]},
+            {"FS" : [
                 "C.Maragos",
                 "E.Thomas"
-            ],
-            "DT": [
-                "T.McDaniel",
-                "C.McDonald",
-                "B.Mebane"
-            ]
-        }, "specialteams" : {
-            "K" : [
+            ]}
+        ]}, 
+        {"Special Teams" : [
+            {"K" : [
                 "S.Hauschka"
-            ],
-            "P" : [
+            ]},
+            {"P" : [
                 "J.Ryan"
-            ]
-        }
-    },
-    "broncos" : {
-        "offense" : {
-            "RB" : [
+            ]}
+        ]}
+    ]},
+    {"Denver Broncos" : [
+        {"Offense" : [
+            {"QB" : [
+                "P.Manning"
+            ]},
+            {"RB" : [
                 "C.Anderson",
                 "M.Ball",
                 "K.Moreno"
-            ],
-            "G" : [
-                "Z.Beadles",
-                "L.Vasquez"
-            ],
-            "T" : [
-                "C.Clark",
-                "O.Franklin"
-            ],
-            "WR" : [
+            ]},
+            {"WR" : [
                 "E.Decker",
                 "T.Holliday",
                 "D.Thomas",
                 "W.Welker"
-            ],
-            "QB" : [
-                "P.Manning"
-            ],
-            "C" : [
-                "M.Ramirez"
-            ],
-            "TE" : [
+            ]},
+            {"TE" : [
                 "J.Tamme",
                 "J.Thomas"
-            ]
-        },
-        "defense" : {
-            "S" : [
-                "M.Adams",
-                "D.Ihenacho"
-            ],
-            "DE" : [
+            ]},
+            {"T" : [
+                "C.Clark",
+                "O.Franklin"
+            ]},
+            {"G" : [
+                "Z.Beadles",
+                "L.Vasquez"
+            ]},
+            {"C" : [
+                "M.Ramirez"
+            ]}
+        ]},
+        {"Defense" : [
+            {"DE" : [
                 "R.Ayers",
                 "M.Jackson",
                 "J.Mincey",
                 "S.Phillips"
-            ],
-            "CB" : [
-                "C.Bailey",
-                "T.Carter",
-                "D.R-Cromartie"
-            ],
-            "LB" : [
+            ]},
+            {"DT" : [
+                "T.Knighton",
+                "M.Unrein",
+                "S.Williams"
+            ]},
+            {"LB" : [
                 "N.Irving",
                 "P.Lenon",
                 "B.Marshall",
                 "D.Trevathan",
                 "W.Woodyard"
-            ],
-            "DT" : [
-                "T.Knighton",
-                "M.Unrein",
-                "S.Williams"
-            ]
-        },
-        "specialteams" : {
-            "P" : [
-                "B.Colquitt"
-            ],
-            "K" : [
+            ]},
+            {"CB" : [
+                "C.Bailey",
+                "T.Carter",
+                "D.R-Cromartie"
+            ]},
+            {"S" : [
+                "M.Adams",
+                "D.Ihenacho"
+            ]}
+        ]},
+        {"Special Teams" : [
+            {"K" : [
                 "M.Prater"
-            ]
-        }
-    }
-}
+            ]},
+            {"P" : [
+                "B.Colquitt"
+            ]}
+        ]}
+    ]}
+]
