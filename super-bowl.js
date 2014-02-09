@@ -125,6 +125,11 @@ function setUpBottom(chart, width, height) {
   var x = d3.scale.linear()
     .domain([-20, 120])
     .range([0, width]);
+  var teamColors = d3.scale.ordinal()
+    .domain(["SEA", "DEN"])
+    .range(["steelblue", "orange"])
+  var typeColors = d3.scale.category10()
+    .domain(["pass", "run", "interception", "fumble"]);
 
   var data = d3.json("top-plays.json", function(err, json) {
     var topPlays = json;
@@ -148,6 +153,7 @@ function setUpBottom(chart, width, height) {
       .attr("height", barHeight - 1)
       .attr("width", function (d) { return length(d[1].yards); })
       .attr("text", function (d) { return d[1].description; })
-      .attr("fill", function (d) { return (d[1].team === "SEA") ? "steelblue" : "orange"; });
+      .attr("fill", function (d) { return teamColors(d[1].team); });
+      //.attr("fill", function (d) { return typeColors(d[1].type); });
   });
 }
