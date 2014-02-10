@@ -236,15 +236,15 @@ function setUpBottom(chart, width, height) {
   // scale for bar length
   var length = d3.scale.linear()
                   .domain([0, 100])
-                  .range([0, width * (5.0/6)]);
+                  .range([0, width * (5/7)]);
 
   // scale for Seahawks yard lines
   var x = d3.scale.linear()
-    .domain([-20, 120])
+    .domain([-10, 110])
     .range([0, width]);
   // scale for Broncos yard lines (display only)
   var xInverted = d3.scale.linear()
-    .domain([120, -20])
+    .domain([110, -10])
     .range([0, width]);
   // margin below the top yard lines and above the bottom yard lines
   var playMargin = 10;
