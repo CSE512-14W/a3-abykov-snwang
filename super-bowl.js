@@ -252,11 +252,13 @@ function setUpBottom(chart, width, height) {
   // margin below the top yard lines and above the bottom yard lines
   var playMargin = 10;
 
+  var teams = ["SEA", "DEN"];
+  var types = ["pass", "run", "interception", "fumble", "kickoff", "punt"];
   var teamColors = d3.scale.ordinal()
-    .domain(["SEA", "DEN"])
-    .range(["steelblue", "orange"])
+    .domain(teams)
+    .range(["steelblue", "orange"]);
   var typeColors = d3.scale.category10()
-    .domain(["pass", "run", "interception", "fumble", "kickoff", "punt"]);
+    .domain(types);
 
   d3.json("top-plays.json", function (err, json) {
     var data = json.filter(function (d) {
@@ -321,6 +323,66 @@ function setUpBottom(chart, width, height) {
       });
     chart.call(tip);
 
+    // create rects based on team color for positive and negative yardages
+    var createTeamColorRect = function (chart, team, color) {
+      var grad = chart.append("defs")
+        .append("linearGradient")
+        .attr("id", "teamColor" + team);
+      grad.append("stop")
+        .attr("offset", "10%")
+        .attr("stop-color", "black");
+      grad.append("stop")
+        .attr("offset", "10%")
+        .attr("stop-color", color);
+      grad.append("stop")
+        .attr("offset", "90%")
+        .attr("stop-color", color);
+      var negativeGrad = chart.append("defs")
+        .append("linearGradient")
+        .attr("id", "reversedTeamColor" + team);
+      negativeGrad.append("stop")
+        .attr("offset", "90%")
+        .attr("stop-color", color);
+      negativeGrad.append("stop")
+        .attr("offset", "90%")
+        .attr("stop-color", "black");
+      negativeGrad.append("stop")
+        .attr("offset", "10%")
+        .attr("stop-color", "black");
+    }
+    // create rects based on play type for positive and negative yardages
+    var createTypeColorRect = function (chart, type, color) {
+      var grad = chart.append("defs")
+        .append("linearGradient")
+        .attr("id", "typeColor" + type);
+      grad.append("stop")
+        .attr("offset", "10%")
+        .attr("stop-color", "black");
+      grad.append("stop")
+        .attr("offset", "10%")
+        .attr("stop-color", color);
+      grad.append("stop")
+        .attr("offset", "90%")
+        .attr("stop-color", color);
+      var negativeGrad = chart.append("defs")
+        .append("linearGradient")
+        .attr("id", "reversedTypeColor" + type);
+      negativeGrad.append("stop")
+        .attr("offset", "90%")
+        .attr("stop-color", color);
+      negativeGrad.append("stop")
+        .attr("offset", "90%")
+        .attr("stop-color", "black");
+      negativeGrad.append("stop")
+        .attr("offset", "10%")
+        .attr("stop-color", "black");
+    }
+
+    for (var i = 0; i < teams.length; i++)
+      createTeamColorRect(chart, teams[i], teamColors(teams[i]));
+    for (var i = 0; i < types.length; i++)
+      createTypeColorRect(chart, types[i], typeColors(types[i]));
+
     // add all the plays
     chart.selectAll(".bar")
       .data(topPlays)
@@ -337,8 +399,16 @@ function setUpBottom(chart, width, height) {
       .attr("height", barHeight - 1)
       .attr("width", function (d) { return Math.floor(Math.abs(length(d[1].yards))); })
       .attr("text", function (d) { return d[1].description; })
-      //.attr("fill", function (d) { return teamColors(d[1].team); })
-      .attr("fill", function (d) { return typeColors(d[1].type); })
+      .attr("fill", function (d) {
+        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
+        var yardageModifier = (d[1].yards > 0) ? 1 : -1;
+        if (teamModifier * yardageModifier > 0)
+          return "url(#teamColor" + d[1].team + ")";
+          //return "url(#typeColor" + d[1].type + ")";
+        else
+          return "url(#reversedTeamColor" + d[1].team + ")";
+          //return "url(#reversedTypeColor" + d[1].type + ")";
+      })
       .on("mouseover", tip.show)
       .on("mouseout", tip.hide);
   });
