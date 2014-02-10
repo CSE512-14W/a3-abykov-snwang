@@ -42,6 +42,11 @@ var bottomChart = chart.append("g")
 
 botHeight -= 1.25 * margin.top;
 
+var teams = ["SEA", "DEN"];
+var teamColors = d3.scale.ordinal()
+  .domain(teams)
+  .range(["steelblue", "orange"]);
+
 // Load in data about the player positions and stats
 queue()
   .defer(d3.json, "player-positions.json")
@@ -286,12 +291,8 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
             .style("cursor", "default")
             .style("pointer-events", "none")
             .style("fill", function (d) {
-                if (d.teamId == 0) {
-                  return "steelblue";
-                } else {
-                  return "orange";
-                }
-              });
+                return teamColors(teams[d.teamId]);
+            });
             
   // Display the Super Bowl logo in the middle
   var logoDim = topHeight * 2 / 3;
@@ -324,11 +325,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .domain([0, 100])
     .range([0, botHeight]);
 
-  var teams = ["SEA", "DEN"];
   var types = ["pass", "run", "interception", "fumble", "kickoff", "punt"];
-  var teamColors = d3.scale.ordinal()
-    .domain(teams)
-    .range(["steelblue", "orange"]);
   var typeColors = d3.scale.category10()
     .domain(types);
 
@@ -433,13 +430,13 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("y", 0)
     .attr("height", y(100) - y(0) - 1)
     .attr("width", x(0) - x(-10) - 1)
-    .attr("fill", "steelblue");
+    .attr("fill", teamColors("SEA"));
   bottomChart.append("rect")
     .attr("x", xInverted(0) + 1)
     .attr("y", 0)
     .attr("height", y(100) - y(0) - 1)
     .attr("width", x(0) - x(-10) - 1)
-    .attr("fill", "orange");
+    .attr("fill", teamColors("DEN"));
   // add logos in the end zones
   bottomChart.append("svg:image")
     .attr("xlink:href", "seahawks_logo_rotated_slab2.png")
