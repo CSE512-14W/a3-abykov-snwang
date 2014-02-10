@@ -23,11 +23,11 @@ svg {
   line-height: 1;
   font-weight: bold;
   padding: 10px;
-  background: rgba(238, 238, 238, 0.9);
+  background: rgba(238, 238, 238, 0.95);
   color: #000;
   border-radius: 2px;
   border: 2px solid #ccc;
-  border-color: rgba(204, 204, 204, 0.9);
+  border-color: rgba(204, 204, 204, 0.95);
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -37,7 +37,7 @@ svg {
   font-size: 10px;
   width: 100%;
   line-height: 1;
-  color: rgba(204, 204, 204, 0.9);
+  color: rgba(204, 204, 204, 0.95);
   content: "\25BC";
   position: absolute;
   text-align: center;
