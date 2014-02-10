@@ -203,7 +203,7 @@ function setUpTop(chart, width, height) {
                     } else {
                       // Set up the tooltip
                       var statTooltip = tooltip.style("left", d.rx + d.rwidth + margin.left + "px")
-                                               .style("top", d.ry + "px")
+                                               .style("top", d.ry + margin.top / 2 + "px")
                                                .style("visibility", "visible")
                                                .append("div");
                       for (statType in stats) {
