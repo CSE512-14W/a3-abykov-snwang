@@ -10,10 +10,13 @@ svg {
   font: 10px sans-serif;
 }
 
+.axis {
+  color: #262626;
+}
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #262626;
   shape-rendering: crispEdges;
 }
 

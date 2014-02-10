@@ -261,6 +261,9 @@ function setUpBottom(chart, width, height) {
   var xInverted = d3.scale.linear()
     .domain([110, -10])
     .range([0, width]);
+  // scale for field height
+  var y = d3.scale.linear()
+    .range([0, height]);
   // margin below the top yard lines and above the bottom yard lines
   var playMargin = 10;
 
@@ -297,6 +300,11 @@ function setUpBottom(chart, width, height) {
       .orient("top")
       .tickFormat(function (d) { return "DEN " + d; })
       .tickValues([0, 10, 20, 30, 40]);
+    // axis for end zone boundaries
+    var yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("right")
+      .tickValues([]);
 
     // add top Seahawks yard lines
     chart.append("g")
@@ -325,6 +333,23 @@ function setUpBottom(chart, width, height) {
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(invertedXAxis.orient("bottom"));
+    // add left end zone boundaries
+    chart.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+    chart.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + x(0) + ",0)")
+      .call(yAxis);
+    // add right end zone boundary
+    chart.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + xInverted(0) + ",0)")
+      .call(yAxis);
+    chart.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + xInverted(-10) + ",0)")
+      .call(yAxis.orient("left"));
 
     // tooltip for play descriptions
     var tip = d3.tip()
