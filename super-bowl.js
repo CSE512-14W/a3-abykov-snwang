@@ -15,7 +15,8 @@ var tooltip = d3.select("body").append("div")
                    .style("border-radius", "2px")
                    .style("pointer-events", "none")
                    .style("padding", "5px 10px 5px 10px")
-                   .style("position", "absolute");
+                   .style("position", "absolute")
+                   .style("visibility", "hidden");
 var chart = d3.select("body").append("svg")
               .attr("width", width + margin.left + margin.right)
               .attr("height", height + margin.top + margin.bottom);
@@ -168,6 +169,7 @@ function setUpTop(chart, width, height) {
                     if (stats == undefined) {
                       tooltip.style("left", d.rx + d.rwidth + margin.left + "px")
                              .style("top", d.ry + margin.top + "px")
+                             .style("visibility", "visible")
                              .append("div")
                              .text("No stats found")
                              .style("font-family", "Arial Black")
@@ -176,6 +178,7 @@ function setUpTop(chart, width, height) {
                       // Set up the tooltip
                       var statTooltip = tooltip.style("left", d.rx + d.rwidth + margin.left + "px")
                                                .style("top", d.ry + "px")
+                                               .style("visibility", "visible")
                                                .append("div");
                       for (statType in stats) {
                         statTooltip.append("div")
@@ -201,7 +204,7 @@ function setUpTop(chart, width, height) {
                   }
                   
                   // Reset the tooltip
-                  tooltip.selectAll("div").remove();
+                  tooltip.style("visibility", "hidden").selectAll("div").remove();
                 })
               .on('click', function (d) {
                   // Toggle color if clicked
