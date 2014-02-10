@@ -1,5 +1,5 @@
 // Partition the visualization space.
-var margin = {top: 20, right: 30, bottom: 20, left: 30},
+var margin = {top: 40, right: 30, bottom: 20, left: 30},
     width = 1280*0.9 - margin.left - margin.right,
     height = 800*0.9 - margin.top - margin.bottom,
     botHeight = Math.round(width * (53.3 / 120.0)) * 0.9,
@@ -18,16 +18,30 @@ var tooltip = d3.select("body").append("div")
                    .style("position", "absolute")
                    .style("visibility", "hidden")
                    .style("opacity", "0.95");
+                   
 var chart = d3.select("body").append("svg")
               .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom);
+              .attr("height", height + margin.top / 2 + margin.bottom);
+// Add a title
+var title = chart.append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top / 2 + ")")
+title.append("text")
+     .text("Seahawks vs. Broncos: A Breakdown of Super Bowl XLVIII")
+     .style("font-family", "Arial Black")
+     .style("font-size", "18px")
+     .style("visibility", "hidden");
+var titleWidth = title.select("text").node().getComputedTextLength();
+title.select("text")
+     .attr("x", width / 2 - titleWidth / 2)
+     .attr("y", margin.top / 5)
+     .style("visibility", "visible");
 var topChart = chart.append("g")
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 var bottomChart = chart.append("g")
-              .attr("transform", "translate(" + margin.left + "," + (2.5*margin.top + topHeight) + ")");
+              .attr("transform", "translate(" + margin.left + "," + (1.75*margin.top + topHeight) + ")");
 
 setUpTop(topChart, width, topHeight);
-setUpBottom(bottomChart, width, botHeight - 1.5*margin.top);
+setUpBottom(bottomChart, width, botHeight - 1.25 * margin.top);
 
 function setUpTop(chart, width, height) {
   // Load in data about the player positions and stats
