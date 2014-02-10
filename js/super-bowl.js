@@ -352,6 +352,11 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .orient("top")
     .tickFormat(function (d) { return "DEN " + d; })
     .tickValues([0, 10, 20, 30, 40]);
+  // axis for sidelines
+  var sidelineAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickValues([]);
   // axis for end zone boundaries
   var yAxis = d3.svg.axis()
     .scale(y)
@@ -360,31 +365,42 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
 
   // add top Seahawks yard lines
   bottomChart.append("g")
-    .attr("class", "x axis")
+    .attr("class", "x axis labels")
     .call(xAxis);
   // add top midfield tick
   bottomChart.append("g")
-    .attr("class", "x axis")
+    .attr("class", "x axis labels")
     .call(midfieldAxis);
   // add top Broncos yard lines
   bottomChart.append("g")
-    .attr("class", "x axis")
+    .attr("class", "x axis labels")
     .call(invertedXAxis);
-  // add bottom Seahawks yard lines
+  // add top sidelines
   bottomChart.append("g")
     .attr("class", "x axis")
+    .call(sidelineAxis);
+
+  // add bottom Seahawks yard lines
+  bottomChart.append("g")
+    .attr("class", "x axis labels")
     .attr("transform", "translate(0," + botHeight + ")")
     .call(xAxis.orient("bottom"));
   // add bottom midfield tick
   bottomChart.append("g")
-    .attr("class", "x axis")
+    .attr("class", "x axis labels")
     .attr("transform", "translate(0," + botHeight + ")")
     .call(midfieldAxis.orient("bottom"));
   // add bottom Broncos yard lines
   bottomChart.append("g")
-    .attr("class", "x axis")
+    .attr("class", "x axis labels")
     .attr("transform", "translate(0," + botHeight + ")")
     .call(invertedXAxis.orient("bottom"));
+  // add bottom sidelines
+  bottomChart.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + botHeight + ")")
+    .call(sidelineAxis.orient("top"));
+
   // add left end zone boundaries
   bottomChart.append("g")
     .attr("class", "y axis")
@@ -393,6 +409,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("class", "y axis")
     .attr("transform", "translate(" + x(0) + ",0)")
     .call(yAxis);
+
   // add right end zone boundary
   bottomChart.append("g")
     .attr("class", "y axis")

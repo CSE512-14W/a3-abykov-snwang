@@ -19,6 +19,9 @@ text {
   stroke: #262626;
   shape-rendering: crispEdges;
 }
+.labels path {
+  display: none;
+}
 
 .d3-tip {
   font-family: Arial;
