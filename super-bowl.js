@@ -14,6 +14,7 @@ var tooltip = d3.select("body").append("div")
                    .style("border", "2px solid #ccc")
                    .style("border-radius", "2px")
                    .style("pointer-events", "none")
+                   .style("padding", "5px 10px 5px 10px")
                    .style("position", "absolute");
 var chart = d3.select("body").append("svg")
               .attr("width", width + margin.left + margin.right)
@@ -308,6 +309,15 @@ function setUpBottom(chart, width, height) {
       .attr("transform", "translate(0," + height + ")")
       .call(invertedXAxis.orient("bottom"));
 
+    // tooltip for play descriptions
+    var tip = d3.tip()
+      .attr("class", "d3-tip")
+      .offset([-9, 0])
+      .html(function (d) {
+        return d[1].description;
+      });
+    chart.call(tip);
+
     // add all the plays
     chart.selectAll(".bar")
       .data(topPlays)
@@ -324,7 +334,9 @@ function setUpBottom(chart, width, height) {
       .attr("height", barHeight - 1)
       .attr("width", function (d) { return Math.floor(Math.abs(length(d[1].yards))); })
       .attr("text", function (d) { return d[1].description; })
-      .attr("fill", function (d) { return teamColors(d[1].team); });
-      //.attr("fill", function (d) { return typeColors(d[1].type); });
+      //.attr("fill", function (d) { return teamColors(d[1].team); })
+      .attr("fill", function (d) { return typeColors(d[1].type); })
+      .on("mouseover", tip.show)
+      .on("mouseout", tip.hide);
   });
 }
