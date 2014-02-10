@@ -22,6 +22,12 @@ text {
 .labels path {
   display: none;
 }
+.labels .tick line {
+  display: none;
+}
+.infield path {
+  stroke-opacity: 0.4;
+}
 
 .d3-tip {
   font-family: Arial;
