@@ -483,7 +483,12 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
       })
       .attr("y", function (d, i) { return playMargin + i * barHeight; })
       .attr("height", barHeight - 1)
-      .attr("width", function (d) { return Math.round(Math.abs(length(d[1].yards))); })
+      .attr("width", function (d) {
+        return Math.round(
+            length(
+              Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
+            ));
+      })
       .attr("text", function (d) { return d[1].description; })
       .attr("fill", function (d) { return teamColors(d[1].team); })
       .on("mouseover", function (d) {
