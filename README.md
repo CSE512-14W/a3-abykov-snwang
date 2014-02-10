@@ -10,15 +10,9 @@ a3-abykov-snwang
 
 Our project is an interactive visualization of all the plays in Super Bowl 48. The intent of the visualization is to allow the user to see what plays happened and which players made the plays. The user will be able to either select a play and determine which players were involved or select a player and easily see all of the plays that the player made.
 
-## Running Instructions - TODO
+## Running Instructions
 
-Put your running instructions here.  (Tell us how to open your visualization.) 
-
-If your visualization is web-based,  it would be great if your submissions can be opened online. [Github Pages](http://pages.github.com/) is a good and easy way to put your visualization online so you can put your link here.  For example:
-
-Access our visualization at http://cse512-14w.github.io/a3-jheer-kanitw/ or download this repository and run `python -m SimpleHTTPServer 9000` and access this from http://localhost:9000/.
-
-(If you put your work online, please also write [one-line description and put a link to your final work](http://note.io/1n3u46s) so people can access it directly from CSE512-14W page.)
+Access our visualization at http://cse512-14w.github.io/a3-abykov-snwang/ or download this repository and run `python -m SimpleHTTPServer 9000` and access this from http://localhost:9000/.
 
 ## Story Board
 
