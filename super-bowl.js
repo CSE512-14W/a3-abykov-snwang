@@ -121,9 +121,9 @@ function setUpTop(chart, width, height) {
                   rectX += 2 * (playerWidth + betweenPositionHorizPadding);
                 }
                 rectangleData.push({"rx":rectX, "ry":curY, "rwidth":positionWidth, 
-                                    "rheight":recHeight, "rtext":position, "rselectable":false, "rselected":false});
+                                    "rheight":recHeight, "rtext":position, "rselectable":false, "rselected":false, "teamId":i});
                 textData.push({"tx":Math.round(rectX + positionWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
-                               "ttext":position, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false});                                    
+                               "ttext":position, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false, "teamId":i});                                    
                 nameJson = categoryJson[k][position];
                 
                 // Iterate over each player
@@ -147,7 +147,7 @@ function setUpTop(chart, width, height) {
                   rectangleData.push({"rx":playerX, "ry":curY, "rwidth":playerWidth, 
                                       "rheight":recHeight, "rtext":nameJson[m], "rselectable":true, "rselected":false, "teamId":i});
                   textData.push({"tx":Math.round(playerX + playerWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
-                               "ttext":nameJson[m], "tfont":"Arial", "tfontsize":"10px", "tselectable":true});   
+                               "ttext":nameJson[m], "tfont":"Arial", "tfontsize":"10px", "tselectable":true, "teamId":i});   
                 }
                 
                 curY += recHeight + vertPadding;
@@ -156,17 +156,17 @@ function setUpTop(chart, width, height) {
 
             curX += 2 * playerWidth + 2 * betweenPositionHorizPadding + positionWidth;
             rectangleData.push({"rx":categoryX, "ry":vertPadding + teamHeight, "rwidth":curX - categoryX, 
-                                "rheight":recHeight, "rtext":category, "rselectable":false, "rselected":false});
+                                "rheight":recHeight, "rtext":category, "rselectable":false, "rselected":false, "teamId":i});
             textData.push({"tx":Math.round(categoryX + (curX - categoryX) / 2), "ty":Math.round(vertPadding + teamHeight + recHeight * 0.75),
-                               "ttext":category, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false});
+                               "ttext":category, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false, "teamId":i});
             curX += betweenCategoryHorizPadding;
           }
         }
         curX -= betweenCategoryHorizPadding;
         rectangleData.push({"rx":teamX, "ry":0, "rwidth":curX - teamX, 
-                            "rheight":teamHeight, "rtext":team, "rselectable":false, "rselected":false});
+                            "rheight":teamHeight, "rtext":team, "rselectable":false, "rselected":false, "teamId":i});
         textData.push({"tx":Math.round(teamX + (curX - teamX) / 2), "ty":Math.round(teamHeight * 0.75),
-                               "ttext":team, "tfont":"Arial Black", "tfontsize":"16px", "tselectable":false});
+                               "ttext":team, "tfont":"Arial Black", "tfontsize":"16px", "tselectable":false, "teamId":i});
         curX += betweenTeamHorizPadding;
       }
     }
@@ -264,7 +264,14 @@ function setUpTop(chart, width, height) {
               .text(function (d) { return d.ttext; })
               .style("text-anchor", "middle")
               .style("cursor", "default")
-              .style("pointer-events", "none");
+              .style("pointer-events", "none")
+              .style("fill", function (d) {
+                  if (d.teamId == 0) {
+                    return "steelblue";
+                  } else {
+                    return "orange";
+                  }
+                });
               
     // Display the Super Bowl logo in the middle
     var logoDim = height * 2 / 3;
