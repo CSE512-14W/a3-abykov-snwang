@@ -523,8 +523,29 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
         return "url(#reversedTeamColor" + d[1].team + ")";
         //return "url(#reversedTypeColor" + d[1].type + ")";
     })
-    .on("mouseover", tip.show)
-    .on("mouseout", tip.hide);
+    .on("mouseover", function (d) {
+      // Show a tooltip and highlight the related players
+      tip.show(d);
+      var players = d[1].players;
+      for (var i = 0; i < players.length; i++) {
+        rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                  .style("fill", selectedColor);
+      }
+    })
+    .on("mouseout", function (d) {
+      tip.hide(d);
+      var players = d[1].players;
+      for (var i = 0; i < players.length; i++) {
+        rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                  .style("fill", function (rd) {
+                    if (rd.rselected) {
+                      return selectedColor;
+                    } else {
+                      return notSelectedColor;
+                    }
+                  });
+      }
+    });
     
 // --------------------------- BOTTOM --------------------------
 }
