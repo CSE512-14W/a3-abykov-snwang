@@ -228,6 +228,10 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
                                    .append("br");
                       }
                     }
+                    
+                    bottomChart.selectAll(".bar")
+                               .filter( function (pd) { return pd[1].players.indexOf(d.rtext) >= 0 })
+                               .style("fill", selectedColor);
                   }
                   
                   // Flip the tooltip for denver
@@ -246,6 +250,9 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
                 
                 // Reset the tooltip
                 tooltip.style("visibility", "hidden").selectAll("div").remove();
+                bottomChart.selectAll(".bar")
+                               .filter( function (pd) { return pd[1].players.indexOf(d.rtext) >= 0 })
+                               .style("fill", function (pd) { return teamColors(pd[1].team); });
               })
             .on('click', function (d) {
                 // Toggle color if clicked
