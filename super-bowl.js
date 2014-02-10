@@ -239,7 +239,7 @@ function setUpBottom(chart, width, height) {
   // scale for bar length
   var length = d3.scale.linear()
                   .domain([0, 100])
-                  .range([0, width * (5/7)]);
+                  .range([0, width * (5/6)]);
 
   // scale for Seahawks yard lines
   var x = d3.scale.linear()
