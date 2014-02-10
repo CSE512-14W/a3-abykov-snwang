@@ -468,10 +468,11 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
       betweenPlayMargin = Math.floor((botHeight   - barHeight * dataLength) / (dataLength + 1));
       playMargin = betweenPlayMargin;
     }
-    
+
     // Remove any old bars
     bottomChart.selectAll(".bar").remove();
-    
+
+    var tipWidth = 7;
     var playBars = bottomChart.selectAll(".bar").data(playData);
     playBars.enter().append("g").attr("class", "bar");
     // add full bar for each play
@@ -480,8 +481,10 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
       .attr("x", function (d) {
         var teamModifier = (d[1].team === "SEA") ? -1 : 1;
         var yardageModifier = (d[1].yards > 0) ? -1 : 1;
-        var leftEnd = (teamModifier * yardageModifier > 0) ? d[1].startLine : d[1].endLine;
-        return Math.round(x(leftEnd));
+        if (teamModifier * yardageModifier > 0)
+          return Math.round(x(d[1].startLine));
+        else
+          return Math.round(x(d[1].endLine)) + tipWidth;
       })
       .attr("y", function (d, i) { return playMargin + i * (barHeight + betweenPlayMargin); })
       .attr("height", barHeight - 1)
@@ -489,7 +492,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
         return Math.round(
             length(
               Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
-            ));
+            )) - tipWidth;
       })
       .attr("text", function (d) { return d[1].description; })
       .attr("fill", function (d) { return teamColors(d[1].team); })
@@ -517,18 +520,51 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
         }
       });
 
-    // add black bar at the location of the end of the play
-    var blackBarWidth = 5;
-    playBars.append("rect")
-      .attr("class", "bar")
-      .attr("x", function (d) {
-        var offset = (d[1].endLine < d[1].startLine) ? 0 : -1 * blackBarWidth;
-        return Math.round(x(d[1].endLine) + offset);
-      })
-      .attr("y", function (d, i) { return playMargin + i * (barHeight + betweenPlayMargin); })
-      .attr("height", barHeight - 1)
-      .attr("width", blackBarWidth)
-      .attr("fill", "black")
+    // functions to create triangle tips
+    var leftTriangle = function (d, i, width) {
+        var leftEnd = Math.round(x(d[1].endLine)),
+            x1 = leftEnd + width,
+            y1 = playMargin + i * (barHeight + betweenPlayMargin),
+            x2 = x1,
+            y2 = y1 + barHeight - 1,
+            x3 = leftEnd,
+            y3 = (y1 + y2) / 2;
+        return "M " + x1 + " " + y1 + " L " + x2 + " " + y2 + " L " + x3 + " " + y3 + " z";
+    }
+    var rightTriangle = function (d, i, width) {
+        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
+        var yardageModifier = (d[1].yards > 0) ? -1 : 1;
+        var leftEnd = 0;
+        if (teamModifier * yardageModifier > 0)
+          leftEnd = Math.round(x(d[1].startLine));
+        else
+          leftEnd = Math.round(x(d[1].endLine)) + tipWidth;
+        var barWidth = Math.round(
+            length(
+              Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
+            )) - tipWidth;
+        var triangleLeftEnd = leftEnd + barWidth;
+        var x1 = triangleLeftEnd,
+            y1 = playMargin + i * (barHeight + betweenPlayMargin),
+            x2 = x1,
+            y2 = y1 + barHeight - 1,
+            x3 = triangleLeftEnd + width,
+            y3 = (y1 + y2) / 2;
+        return "M " + x1 + " " + y1 + " L " + x2 + " " + y2 + " L " + x3 + " " + y3 + " z";
+    }
+    var makeTriangle = function (width) {
+      return function (d, i) {
+        if (d[1].endLine < d[1].startLine)
+          return leftTriangle(d, i, width);
+        else
+          return rightTriangle(d, i, width);
+      };
+    }
+
+    // add tip at the location of the end of the play
+    playBars.append("path")
+      .attr("d", makeTriangle(tipWidth))
+      .attr("fill", function (d) { return teamColors(d[1].team) })
       .on("mouseover", function (d) {
         // Show a tooltip and highlight the related players
         var players = d[1].players;
@@ -550,6 +586,6 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
                     });
         }
       });
-  }  
+  }
 // --------------------------- BOTTOM --------------------------
 }
