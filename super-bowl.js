@@ -244,6 +244,15 @@ function setUpTop(chart, width, height) {
               .style("text-anchor", "middle")
               .style("cursor", "default")
               .style("pointer-events", "none");
+              
+    // Display the Super Bowl logo in the middle
+    var logoDim = height * 2 / 3;
+    chart.append("image")
+         .attr("xlink:href", "logo.jpg")
+         .attr("width", logoDim)
+         .attr("height", logoDim)
+         .attr("x", width / 2 - logoDim / 2)
+         .attr("y", height - logoDim);
   }
 }
 
