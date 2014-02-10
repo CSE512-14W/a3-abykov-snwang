@@ -363,17 +363,21 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .orient("right")
     .tickValues([]);
 
+  var sidelineOffset = 2;
   // add top Seahawks yard lines
   bottomChart.append("g")
     .attr("class", "x axis labels")
+    .attr("transform", "translate(0," + sidelineOffset + ")")
     .call(xAxis);
   // add top midfield tick
   bottomChart.append("g")
     .attr("class", "x axis labels")
+    .attr("transform", "translate(0," + sidelineOffset + ")")
     .call(midfieldAxis);
   // add top Broncos yard lines
   bottomChart.append("g")
     .attr("class", "x axis labels")
+    .attr("transform", "translate(0," + sidelineOffset + ")")
     .call(invertedXAxis);
   // add top sidelines
   bottomChart.append("g")
@@ -383,17 +387,17 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   // add bottom Seahawks yard lines
   bottomChart.append("g")
     .attr("class", "x axis labels")
-    .attr("transform", "translate(0," + botHeight + ")")
+    .attr("transform", "translate(0," + (botHeight - sidelineOffset) + ")")
     .call(xAxis.orient("bottom"));
   // add bottom midfield tick
   bottomChart.append("g")
     .attr("class", "x axis labels")
-    .attr("transform", "translate(0," + botHeight + ")")
+    .attr("transform", "translate(0," + (botHeight - sidelineOffset) + ")")
     .call(midfieldAxis.orient("bottom"));
   // add bottom Broncos yard lines
   bottomChart.append("g")
     .attr("class", "x axis labels")
-    .attr("transform", "translate(0," + botHeight + ")")
+    .attr("transform", "translate(0," + (botHeight - sidelineOffset) + ")")
     .call(invertedXAxis.orient("bottom"));
   // add bottom sidelines
   bottomChart.append("g")
@@ -409,6 +413,12 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("class", "y axis")
     .attr("transform", "translate(" + x(0) + ",0)")
     .call(yAxis);
+  for (var i = 10; i < 100; i += 10) {
+    bottomChart.append("g")
+      .attr("class", "y axis infield")
+      .attr("transform", "translate(" + x(i) + ",0)")
+      .call(yAxis);
+  }
 
   // add right end zone boundary
   bottomChart.append("g")
