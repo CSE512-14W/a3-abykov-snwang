@@ -410,66 +410,6 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     });
   bottomChart.call(tip);
 
-  // create rects based on team color for positive and negative yardages
-  var createTeamColorRect = function (chart, team, color) {
-    var grad = chart.append("defs")
-      .append("linearGradient")
-      .attr("id", "teamColor" + team);
-    grad.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", "black");
-    grad.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", color);
-    grad.append("stop")
-      .attr("offset", "90%")
-      .attr("stop-color", color);
-    var negativeGrad = chart.append("defs")
-      .append("linearGradient")
-      .attr("id", "reversedTeamColor" + team);
-    negativeGrad.append("stop")
-      .attr("offset", "90%")
-      .attr("stop-color", color);
-    negativeGrad.append("stop")
-      .attr("offset", "90%")
-      .attr("stop-color", "black");
-    negativeGrad.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", "black");
-  }
-  // create rects based on play type for positive and negative yardages
-  var createTypeColorRect = function (chart, type, color) {
-    var grad = chart.append("defs")
-      .append("linearGradient")
-      .attr("id", "typeColor" + type);
-    grad.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", "black");
-    grad.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", color);
-    grad.append("stop")
-      .attr("offset", "90%")
-      .attr("stop-color", color);
-    var negativeGrad = chart.append("defs")
-      .append("linearGradient")
-      .attr("id", "reversedTypeColor" + type);
-    negativeGrad.append("stop")
-      .attr("offset", "90%")
-      .attr("stop-color", color);
-    negativeGrad.append("stop")
-      .attr("offset", "90%")
-      .attr("stop-color", "black");
-    negativeGrad.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", "black");
-  }
-
-  for (var i = 0; i < teams.length; i++)
-    createTeamColorRect(bottomChart, teams[i], teamColors(teams[i]));
-  for (var i = 0; i < types.length; i++)
-    createTypeColorRect(bottomChart, types[i], typeColors(types[i]));
-
   // fill the end zones
   bottomChart.append("rect")
     .attr("x", 1)
@@ -498,10 +438,12 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("width", x(0) - x(-10) - 1);
 
   // add all the plays
-  bottomChart.selectAll(".bar")
+  var plays = bottomChart.selectAll(".bar")
     .data(topPlays)
-    .enter()
-    .append("rect")
+    .enter().append("g");
+
+  // add full bar for each play
+  plays.append("rect")
     .attr("class", "bar")
     .attr("x", function (d) {
       var teamModifier = (d[1].team === "SEA") ? -1 : 1;
@@ -513,16 +455,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("height", barHeight - 1)
     .attr("width", function (d) { return Math.round(Math.abs(length(d[1].yards))); })
     .attr("text", function (d) { return d[1].description; })
-    .attr("fill", function (d) {
-      var teamModifier = (d[1].team === "SEA") ? -1 : 1;
-      var yardageModifier = (d[1].yards > 0) ? 1 : -1;
-      if (teamModifier * yardageModifier > 0)
-        return "url(#teamColor" + d[1].team + ")";
-        //return "url(#typeColor" + d[1].type + ")";
-      else
-        return "url(#reversedTeamColor" + d[1].team + ")";
-        //return "url(#reversedTypeColor" + d[1].type + ")";
-    })
+    .attr("fill", function (d) { return teamColors(d[1].team); })
     .on("mouseover", function (d) {
       // Show a tooltip and highlight the related players
       tip.show(d);
@@ -546,6 +479,19 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
                   });
       }
     });
+
+  // add black bar at the location of the end of the play
+  var blackBarWidth = 5;
+  plays.append("rect")
+    .attr("class", "bar")
+    .attr("x", function (d) {
+      var offset = (d[1].endLine < d[1].startLine) ? 0 : -1 * blackBarWidth;
+      return Math.round(x(d[1].endLine) + offset);
+    })
+    .attr("y", function (d, i) { return playMargin + i * barHeight; })
+    .attr("height", barHeight - 1)
+    .attr("width", blackBarWidth)
+    .attr("fill", "black");
     
 // --------------------------- BOTTOM --------------------------
 }
