@@ -79,35 +79,12 @@
         ]}
     ]},
     {"Denver Broncos" : [
-        {"Offense" : [
-            {"QB" : [
-                "P.Manning"
+        {"Special Teams" : [
+            {"K" : [
+                "M.Prater"
             ]},
-            {"RB" : [
-                "K.Moreno",
-                "M.Ball",
-                "C.Anderson"
-            ]},
-            {"WR" : [
-                "D.Thomas",
-                "E.Decker",
-                "W.Welker",
-                "T.Holliday"
-            ]},
-            {"TE" : [
-                "J.Thomas",
-                "J.Tamme"
-            ]},
-            {"T" : [
-                "C.Clark",
-                "O.Franklin"
-            ]},
-            {"G" : [
-                "Z.Beadles",
-                "L.Vasquez"
-            ]},
-            {"C" : [
-                "M.Ramirez"
+            {"P" : [
+                "B.Colquitt"
             ]}
         ]},
         {"Defense" : [
@@ -139,12 +116,35 @@
                 "M.Adams"
             ]}
         ]},
-        {"Special Teams" : [
-            {"K" : [
-                "M.Prater"
+        {"Offense" : [
+            {"QB" : [
+                "P.Manning"
             ]},
-            {"P" : [
-                "B.Colquitt"
+            {"RB" : [
+                "K.Moreno",
+                "M.Ball",
+                "C.Anderson"
+            ]},
+            {"WR" : [
+                "D.Thomas",
+                "E.Decker",
+                "W.Welker",
+                "T.Holliday"
+            ]},
+            {"TE" : [
+                "J.Thomas",
+                "J.Tamme"
+            ]},
+            {"T" : [
+                "C.Clark",
+                "O.Franklin"
+            ]},
+            {"G" : [
+                "Z.Beadles",
+                "L.Vasquez"
+            ]},
+            {"C" : [
+                "M.Ramirez"
             ]}
         ]}
     ]}

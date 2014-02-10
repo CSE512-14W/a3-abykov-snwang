@@ -16,7 +16,8 @@ var tooltip = d3.select("body").append("div")
                    .style("pointer-events", "none")
                    .style("padding", "5px 10px 5px 10px")
                    .style("position", "absolute")
-                   .style("visibility", "hidden");
+                   .style("visibility", "hidden")
+                   .style("opacity", "0.95");
 var chart = d3.select("body").append("svg")
               .attr("width", width + margin.left + margin.right)
               .attr("height", height + margin.top + margin.bottom);
@@ -100,9 +101,14 @@ function setUpTop(chart, width, height) {
             var curY = teamHeight + recHeight + 2 * vertPadding;
             for (var k = 0; k < categoryJson.length; k++) {
               for (var position in categoryJson[k]) {
-                rectangleData.push({"rx":curX, "ry":curY, "rwidth":positionWidth, 
+                // Check whether the x values should be flipped
+                var rectX = curX;
+                if (i == 1) {
+                  rectX += 2 * (playerWidth + betweenPositionHorizPadding);
+                }
+                rectangleData.push({"rx":rectX, "ry":curY, "rwidth":positionWidth, 
                                     "rheight":recHeight, "rtext":position, "rselectable":false, "rselected":false});
-                textData.push({"tx":Math.round(curX + positionWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
+                textData.push({"tx":Math.round(rectX + positionWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
                                "ttext":position, "tfont":"Arial Black", "tfontsize":"10px", "tselectable":false});                                    
                 nameJson = categoryJson[k][position];
                 
@@ -111,9 +117,15 @@ function setUpTop(chart, width, height) {
                   if (m > 0 && m % 2 == 0) {
                     curY += recHeight + vertPadding;
                   }
-                  var playerX = curX + positionWidth + betweenPositionHorizPadding;
-                  if (m % 2 == 1) {
-                    playerX += playerWidth + betweenPositionHorizPadding;
+                  // Check whether the x values should be flipped
+                  var playerX = 0;
+                  if (i == 0) {
+                    playerX = curX + positionWidth + betweenPositionHorizPadding;
+                    if (m % 2 == 1) {
+                      playerX += playerWidth + betweenPositionHorizPadding;
+                    }
+                  } else {
+                    playerX = curX + (1 - (m % 2)) * (playerWidth + betweenPositionHorizPadding);
                   }
                   if (curY + recHeight > height) {
                     alert("WENT TOO FAR!");
