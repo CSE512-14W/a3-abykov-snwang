@@ -20,7 +20,7 @@ fs.readFile("super-bowl-pretty.json", function (err, data) {
     });
 
     var convertYardline = function (yardline) {
-      var match = yardline.match(/([A-Z]{3}) (\d+)/);
+      var match = yardline.match(/([A-Z]{3}) (-?\d+)/);
       if (!match) {
         return 50;
       } else {

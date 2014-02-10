@@ -84,14 +84,14 @@
         24,
         {
             "description": "S.Hauschka kicks 66 yards from SEA 35 to DEN -1. T.Holliday to DEN 23 for 24 yards (H.Farwell, D.Baldwin).",
-            "endLine": 26,
+            "endLine": 77,
             "players": [
                 "H.Farwell",
                 "S.Hauschka",
                 "T.Holliday",
                 "D.Baldwin"
             ],
-            "startLine": 50,
+            "startLine": 101,
             "team": "DEN",
             "type": "kickoff",
             "yards": 24
@@ -170,14 +170,14 @@
         20,
         {
             "description": "S.Hauschka kicks 71 yards from SEA 35 to DEN -6. T.Holliday to DEN 14 for 20 yards (D.Coleman, J.Lane).",
-            "endLine": 30,
+            "endLine": 86,
             "players": [
                 "S.Hauschka",
                 "T.Holliday",
                 "D.Coleman",
                 "J.Lane"
             ],
-            "startLine": 50,
+            "startLine": 106,
             "team": "DEN",
             "type": "kickoff",
             "yards": 20
@@ -257,14 +257,14 @@
         17,
         {
             "description": "S.Hauschka kicks 66 yards from SEA 35 to DEN -1. T.Holliday to DEN 16 for 17 yards (K.Chancellor, J.Lane). SEA-K.Chancellor was injured during the play.",
-            "endLine": 33,
+            "endLine": 84,
             "players": [
                 "S.Hauschka",
                 "T.Holliday",
                 "K.Chancellor",
                 "J.Lane"
             ],
-            "startLine": 50,
+            "startLine": 101,
             "team": "DEN",
             "type": "kickoff",
             "yards": 17
