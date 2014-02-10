@@ -339,7 +339,6 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   });
   var numPlays = data.length;
   var topPlays = data.slice(0, numPlays);
-  var barHeight = (botHeight - 2*playMargin) / numPlays;
 
   // axis for Seahawks yard lines
   var xAxis = d3.svg.axis()
@@ -461,7 +460,16 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   addPlays(topPlays);
   
   function addPlays(playData) {
+    // Recalculate bar heights
+    var barHeight = (botHeight - 2*playMargin) / playData.length;
+    // Make sure the bars don't get too big
+    if (barHeight > 0.05 * botHeight) {
+      barHeight = Math.round(0.05 * botHeight);
+    }
+    
+    // Remove any old bars
     bottomChart.selectAll(".bar").remove();
+    
     var playBars = bottomChart.selectAll(".bar").data(playData);
     playBars.enter().append("g").attr("class", "bar");
     // add full bar for each play
