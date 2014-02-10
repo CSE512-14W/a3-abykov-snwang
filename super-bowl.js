@@ -458,13 +458,26 @@ function setUpBottom(chart, width, height) {
     for (var i = 0; i < types.length; i++)
       createTypeColorRect(chart, types[i], typeColors(types[i]));
 
+    // fill the end zones
+    chart.append("rect")
+      .attr("x", 1)
+      .attr("y", 0)
+      .attr("height", y(100) - y(0) - 1)
+      .attr("width", x(0) - x(-10) - 1)
+      .attr("fill", "steelblue");
+    chart.append("rect")
+      .attr("x", xInverted(0) + 1)
+      .attr("y", 0)
+      .attr("height", y(100) - y(0) - 1)
+      .attr("width", x(0) - x(-10) - 1)
+      .attr("fill", "orange");
     // add logos in the end zones
     chart.append("svg:image")
-      .attr("xlink:href", "seahawks_logo_rotated_slab.png")
+      .attr("xlink:href", "seahawks_logo_rotated_slab2.png")
       .attr("x", 1)
       .attr("y", 1)
       .attr("height", y(100) - y(0) - 2)
-      .attr("width", x(0) - x(-10));
+      .attr("width", x(0) - x(-10) - 1);
     chart.append("svg:image")
       .attr("xlink:href", "broncos_logo_rotated_slab.png")
       .attr("x", xInverted(0) + 1)
