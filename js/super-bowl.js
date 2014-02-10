@@ -49,9 +49,9 @@ var teamColors = d3.scale.ordinal()
 
 // Load in data about the player positions and stats
 queue()
-  .defer(d3.json, "player-positions.json")
-  .defer(d3.json, "player-stats.json")
-  .defer(d3.json, "top-plays.json")
+  .defer(d3.json, "data/player-positions.json")
+  .defer(d3.json, "data/player-stats.json")
+  .defer(d3.json, "data/top-plays.json")
   .await(drawElements);
   
 function drawElements(err, playerPositions, playerStats, topPlays) {
@@ -297,7 +297,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   // Display the Super Bowl logo in the middle
   var logoDim = topHeight * 2 / 3;
   topChart.append("image")
-       .attr("xlink:href", "logo.jpg")
+       .attr("xlink:href", "img/logo.jpg")
        .attr("width", logoDim)
        .attr("height", logoDim)
        .attr("x", width / 2 - logoDim / 2)
@@ -439,13 +439,13 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("fill", teamColors("DEN"));
   // add logos in the end zones
   bottomChart.append("svg:image")
-    .attr("xlink:href", "seahawks_logo_rotated_slab2.png")
+    .attr("xlink:href", "img/seahawks_logo_rotated_slab2.png")
     .attr("x", 1)
     .attr("y", 1)
     .attr("height", y(100) - y(0) - 2)
     .attr("width", x(0) - x(-10) - 1);
   bottomChart.append("svg:image")
-    .attr("xlink:href", "broncos_logo_rotated_slab.png")
+    .attr("xlink:href", "img/broncos_logo_rotated_slab.png")
     .attr("x", xInverted(0) + 1)
     .attr("y", 0)
     .attr("height", y(100) - y(0) - 2)
