@@ -26,7 +26,7 @@ var chart = d3.select("body").append("svg")
 var title = chart.append("g")
               .attr("transform", "translate(" + margin.left + "," + margin.top / 2 + ")")
 title.append("text")
-     .text("Seahawks vs. Broncos: A Breakdown of Super Bowl XLVIII")
+     .text("Seahawks vs. Broncos: Every Play of Super Bowl XLVIII")
      .style("font-family", "Arial Black")
      .style("font-size", "18px")
      .style("visibility", "hidden");
