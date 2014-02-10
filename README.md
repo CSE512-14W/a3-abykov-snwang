@@ -28,11 +28,11 @@ The third page of the storyboard shows what happens when a player name is moused
 
 The final page of the storyboard illustrates what happens when a player's name is clicked. The player's name will be highlighted and the shown plays will be replaced with only plays that the player was involved in. This allows the user to drill down and learn more about each player's contribution to the game. If additional players are selected their plays will also be added to those shown.
 
-To accomplish all of this we found a JSON dataset that contains a record of every play in the Super Bowl. Additionally the dataset contains which players were involved in each play and the aggregate stats for each player. We also created a JSON file to associate each player with their position.
+To accomplish all of this we found a JSON dataset that contains a record of every play in the Super Bowl (Found on https://github.com/BurntSushi/nflgame). Additionally the dataset contains which players were involved in each play and the aggregate stats for each player. We also created a JSON file to associate each player with their position.
 
-### Changes between Storyboard and the Final Implementation - TODO
+### Changes between Storyboard and the Final Implementation
 
-A paragraph explaining changes between the storyboard and the final implementation.
+The biggest change between the provided storyboard and the final implementation is the way that the players are visualized. The storyboard featured every position listed across the top and player names below their positions. Once we implemented this however, we realized that there were too many positions and there was not enough horizontal space to fit all of the player names. Therefore we decided to switch to a vertical list approach. The player are still grouped by team and by offense/defense/special teams but the positions are not listed vertically along the page. The player names are horizontally adjacent to their respective position. Switching to this vertical grouping allowed us to easily fit in all of the names. Additionally, we flipped the horizontal order of the position categories for the right team (Denver Broncos) to create a symmetric effect and allow space between the player lists for an image of the Super Bowl logo. One other significant change is that we decided to color code the plays based on the team that made the play rather than the play type. This allowed for a clean color coding system between the players, the endzone colors and the plays. The aesthetic looks of the field and the player lists are also different from the initial design as we felt that they were better choices.
 
 ## Development Process - TODO
 
