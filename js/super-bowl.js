@@ -45,7 +45,7 @@ botHeight -= 1.25 * margin.top;
 var teams = ["SEA", "DEN"];
 var teamColors = d3.scale.ordinal()
   .domain(teams)
-  .range(["steelblue", "orange"]);
+  .range(["steelblue", "#c35a2b"]);
 
 // Load in data about the player positions and stats
 queue()
