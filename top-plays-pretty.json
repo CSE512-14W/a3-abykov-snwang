@@ -15,6 +15,24 @@
         }
     ],
     [
+        69,
+        {
+            "description": "(3:36) (No Huddle, Shotgun) P.Manning pass short right intended for K.Moreno INTERCEPTED by M.Smith (C.Avril) at SEA 31. M.Smith for 69 yards, TOUCHDOWN.",
+            "endLine": 100,
+            "players": [
+                null,
+                "P.Manning",
+                "C.Avril",
+                "K.Moreno",
+                "M.Smith"
+            ],
+            "startLine": 31,
+            "team": "SEA",
+            "type": "pass",
+            "yards": 69
+        }
+    ],
+    [
         37,
         {
             "description": "(4:26) (Shotgun) R.Wilson pass deep left to D.Baldwin to DEN 6 for 37 yards (C.Bailey).",
@@ -66,23 +84,6 @@
     [
         24,
         {
-            "description": "(12:37) (Shotgun) R.Wilson pass deep middle to J.Kearse to DEN 10 for 24 yards (T.Carter).",
-            "endLine": 90,
-            "players": [
-                "",
-                "T.Carter",
-                "J.Kearse",
-                "R.Wilson"
-            ],
-            "startLine": 66,
-            "team": "SEA",
-            "type": "pass",
-            "yards": 24
-        }
-    ],
-    [
-        24,
-        {
             "description": "S.Hauschka kicks 66 yards from SEA 35 to DEN -1. T.Holliday to DEN 23 for 24 yards (H.Farwell, D.Baldwin).",
             "endLine": 77,
             "players": [
@@ -94,6 +95,23 @@
             "startLine": 101,
             "team": "DEN",
             "type": "kickoff",
+            "yards": 24
+        }
+    ],
+    [
+        24,
+        {
+            "description": "(12:37) (Shotgun) R.Wilson pass deep middle to J.Kearse to DEN 10 for 24 yards (T.Carter).",
+            "endLine": 90,
+            "players": [
+                "",
+                "T.Carter",
+                "J.Kearse",
+                "R.Wilson"
+            ],
+            "startLine": 66,
+            "team": "SEA",
+            "type": "pass",
             "yards": 24
         }
     ],
@@ -152,23 +170,6 @@
     [
         20,
         {
-            "description": "B.Colquitt kicks 64 yards from DEN 20 to SEA 16. G.Tate to SEA 36 for 20 yards (B.Marshall, N.Irving).",
-            "endLine": 36,
-            "players": [
-                "B.Colquitt",
-                "G.Tate",
-                "N.Irving",
-                "B.Marshall"
-            ],
-            "startLine": 16,
-            "team": "SEA",
-            "type": "kickoff",
-            "yards": 20
-        }
-    ],
-    [
-        20,
-        {
             "description": "S.Hauschka kicks 71 yards from SEA 35 to DEN -6. T.Holliday to DEN 14 for 20 yards (D.Coleman, J.Lane).",
             "endLine": 86,
             "players": [
@@ -179,6 +180,23 @@
             ],
             "startLine": 106,
             "team": "DEN",
+            "type": "kickoff",
+            "yards": 20
+        }
+    ],
+    [
+        20,
+        {
+            "description": "B.Colquitt kicks 64 yards from DEN 20 to SEA 16. G.Tate to SEA 36 for 20 yards (B.Marshall, N.Irving).",
+            "endLine": 36,
+            "players": [
+                "B.Colquitt",
+                "G.Tate",
+                "N.Irving",
+                "B.Marshall"
+            ],
+            "startLine": 16,
+            "team": "SEA",
             "type": "kickoff",
             "yards": 20
         }
@@ -273,6 +291,21 @@
     [
         16,
         {
+            "description": "(7:26) (Shotgun) R.Wilson scrambles left tackle pushed ob at DEN 33 for 16 yards (M.Adams).",
+            "endLine": 67,
+            "players": [
+                "M.Adams",
+                "R.Wilson"
+            ],
+            "startLine": 51,
+            "team": "SEA",
+            "type": "run",
+            "yards": 16
+        }
+    ],
+    [
+        16,
+        {
             "description": "(7:40) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to SEA 43 for 16 yards (W.Thurmond) [C.Clemons].",
             "endLine": 43,
             "players": [
@@ -285,21 +318,6 @@
             "startLine": 59,
             "team": "DEN",
             "type": "pass",
-            "yards": 16
-        }
-    ],
-    [
-        16,
-        {
-            "description": "(7:26) (Shotgun) R.Wilson scrambles left tackle pushed ob at DEN 33 for 16 yards (M.Adams).",
-            "endLine": 67,
-            "players": [
-                "M.Adams",
-                "R.Wilson"
-            ],
-            "startLine": 51,
-            "team": "SEA",
-            "type": "run",
             "yards": 16
         }
     ],
@@ -322,6 +340,23 @@
     [
         14,
         {
+            "description": "(14:36) (No Huddle, Shotgun) P.Manning pass short left to W.Welker to DEN 37 for 14 yards (B.Wagner).",
+            "endLine": 63,
+            "players": [
+                null,
+                "P.Manning",
+                "W.Welker",
+                "B.Wagner"
+            ],
+            "startLine": 77,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 14
+        }
+    ],
+    [
+        14,
+        {
             "description": "(1:59) (Shotgun) P.Manning pass short middle to C.Anderson to DEN 38 for 14 yards (B.Irvin, H.Farwell). P.Manning finishes with 34 completions, new Super Bowl record.",
             "endLine": 62,
             "players": [
@@ -332,23 +367,6 @@
                 "C.Anderson"
             ],
             "startLine": 76,
-            "team": "DEN",
-            "type": "pass",
-            "yards": 14
-        }
-    ],
-    [
-        14,
-        {
-            "description": "(14:36) (No Huddle, Shotgun) P.Manning pass short left to W.Welker to DEN 37 for 14 yards (B.Wagner).",
-            "endLine": 63,
-            "players": [
-                null,
-                "P.Manning",
-                "W.Welker",
-                "B.Wagner"
-            ],
-            "startLine": 77,
             "team": "DEN",
             "type": "pass",
             "yards": 14
@@ -373,23 +391,6 @@
     [
         12,
         {
-            "description": "S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 13 for 12 yards (M.Robinson, R.Lockette).",
-            "endLine": 87,
-            "players": [
-                "M.Robinson",
-                "S.Hauschka",
-                "T.Holliday",
-                "R.Lockette"
-            ],
-            "startLine": 99,
-            "team": "DEN",
-            "type": "kickoff",
-            "yards": 12
-        }
-    ],
-    [
-        12,
-        {
             "description": "(12:34) (Shotgun) R.Wilson pass short middle to J.Kearse to DEN 18 for 12 yards (M.Adams).",
             "endLine": 82,
             "players": [
@@ -400,6 +401,23 @@
             ],
             "startLine": 70,
             "team": "SEA",
+            "type": "pass",
+            "yards": 12
+        }
+    ],
+    [
+        12,
+        {
+            "description": "(1:28) (No Huddle, Shotgun) P.Manning pass short left to W.Welker to SEA 47 for 12 yards (B.Wagner).",
+            "endLine": 47,
+            "players": [
+                null,
+                "P.Manning",
+                "W.Welker",
+                "B.Wagner"
+            ],
+            "startLine": 59,
+            "team": "DEN",
             "type": "pass",
             "yards": 12
         }
@@ -424,17 +442,17 @@
     [
         12,
         {
-            "description": "(1:28) (No Huddle, Shotgun) P.Manning pass short left to W.Welker to SEA 47 for 12 yards (B.Wagner).",
-            "endLine": 47,
+            "description": "S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 13 for 12 yards (M.Robinson, R.Lockette).",
+            "endLine": 87,
             "players": [
-                null,
-                "P.Manning",
-                "W.Welker",
-                "B.Wagner"
+                "M.Robinson",
+                "S.Hauschka",
+                "T.Holliday",
+                "R.Lockette"
             ],
-            "startLine": 59,
+            "startLine": 99,
             "team": "DEN",
-            "type": "pass",
+            "type": "kickoff",
             "yards": 12
         }
     ],
@@ -494,23 +512,6 @@
     [
         10,
         {
-            "description": "(14:39) (Shotgun) R.Wilson pass short right to Z.Miller to DEN 48 for 10 yards (D.Trevathan, D.Ihenacho).",
-            "endLine": 52,
-            "players": [
-                "Z.Miller",
-                "D.Ihenacho",
-                "R.Wilson",
-                "D.Trevathan"
-            ],
-            "startLine": 42,
-            "team": "SEA",
-            "type": "pass",
-            "yards": 10
-        }
-    ],
-    [
-        10,
-        {
             "description": "(11:55) (Shotgun) R.Wilson pass short right to D.Baldwin for 10 yards, TOUCHDOWN.",
             "endLine": 100,
             "players": [
@@ -525,35 +526,20 @@
         }
     ],
     [
-        9,
+        10,
         {
-            "description": "(4:13) (No Huddle, Shotgun) K.Moreno left guard to SEA 35 for 9 yards (E.Thomas, K.Chancellor).",
-            "endLine": 35,
+            "description": "(14:39) (Shotgun) R.Wilson pass short right to Z.Miller to DEN 48 for 10 yards (D.Trevathan, D.Ihenacho).",
+            "endLine": 52,
             "players": [
-                "K.Moreno",
-                "K.Chancellor",
-                "E.Thomas"
+                "Z.Miller",
+                "D.Ihenacho",
+                "R.Wilson",
+                "D.Trevathan"
             ],
-            "startLine": 44,
-            "team": "DEN",
-            "type": "run",
-            "yards": 9
-        }
-    ],
-    [
-        9,
-        {
-            "description": "(7:04) (No Huddle, Shotgun) P.Manning pass short right to D.Thomas to SEA 34 for 9 yards (M.Bennett).",
-            "endLine": 34,
-            "players": [
-                "P.Manning",
-                "M.Bennett",
-                "D.Thomas"
-            ],
-            "startLine": 43,
-            "team": "DEN",
+            "startLine": 42,
+            "team": "SEA",
             "type": "pass",
-            "yards": 9
+            "yards": 10
         }
     ],
     [
@@ -576,6 +562,22 @@
     [
         9,
         {
+            "description": "(7:04) (No Huddle, Shotgun) P.Manning pass short right to D.Thomas to SEA 34 for 9 yards (M.Bennett).",
+            "endLine": 34,
+            "players": [
+                "P.Manning",
+                "M.Bennett",
+                "D.Thomas"
+            ],
+            "startLine": 43,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 9
+        }
+    ],
+    [
+        9,
+        {
             "description": "(7:50) (Shotgun) R.Wilson pass short left to G.Tate ran ob at SEA 40 for 9 yards.",
             "endLine": 40,
             "players": [
@@ -587,6 +589,39 @@
             "team": "SEA",
             "type": "pass",
             "yards": 9
+        }
+    ],
+    [
+        9,
+        {
+            "description": "(4:13) (No Huddle, Shotgun) K.Moreno left guard to SEA 35 for 9 yards (E.Thomas, K.Chancellor).",
+            "endLine": 35,
+            "players": [
+                "K.Moreno",
+                "K.Chancellor",
+                "E.Thomas"
+            ],
+            "startLine": 44,
+            "team": "DEN",
+            "type": "run",
+            "yards": 9
+        }
+    ],
+    [
+        8,
+        {
+            "description": "(2:08) (No Huddle, Shotgun) P.Manning pass short middle to J.Thomas to DEN 21 for 8 yards (K.Chancellor, W.Thurmond).",
+            "endLine": 79,
+            "players": [
+                "P.Manning",
+                "W.Thurmond",
+                "K.Chancellor",
+                "J.Thomas"
+            ],
+            "startLine": 87,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 8
         }
     ],
     [
@@ -607,20 +642,20 @@
         }
     ],
     [
-        8,
+        7,
         {
-            "description": "(2:08) (No Huddle, Shotgun) P.Manning pass short middle to J.Thomas to DEN 21 for 8 yards (K.Chancellor, W.Thurmond).",
-            "endLine": 79,
+            "description": "(10:13) (No Huddle, Shotgun) P.Manning pass short left to D.Thomas to DEN 37 for 7 yards (B.Maxwell, E.Thomas).",
+            "endLine": 63,
             "players": [
                 "P.Manning",
-                "W.Thurmond",
-                "K.Chancellor",
-                "J.Thomas"
+                "E.Thomas",
+                "D.Thomas",
+                "B.Maxwell"
             ],
-            "startLine": 87,
+            "startLine": 70,
             "team": "DEN",
             "type": "pass",
-            "yards": 8
+            "yards": 7
         }
     ],
     [
@@ -660,16 +695,19 @@
     [
         7,
         {
-            "description": "(10:29) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to SEA 47 for 7 yards (C.McDonald).",
-            "endLine": 47,
+            "description": "(6:08) (No Huddle, Shotgun) P.Manning pass deep left to D.Thomas to SEA 21 for 23 yards (B.Maxwell). FUMBLES (B.Maxwell), RECOVERED by SEA-M.Smith at SEA 20. M.Smith to SEA 27 for 7 yards (J.Thomas). PENALTY on DEN-O.Franklin, Unnecessary Roughness, 15 yards, enforced at SEA 27.",
+            "endLine": 27,
             "players": [
                 "P.Manning",
-                "W.Welker",
-                "C.McDonald"
+                "D.Thomas",
+                "O.Franklin",
+                "J.Thomas",
+                "B.Maxwell",
+                "M.Smith"
             ],
-            "startLine": 54,
-            "team": "DEN",
-            "type": "pass",
+            "startLine": 20,
+            "team": "SEA",
+            "type": "fumble",
             "yards": 7
         }
     ],
@@ -693,19 +731,16 @@
     [
         7,
         {
-            "description": "(6:08) (No Huddle, Shotgun) P.Manning pass deep left to D.Thomas to SEA 21 for 23 yards (B.Maxwell). FUMBLES (B.Maxwell), RECOVERED by SEA-M.Smith at SEA 20. M.Smith to SEA 27 for 7 yards (J.Thomas). PENALTY on DEN-O.Franklin, Unnecessary Roughness, 15 yards, enforced at SEA 27.",
-            "endLine": 27,
+            "description": "(10:29) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to SEA 47 for 7 yards (C.McDonald).",
+            "endLine": 47,
             "players": [
                 "P.Manning",
-                "D.Thomas",
-                "O.Franklin",
-                "J.Thomas",
-                "B.Maxwell",
-                "M.Smith"
+                "W.Welker",
+                "C.McDonald"
             ],
-            "startLine": 20,
-            "team": "SEA",
-            "type": "fumble",
+            "startLine": 54,
+            "team": "DEN",
+            "type": "pass",
             "yards": 7
         }
     ],
@@ -726,52 +761,17 @@
         }
     ],
     [
-        7,
-        {
-            "description": "(10:13) (No Huddle, Shotgun) P.Manning pass short left to D.Thomas to DEN 37 for 7 yards (B.Maxwell, E.Thomas).",
-            "endLine": 63,
-            "players": [
-                "P.Manning",
-                "E.Thomas",
-                "D.Thomas",
-                "B.Maxwell"
-            ],
-            "startLine": 70,
-            "team": "DEN",
-            "type": "pass",
-            "yards": 7
-        }
-    ],
-    [
         6,
         {
-            "description": "(9:48) R.Turbin left tackle to DEN 47 for 6 yards (D.Ihenacho, M.Unrein).",
+            "description": "(:40) (Shotgun) C.Anderson up the middle to DEN 47 for 6 yards (M.Smith).",
             "endLine": 53,
             "players": [
-                "M.Unrein",
-                "D.Ihenacho",
-                "R.Turbin"
+                "M.Smith",
+                "C.Anderson"
             ],
-            "startLine": 47,
-            "team": "SEA",
+            "startLine": 59,
+            "team": "DEN",
             "type": "run",
-            "yards": 6
-        }
-    ],
-    [
-        6,
-        {
-            "description": "(5:53) (Shotgun) R.Wilson pass short middle to D.Baldwin to DEN 48 for 6 yards (C.Bailey).",
-            "endLine": 52,
-            "players": [
-                null,
-                "C.Bailey",
-                "D.Baldwin",
-                "R.Wilson"
-            ],
-            "startLine": 46,
-            "team": "SEA",
-            "type": "pass",
             "yards": 6
         }
     ],
@@ -812,23 +812,6 @@
     [
         6,
         {
-            "description": "(13:33) (Shotgun) R.Wilson pass short right to D.Baldwin pushed ob at DEN 34 for 6 yards (C.Bailey).",
-            "endLine": 66,
-            "players": [
-                "",
-                "C.Bailey",
-                "D.Baldwin",
-                "R.Wilson"
-            ],
-            "startLine": 60,
-            "team": "SEA",
-            "type": "pass",
-            "yards": 6
-        }
-    ],
-    [
-        6,
-        {
             "description": "(15:00) M.Lynch up the middle to DEN 11 for 6 yards (M.Jackson, D.Trevathan).",
             "endLine": 89,
             "players": [
@@ -840,6 +823,39 @@
             "startLine": 83,
             "team": "SEA",
             "type": "run",
+            "yards": 6
+        }
+    ],
+    [
+        6,
+        {
+            "description": "(9:48) R.Turbin left tackle to DEN 47 for 6 yards (D.Ihenacho, M.Unrein).",
+            "endLine": 53,
+            "players": [
+                "M.Unrein",
+                "D.Ihenacho",
+                "R.Turbin"
+            ],
+            "startLine": 47,
+            "team": "SEA",
+            "type": "run",
+            "yards": 6
+        }
+    ],
+    [
+        6,
+        {
+            "description": "(13:33) (Shotgun) R.Wilson pass short right to D.Baldwin pushed ob at DEN 34 for 6 yards (C.Bailey).",
+            "endLine": 66,
+            "players": [
+                "",
+                "C.Bailey",
+                "D.Baldwin",
+                "R.Wilson"
+            ],
+            "startLine": 60,
+            "team": "SEA",
+            "type": "pass",
             "yards": 6
         }
     ],
@@ -878,33 +894,18 @@
     [
         6,
         {
-            "description": "(:40) (Shotgun) C.Anderson up the middle to DEN 47 for 6 yards (M.Smith).",
-            "endLine": 53,
+            "description": "(5:53) (Shotgun) R.Wilson pass short middle to D.Baldwin to DEN 48 for 6 yards (C.Bailey).",
+            "endLine": 52,
             "players": [
-                "M.Smith",
-                "C.Anderson"
+                null,
+                "C.Bailey",
+                "D.Baldwin",
+                "R.Wilson"
             ],
-            "startLine": 59,
-            "team": "DEN",
-            "type": "run",
-            "yards": 6
-        }
-    ],
-    [
-        5,
-        {
-            "description": "(3:16) (Shotgun) P.Manning pass short middle to J.Thomas to DEN 38 for 5 yards (K.Chancellor, B.Wagner).",
-            "endLine": 62,
-            "players": [
-                "P.Manning",
-                "K.Chancellor",
-                "J.Thomas",
-                "B.Wagner"
-            ],
-            "startLine": 67,
-            "team": "DEN",
+            "startLine": 46,
+            "team": "SEA",
             "type": "pass",
-            "yards": 5
+            "yards": 6
         }
     ],
     [
@@ -1036,6 +1037,23 @@
         }
     ],
     [
+        5,
+        {
+            "description": "(3:16) (Shotgun) P.Manning pass short middle to J.Thomas to DEN 38 for 5 yards (K.Chancellor, B.Wagner).",
+            "endLine": 62,
+            "players": [
+                "P.Manning",
+                "K.Chancellor",
+                "J.Thomas",
+                "B.Wagner"
+            ],
+            "startLine": 67,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 5
+        }
+    ],
+    [
         4,
         {
             "description": "(13:03) (No Huddle, Shotgun) P.Manning pass short left to D.Thomas to SEA 46 for 4 yards (B.Irvin, K.Chancellor). SEA-R.Sherman was injured during the play.",
@@ -1071,23 +1089,6 @@
     [
         3,
         {
-            "description": "(11:27) (No Huddle) P.Manning pass short left to D.Thomas to DEN 25 for 3 yards (B.Maxwell, B.Wagner).",
-            "endLine": 75,
-            "players": [
-                "P.Manning",
-                "D.Thomas",
-                "B.Maxwell",
-                "B.Wagner"
-            ],
-            "startLine": 78,
-            "team": "DEN",
-            "type": "pass",
-            "yards": 3
-        }
-    ],
-    [
-        3,
-        {
             "description": "(3:44) R.Turbin up the middle to DEN 26 for 3 yards (T.Knighton, J.Mincey).",
             "endLine": 74,
             "players": [
@@ -1096,22 +1097,6 @@
                 "R.Turbin"
             ],
             "startLine": 71,
-            "team": "SEA",
-            "type": "run",
-            "yards": 3
-        }
-    ],
-    [
-        3,
-        {
-            "description": "(5:55) M.Lynch right tackle to SEA 45 for 3 yards (T.Knighton, J.Mincey).",
-            "endLine": 45,
-            "players": [
-                "J.Mincey",
-                "M.Lynch",
-                "T.Knighton"
-            ],
-            "startLine": 42,
             "team": "SEA",
             "type": "run",
             "yards": 3
@@ -1135,50 +1120,16 @@
     [
         3,
         {
-            "description": "(6:48) (Shotgun) R.Turbin right tackle to DEN 30 for 3 yards (S.Williams, S.Phillips). SEA-M.Unger was injured during the play.",
-            "endLine": 70,
+            "description": "(5:55) M.Lynch right tackle to SEA 45 for 3 yards (T.Knighton, J.Mincey).",
+            "endLine": 45,
             "players": [
-                "S.Phillips",
-                "R.Turbin",
-                "S.Williams"
+                "J.Mincey",
+                "M.Lynch",
+                "T.Knighton"
             ],
-            "startLine": 67,
+            "startLine": 42,
             "team": "SEA",
             "type": "run",
-            "yards": 3
-        }
-    ],
-    [
-        3,
-        {
-            "description": "(12:45) (Shotgun) P.Manning pass short middle to D.Thomas to SEA 43 for 3 yards (K.Wright).",
-            "endLine": 43,
-            "players": [
-                "P.Manning",
-                "D.Thomas",
-                "K.Wright"
-            ],
-            "startLine": 46,
-            "team": "DEN",
-            "type": "pass",
-            "yards": 3
-        }
-    ],
-    [
-        3,
-        {
-            "description": "(3:36) (No Huddle, Shotgun) P.Manning pass short right intended for K.Moreno INTERCEPTED by M.Smith (C.Avril) at SEA 31. M.Smith for 69 yards, TOUCHDOWN.",
-            "endLine": 34,
-            "players": [
-                null,
-                "P.Manning",
-                "C.Avril",
-                "K.Moreno",
-                "M.Smith"
-            ],
-            "startLine": 31,
-            "team": "SEA",
-            "type": "pass",
             "yards": 3
         }
     ],
@@ -1195,6 +1146,22 @@
             "startLine": 90,
             "team": "DEN",
             "type": "pass",
+            "yards": 3
+        }
+    ],
+    [
+        3,
+        {
+            "description": "(6:48) (Shotgun) R.Turbin right tackle to DEN 30 for 3 yards (S.Williams, S.Phillips). SEA-M.Unger was injured during the play.",
+            "endLine": 70,
+            "players": [
+                "S.Phillips",
+                "R.Turbin",
+                "S.Williams"
+            ],
+            "startLine": 67,
+            "team": "SEA",
+            "type": "run",
             "yards": 3
         }
     ],
@@ -1233,49 +1200,17 @@
     [
         3,
         {
-            "description": "(9:07) (Shotgun) R.Turbin up the middle to DEN 44 for 3 yards (R.Ayers).",
-            "endLine": 56,
+            "description": "(11:27) (No Huddle) P.Manning pass short left to D.Thomas to DEN 25 for 3 yards (B.Maxwell, B.Wagner).",
+            "endLine": 75,
             "players": [
-                "R.Ayers",
-                "R.Turbin"
-            ],
-            "startLine": 53,
-            "team": "SEA",
-            "type": "run",
-            "yards": 3
-        }
-    ],
-    [
-        3,
-        {
-            "description": "(9:22) (No Huddle, Shotgun) P.Manning pass short middle to J.Thomas to DEN 43 for 3 yards (B.Wagner, W.Thurmond).",
-            "endLine": 57,
-            "players": [
-                null,
                 "P.Manning",
-                "W.Thurmond",
-                "J.Thomas",
+                "D.Thomas",
+                "B.Maxwell",
                 "B.Wagner"
             ],
-            "startLine": 60,
+            "startLine": 78,
             "team": "DEN",
             "type": "pass",
-            "yards": 3
-        }
-    ],
-    [
-        3,
-        {
-            "description": "(8:27) M.Lynch right guard to SEA 31 for 3 yards (N.Irving, D.Ihenacho).",
-            "endLine": 31,
-            "players": [
-                "M.Lynch",
-                "N.Irving",
-                "D.Ihenacho"
-            ],
-            "startLine": 28,
-            "team": "SEA",
-            "type": "run",
             "yards": 3
         }
     ],
@@ -1290,6 +1225,56 @@
                 "M.Jackson"
             ],
             "startLine": 16,
+            "team": "SEA",
+            "type": "run",
+            "yards": 3
+        }
+    ],
+    [
+        3,
+        {
+            "description": "(12:45) (Shotgun) P.Manning pass short middle to D.Thomas to SEA 43 for 3 yards (K.Wright).",
+            "endLine": 43,
+            "players": [
+                "P.Manning",
+                "D.Thomas",
+                "K.Wright"
+            ],
+            "startLine": 46,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 3
+        }
+    ],
+    [
+        3,
+        {
+            "description": "(1:47) (No Huddle, Shotgun) K.Moreno left end to DEN 27 for 2 yards (C.Clemons, C.McDonald). FUMBLES (C.Clemons), recovered by DEN-Z.Beadles at DEN 23. Z.Beadles to DEN 23 for no gain (E.Thomas). Officially, a rush for -2 yards.",
+            "endLine": 72,
+            "players": [
+                null,
+                "C.Clemons",
+                "C.McDonald",
+                "K.Moreno",
+                "Z.Beadles",
+                "E.Thomas"
+            ],
+            "startLine": 75,
+            "team": "DEN",
+            "type": "fumble",
+            "yards": 3
+        }
+    ],
+    [
+        3,
+        {
+            "description": "(9:07) (Shotgun) R.Turbin up the middle to DEN 44 for 3 yards (R.Ayers).",
+            "endLine": 56,
+            "players": [
+                "R.Ayers",
+                "R.Turbin"
+            ],
+            "startLine": 53,
             "team": "SEA",
             "type": "run",
             "yards": 3
@@ -1314,19 +1299,34 @@
     [
         3,
         {
-            "description": "(1:47) (No Huddle, Shotgun) K.Moreno left end to DEN 27 for 2 yards (C.Clemons, C.McDonald). FUMBLES (C.Clemons), recovered by DEN-Z.Beadles at DEN 23. Z.Beadles to DEN 23 for no gain (E.Thomas). Officially, a rush for -2 yards.",
-            "endLine": 72,
+            "description": "(8:27) M.Lynch right guard to SEA 31 for 3 yards (N.Irving, D.Ihenacho).",
+            "endLine": 31,
+            "players": [
+                "M.Lynch",
+                "N.Irving",
+                "D.Ihenacho"
+            ],
+            "startLine": 28,
+            "team": "SEA",
+            "type": "run",
+            "yards": 3
+        }
+    ],
+    [
+        3,
+        {
+            "description": "(9:22) (No Huddle, Shotgun) P.Manning pass short middle to J.Thomas to DEN 43 for 3 yards (B.Wagner, W.Thurmond).",
+            "endLine": 57,
             "players": [
                 null,
-                "C.Clemons",
-                "C.McDonald",
-                "K.Moreno",
-                "Z.Beadles",
-                "E.Thomas"
+                "P.Manning",
+                "W.Thurmond",
+                "J.Thomas",
+                "B.Wagner"
             ],
-            "startLine": 75,
+            "startLine": 60,
             "team": "DEN",
-            "type": "fumble",
+            "type": "pass",
             "yards": 3
         }
     ],
@@ -1349,33 +1349,14 @@
     [
         2,
         {
-            "description": "(1:10) (No Huddle, Shotgun) P.Manning pass deep middle intended for J.Thomas INTERCEPTED by K.Chancellor [C.Avril] at DEN 39. K.Chancellor to DEN 37 for 2 yards (J.Thomas).",
-            "endLine": 63,
+            "description": "(3:22) (Shotgun) M.Lynch right guard to DEN 14 for 2 yards (S.Phillips, W.Woodyard).",
+            "endLine": 86,
             "players": [
-                null,
-                "P.Manning",
-                "C.Avril",
-                "K.Chancellor",
-                "J.Thomas"
+                "S.Phillips",
+                "M.Lynch",
+                "W.Woodyard"
             ],
-            "startLine": 61,
-            "team": "SEA",
-            "type": "interception",
-            "yards": 2
-        }
-    ],
-    [
-        2,
-        {
-            "description": "(2:05) (Shotgun) R.Turbin left tackle to DEN 24 for 2 yards (T.Knighton, D.Trevathan).",
-            "endLine": 76,
-            "players": [
-                "",
-                "T.Knighton",
-                "R.Turbin",
-                "D.Trevathan"
-            ],
-            "startLine": 74,
+            "startLine": 84,
             "team": "SEA",
             "type": "run",
             "yards": 2
@@ -1417,16 +1398,35 @@
     [
         2,
         {
-            "description": "(3:22) (Shotgun) M.Lynch right guard to DEN 14 for 2 yards (S.Phillips, W.Woodyard).",
-            "endLine": 86,
+            "description": "(2:05) (Shotgun) R.Turbin left tackle to DEN 24 for 2 yards (T.Knighton, D.Trevathan).",
+            "endLine": 76,
             "players": [
-                "S.Phillips",
-                "M.Lynch",
-                "W.Woodyard"
+                "",
+                "T.Knighton",
+                "R.Turbin",
+                "D.Trevathan"
             ],
-            "startLine": 84,
+            "startLine": 74,
             "team": "SEA",
             "type": "run",
+            "yards": 2
+        }
+    ],
+    [
+        2,
+        {
+            "description": "(1:10) (No Huddle, Shotgun) P.Manning pass deep middle intended for J.Thomas INTERCEPTED by K.Chancellor [C.Avril] at DEN 39. K.Chancellor to DEN 37 for 2 yards (J.Thomas).",
+            "endLine": 63,
+            "players": [
+                null,
+                "P.Manning",
+                "C.Avril",
+                "K.Chancellor",
+                "J.Thomas"
+            ],
+            "startLine": 61,
+            "team": "SEA",
+            "type": "interception",
             "yards": 2
         }
     ],
@@ -1444,54 +1444,6 @@
             "startLine": 61,
             "team": "DEN",
             "type": "pass",
-            "yards": 1
-        }
-    ],
-    [
-        1,
-        {
-            "description": "(8:10) (Shotgun) P.Manning pass short right to M.Ball to DEN 41 for 1 yard (C.McDonald, M.Bennett).",
-            "endLine": 59,
-            "players": [
-                "P.Manning",
-                "M.Bennett",
-                "C.McDonald",
-                "M.Ball"
-            ],
-            "startLine": 60,
-            "team": "DEN",
-            "type": "pass",
-            "yards": 1
-        }
-    ],
-    [
-        1,
-        {
-            "description": "(11:02) (Shotgun) P.Manning pass short right to M.Ball to DEN 46 for 1 yard (M.Smith).",
-            "endLine": 54,
-            "players": [
-                "P.Manning",
-                "M.Smith",
-                "M.Ball"
-            ],
-            "startLine": 55,
-            "team": "DEN",
-            "type": "pass",
-            "yards": 1
-        }
-    ],
-    [
-        1,
-        {
-            "description": "(12:08) M.Lynch left guard for 1 yard, TOUCHDOWN.",
-            "endLine": 100,
-            "players": [
-                null,
-                "M.Lynch"
-            ],
-            "startLine": 99,
-            "team": "SEA",
-            "type": "run",
             "yards": 1
         }
     ],
@@ -1539,6 +1491,54 @@
             ],
             "startLine": 55,
             "team": "DEN",
+            "type": "run",
+            "yards": 1
+        }
+    ],
+    [
+        1,
+        {
+            "description": "(11:02) (Shotgun) P.Manning pass short right to M.Ball to DEN 46 for 1 yard (M.Smith).",
+            "endLine": 54,
+            "players": [
+                "P.Manning",
+                "M.Smith",
+                "M.Ball"
+            ],
+            "startLine": 55,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 1
+        }
+    ],
+    [
+        1,
+        {
+            "description": "(8:10) (Shotgun) P.Manning pass short right to M.Ball to DEN 41 for 1 yard (C.McDonald, M.Bennett).",
+            "endLine": 59,
+            "players": [
+                "P.Manning",
+                "M.Bennett",
+                "C.McDonald",
+                "M.Ball"
+            ],
+            "startLine": 60,
+            "team": "DEN",
+            "type": "pass",
+            "yards": 1
+        }
+    ],
+    [
+        1,
+        {
+            "description": "(12:08) M.Lynch left guard for 1 yard, TOUCHDOWN.",
+            "endLine": 100,
+            "players": [
+                null,
+                "M.Lynch"
+            ],
+            "startLine": 99,
+            "team": "SEA",
             "type": "run",
             "yards": 1
         }

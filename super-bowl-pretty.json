@@ -8180,7 +8180,7 @@
                     "1596": {
                         "desc": "(3:36) (No Huddle, Shotgun) P.Manning pass short right intended for K.Moreno INTERCEPTED by M.Smith (C.Avril) at SEA 31. M.Smith for 69 yards, TOUCHDOWN.",
                         "down": 3,
-                        "note": "TD",
+                        "note": "TD,INT",
                         "players": {
                             "0": [
                                 {

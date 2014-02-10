@@ -33,8 +33,23 @@ fs.readFile("super-bowl-pretty.json", function (err, data) {
     };
     for (var i = 0; i < orderedPlays.length; i++) {
       var play = orderedPlays[i][1];
+      var includesTerm = function (note) {
+        return function (term) {
+          if (note == null)
+            return false;
+
+          var terms = note.split(",");
+          for (var i = 0; i < terms.length; i++) {
+            var curTerm = terms[i].trim();
+            if (curTerm == term)
+              return true;
+          }
+          return false;
+        };
+      }(play.note);
+
       var yards = orderedPlays[i][1].ydsnet;
-      if (i > 0 && play.note != "PUNT" && play.note != "FUMBLE" && play.note != "INT")
+      if (i > 0 && !includesTerm("PUNT") && !includesTerm("FUMBLE") && !includesTerm("INT"))
         yards -= orderedPlays[i-1][1].ydsnet;
 
       var team = play.posteam;
