@@ -171,6 +171,9 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     }
   }
   
+  // Add an array for keeping track of all the selected players
+  rectangleData.selectedPlayers = [];
+  
   // Add the rectangles
   var rectangles = topChart.selectAll("rect").data(rectangleData).enter().append("rect");
 
@@ -245,9 +248,26 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
                   if (!d.rselected) {
                     d3.select(this).style("fill", selectedColor);
                     d.rselected = true;
+                    rectangleData.selectedPlayers.push(d.rtext);
                   } else {
                     d3.select(this).style("fill", notSelectedColor);
                     d.rselected = false;
+                    rectangleData.selectedPlayers.splice(rectangleData.selectedPlayers.indexOf(d.rtext), 1);
+                  }
+                  
+                  // Now we need to update the plays based on the selected players
+                  if (rectangleData.selectedPlayers.length == 0) {
+                    addPlays(topPlays);
+                  } else {
+                    addPlays(topPlays.filter(function (pd) {
+                              for (var i = 0; i < rectangleData.selectedPlayers.length; i++) {
+                                var index = pd[1].players.indexOf(rectangleData.selectedPlayers[i]);
+                                if(index >= 0) {
+                                  return true;
+                                }
+                              }
+                              return false;
+                            }));
                   }
                 }
               });
@@ -438,60 +458,62 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("width", x(0) - x(-10) - 1);
 
   // add all the plays
-  var plays = bottomChart.selectAll(".bar")
-    .data(topPlays)
-    .enter().append("g");
+  addPlays(topPlays);
+  
+  function addPlays(playData) {
+    bottomChart.selectAll(".bar").remove();
+    var playBars = bottomChart.selectAll(".bar").data(playData);
+    playBars.enter().append("g").attr("class", "bar");
+    // add full bar for each play
+    playBars.append("rect")
+      .attr("class", "bar")
+      .attr("x", function (d) {
+        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
+        var yardageModifier = (d[1].yards > 0) ? -1 : 1;
+        var leftEnd = (teamModifier * yardageModifier > 0) ? d[1].startLine : d[1].endLine;
+        return Math.round(x(leftEnd));
+      })
+      .attr("y", function (d, i) { return playMargin + i * barHeight; })
+      .attr("height", barHeight - 1)
+      .attr("width", function (d) { return Math.round(Math.abs(length(d[1].yards))); })
+      .attr("text", function (d) { return d[1].description; })
+      .attr("fill", function (d) { return teamColors(d[1].team); })
+      .on("mouseover", function (d) {
+        // Show a tooltip and highlight the related players
+        tip.show(d);
+        var players = d[1].players;
+        for (var i = 0; i < players.length; i++) {
+          rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                    .style("fill", selectedColor);
+        }
+      })
+      .on("mouseout", function (d) {
+        tip.hide(d);
+        var players = d[1].players;
+        for (var i = 0; i < players.length; i++) {
+          rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                    .style("fill", function (rd) {
+                      if (rd.rselected) {
+                        return selectedColor;
+                      } else {
+                        return notSelectedColor;
+                      }
+                    });
+        }
+      });
 
-  // add full bar for each play
-  plays.append("rect")
-    .attr("class", "bar")
-    .attr("x", function (d) {
-      var teamModifier = (d[1].team === "SEA") ? -1 : 1;
-      var yardageModifier = (d[1].yards > 0) ? -1 : 1;
-      var leftEnd = (teamModifier * yardageModifier > 0) ? d[1].startLine : d[1].endLine;
-      return Math.round(x(leftEnd));
-    })
-    .attr("y", function (d, i) { return playMargin + i * barHeight; })
-    .attr("height", barHeight - 1)
-    .attr("width", function (d) { return Math.round(Math.abs(length(d[1].yards))); })
-    .attr("text", function (d) { return d[1].description; })
-    .attr("fill", function (d) { return teamColors(d[1].team); })
-    .on("mouseover", function (d) {
-      // Show a tooltip and highlight the related players
-      tip.show(d);
-      var players = d[1].players;
-      for (var i = 0; i < players.length; i++) {
-        rectangles.filter(function (rd) { return rd.rtext === players[i] })
-                  .style("fill", selectedColor);
-      }
-    })
-    .on("mouseout", function (d) {
-      tip.hide(d);
-      var players = d[1].players;
-      for (var i = 0; i < players.length; i++) {
-        rectangles.filter(function (rd) { return rd.rtext === players[i] })
-                  .style("fill", function (rd) {
-                    if (rd.rselected) {
-                      return selectedColor;
-                    } else {
-                      return notSelectedColor;
-                    }
-                  });
-      }
-    });
-
-  // add black bar at the location of the end of the play
-  var blackBarWidth = 5;
-  plays.append("rect")
-    .attr("class", "bar")
-    .attr("x", function (d) {
-      var offset = (d[1].endLine < d[1].startLine) ? 0 : -1 * blackBarWidth;
-      return Math.round(x(d[1].endLine) + offset);
-    })
-    .attr("y", function (d, i) { return playMargin + i * barHeight; })
-    .attr("height", barHeight - 1)
-    .attr("width", blackBarWidth)
-    .attr("fill", "black");
-    
+    // add black bar at the location of the end of the play
+    var blackBarWidth = 5;
+    playBars.append("rect")
+      .attr("class", "bar")
+      .attr("x", function (d) {
+        var offset = (d[1].endLine < d[1].startLine) ? 0 : -1 * blackBarWidth;
+        return Math.round(x(d[1].endLine) + offset);
+      })
+      .attr("y", function (d, i) { return playMargin + i * barHeight; })
+      .attr("height", barHeight - 1)
+      .attr("width", blackBarWidth)
+      .attr("fill", "black");
+  }  
 // --------------------------- BOTTOM --------------------------
 }
