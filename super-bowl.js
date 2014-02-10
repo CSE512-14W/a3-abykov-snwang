@@ -300,6 +300,7 @@ function setUpBottom(chart, width, height) {
     .range([0, width]);
   // scale for field height
   var y = d3.scale.linear()
+    .domain([0, 100])
     .range([0, height]);
   // margin below the top yard lines and above the bottom yard lines
   var playMargin = 10;
@@ -456,6 +457,20 @@ function setUpBottom(chart, width, height) {
       createTeamColorRect(chart, teams[i], teamColors(teams[i]));
     for (var i = 0; i < types.length; i++)
       createTypeColorRect(chart, types[i], typeColors(types[i]));
+
+    // add logos in the end zones
+    chart.append("svg:image")
+      .attr("xlink:href", "seahawks_logo_rotated_slab.png")
+      .attr("x", 1)
+      .attr("y", 1)
+      .attr("height", y(100) - y(0) - 2)
+      .attr("width", x(0) - x(-10));
+    chart.append("svg:image")
+      .attr("xlink:href", "broncos_logo_rotated_slab.png")
+      .attr("x", xInverted(0) + 1)
+      .attr("y", 0)
+      .attr("height", y(100) - y(0) - 2)
+      .attr("width", x(0) - x(-10) - 1);
 
     // add all the plays
     chart.selectAll(".bar")
