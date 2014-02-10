@@ -471,7 +471,7 @@ function setUpBottom(chart, width, height) {
       })
       .attr("y", function (d, i) { return playMargin + i * barHeight; })
       .attr("height", barHeight - 1)
-      .attr("width", function (d) { return Math.floor(Math.abs(length(d[1].yards))); })
+      .attr("width", function (d) { return Math.round(Math.abs(length(d[1].yards))); })
       .attr("text", function (d) { return d[1].description; })
       .attr("fill", function (d) {
         var teamModifier = (d[1].team === "SEA") ? -1 : 1;
