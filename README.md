@@ -34,10 +34,8 @@ To accomplish all of this we found a JSON dataset that contains a record of ever
 
 The biggest change between the provided storyboard and the final implementation is the way that the players are visualized. The storyboard featured every position listed across the top and player names below their positions. Once we implemented this however, we realized that there were too many positions and there was not enough horizontal space to fit all of the player names. Therefore we decided to switch to a vertical list approach. The player are still grouped by team and by offense/defense/special teams but the positions are not listed vertically along the page. The player names are horizontally adjacent to their respective position. Switching to this vertical grouping allowed us to easily fit in all of the names. Additionally, we flipped the horizontal order of the position categories for the right team (Denver Broncos) to create a symmetric effect and allow space between the player lists for an image of the Super Bowl logo. One other significant change is that we decided to color code the plays based on the team that made the play rather than the play type. This allowed for a clean color coding system between the players, the endzone colors and the plays. The aesthetic looks of the field and the player lists are also different from the initial design as we felt that they were better choices.
 
-## Development Process - TODO
+## Development Process
 
-Include:
-- Breakdown of how the work was split among the group members. 
-- a commentary on the development process, including answers to the following questions: 
-  - Roughly how much time did you spend developing your application?
-  - What aspects took the most time?
+The work was roughly split up along the two parts of the visualization. Alex worked mostly on the player names section and Stanley worked mostly on the plays section. After completing our individual sections we both worked on linking the sections together and fixing any final bugs that we found.
+
+We spent about 50 hours working on this visualization, in total. A large portion of this time was spent modifying the data to fit our needs before we started developing the final visualization. The original JSON data had many mistakes and was not meant for our exact application. Thus we had to both clean it up and convert it into the format that we needed. It also took a long time to figure out a good way to organize both the player names and the plays. We went through several iterations of different placement techniques for both of those sections before we found one that worked well. Also, since neither one of us has a vast background in D3, we both spent a significant amount of time learning how to use it as we developed the application. Finally, getting all of the interactions to work (especially the coordination between the two parts of the visualization) was challenging and required a significant effort from both sides.
