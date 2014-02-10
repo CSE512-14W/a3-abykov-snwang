@@ -2,8 +2,8 @@ svg {
   font: 12px sans-serif;
 }
 
-.bar {
-    /*fill: steelblue;*/
+text {
+  fill: #262626;
 }
 
 .axis text {
@@ -11,7 +11,7 @@ svg {
 }
 
 .axis {
-  color: #262626;
+  fill: #262626;
 }
 .axis path,
 .axis line {
