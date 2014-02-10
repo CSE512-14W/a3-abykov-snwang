@@ -131,7 +131,7 @@ function setUpTop(chart, width, height) {
                     alert("WENT TOO FAR!");
                   }
                   rectangleData.push({"rx":playerX, "ry":curY, "rwidth":playerWidth, 
-                                      "rheight":recHeight, "rtext":nameJson[m], "rselectable":true, "rselected":false});
+                                      "rheight":recHeight, "rtext":nameJson[m], "rselectable":true, "rselected":false, "teamId":i});
                   textData.push({"tx":Math.round(playerX + playerWidth / 2), "ty":Math.round(curY + recHeight * 0.75),
                                "ttext":nameJson[m], "tfont":"Arial", "tfontsize":"10px", "tselectable":true});   
                 }
@@ -206,6 +206,13 @@ function setUpTop(chart, width, height) {
                                      .append("br");
                         }
                       }
+                    }
+                    
+                    // Flip the tooltip for denver
+                    if (d.teamId == 1) {
+                      var tooltipWidth = parseInt(tooltip.style("width"));
+                      // -10 is for the padding
+                      tooltip.style("left", d.rx - tooltipWidth + margin.left - 10 + "px");
                     }
                   }
                 })
