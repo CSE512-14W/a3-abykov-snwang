@@ -394,7 +394,19 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("class", "d3-tip")
     .offset([-9, 0])
     .html(function (d) {
-      return d[1].description;
+      var description = d[1].description;
+      var lineSize = 70;
+      var lines = [];
+      var pointer = 0;
+      while (description.length - pointer > lineSize) {
+        var endOfLinePointer = pointer + lineSize;
+        while (description[endOfLinePointer] !== " ")
+          endOfLinePointer--;
+        lines.push(description.substring(pointer, endOfLinePointer));
+        pointer = endOfLinePointer + 1;
+      }
+      lines.push(description.substring(pointer, description.length));
+      return lines.join("<br />");
     });
   bottomChart.call(tip);
 
