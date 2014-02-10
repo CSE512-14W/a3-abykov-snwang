@@ -461,10 +461,13 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   
   function addPlays(playData) {
     // Recalculate bar heights
-    var barHeight = (botHeight - 2*playMargin) / playData.length;
+    var dataLength = playData.length;
+    var barHeight = (botHeight - 2*playMargin) / dataLength;
     // Make sure the bars don't get too big
+    var betweenPlayMargin = 0;
     if (barHeight > 0.05 * botHeight) {
       barHeight = Math.round(0.05 * botHeight);
+      betweenPlayMargin = Math.floor(((botHeight - 2*playMargin) - barHeight * dataLength) / (dataLength - 1));
     }
     
     // Remove any old bars
@@ -481,7 +484,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
         var leftEnd = (teamModifier * yardageModifier > 0) ? d[1].startLine : d[1].endLine;
         return Math.round(x(leftEnd));
       })
-      .attr("y", function (d, i) { return playMargin + i * barHeight; })
+      .attr("y", function (d, i) { return playMargin + i * (barHeight + betweenPlayMargin); })
       .attr("height", barHeight - 1)
       .attr("width", function (d) {
         return Math.round(
@@ -523,7 +526,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
         var offset = (d[1].endLine < d[1].startLine) ? 0 : -1 * blackBarWidth;
         return Math.round(x(d[1].endLine) + offset);
       })
-      .attr("y", function (d, i) { return playMargin + i * barHeight; })
+      .attr("y", function (d, i) { return playMargin + i * (barHeight + betweenPlayMargin); })
       .attr("height", barHeight - 1)
       .attr("width", blackBarWidth)
       .attr("fill", "black")
