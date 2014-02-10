@@ -526,7 +526,28 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
       .attr("y", function (d, i) { return playMargin + i * barHeight; })
       .attr("height", barHeight - 1)
       .attr("width", blackBarWidth)
-      .attr("fill", "black");
+      .attr("fill", "black")
+      .on("mouseover", function (d) {
+        // Show a tooltip and highlight the related players
+        var players = d[1].players;
+        for (var i = 0; i < players.length; i++) {
+          rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                    .style("fill", selectedColor);
+        }
+      })
+      .on("mouseout", function (d) {
+        var players = d[1].players;
+        for (var i = 0; i < players.length; i++) {
+          rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                    .style("fill", function (rd) {
+                      if (rd.rselected) {
+                        return selectedColor;
+                      } else {
+                        return notSelectedColor;
+                      }
+                    });
+        }
+      });
   }  
 // --------------------------- BOTTOM --------------------------
 }
