@@ -323,8 +323,6 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   var y = d3.scale.linear()
     .domain([0, 100])
     .range([0, botHeight]);
-  // margin below the top yard lines and above the bottom yard lines
-  var playMargin = 10;
 
   var teams = ["SEA", "DEN"];
   var types = ["pass", "run", "interception", "fumble", "kickoff", "punt"];
@@ -460,6 +458,9 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   addPlays(topPlays);
   
   function addPlays(playData) {
+    // margin below the top yard lines and above the bottom yard lines
+    var playMargin = 10;
+
     // Recalculate bar heights
     var dataLength = playData.length;
     var barHeight = (botHeight - 2*playMargin) / dataLength;
@@ -467,7 +468,8 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     var betweenPlayMargin = 0;
     if (barHeight > 0.05 * botHeight) {
       barHeight = Math.round(0.05 * botHeight);
-      betweenPlayMargin = Math.floor(((botHeight - 2*playMargin) - barHeight * dataLength) / (dataLength - 1));
+      betweenPlayMargin = Math.floor((botHeight   - barHeight * dataLength) / (dataLength + 1));
+      playMargin = betweenPlayMargin;
     }
     
     // Remove any old bars
