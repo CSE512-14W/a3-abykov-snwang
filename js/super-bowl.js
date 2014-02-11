@@ -226,6 +226,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
   function addPlaysWithSmartTransitions(xScale) {
     var previousSelectionSize = 0;
     return function (playData) {
+    
       // margin below the top yard lines and above the bottom yard lines
       var playMargin = 10;
 
@@ -322,6 +323,11 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
       playBars.exit().transition().duration(100)
         //.style("fill-opacity", 0)
         .style("display", "none");
+        
+      if (playData.length == 0) {
+        previousSelectionSize = 0;
+        return;
+      }
 
       // resize and move all plays, then fade in the ones that were not previously
       // selected
