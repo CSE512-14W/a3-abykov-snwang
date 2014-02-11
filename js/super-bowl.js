@@ -417,11 +417,11 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
                                    .append("br");
                       }
                     }
-                    
-                    bottomChart.selectAll(".bar")
+                  }
+                  
+                  bottomChart.selectAll(".bar")
                                .filter( function (pd) { return pd[1].players.indexOf(d.rtext) >= 0 })
                                .style("fill", selectedColor);
-                  }
                   
                   // Flip the tooltip for denver
                   if (d.teamId == 1) {
