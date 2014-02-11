@@ -323,19 +323,14 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
       playBars.exit().transition().duration(100)
         //.style("fill-opacity", 0)
         .style("display", "none");
-        
-      if (playData.length == 0) {
-        previousSelectionSize = 0;
-        return;
-      }
 
       // resize and move all plays, then fade in the ones that were not previously
       // selected
       var resizeMoveDuration = 800,
           resizeMoveDelay = 100;
       if (previousSelectionSize == 0) {
-        resizeMoveDuration = 10,
-        resizeMoveDelay = 10;
+        resizeMoveDuration = 50,
+        resizeMoveDelay = 100;
       }
       playBars
         .transition().duration(resizeMoveDuration).delay(resizeMoveDelay)
