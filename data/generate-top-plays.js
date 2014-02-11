@@ -32,6 +32,7 @@ fs.readFile("super-bowl-pretty.json", function (err, data) {
       }
     };
     for (var i = 0; i < orderedPlays.length; i++) {
+      var playId = orderedPlays[i][0];
       var play = orderedPlays[i][1];
       var includesTerm = function (note) {
         return function (term) {
@@ -91,6 +92,7 @@ fs.readFile("super-bowl-pretty.json", function (err, data) {
         endLine -= yards;
 
       var obj = {
+        "id": playId,
         "team": team,
         "yards": yards,
         "startLine": convertYardline(play.yrdln),

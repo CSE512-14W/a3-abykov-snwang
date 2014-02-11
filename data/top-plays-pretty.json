@@ -4,6 +4,7 @@
         {
             "description": "M.Prater kicks 52 yards from DEN 35 to SEA 13. P.Harvin for 87 yards, TOUCHDOWN.",
             "endLine": 100,
+            "id": 2049,
             "players": [
                 "M.Prater",
                 "P.Harvin"
@@ -19,6 +20,7 @@
         {
             "description": "(3:36) (No Huddle, Shotgun) P.Manning pass short right intended for K.Moreno INTERCEPTED by M.Smith (C.Avril) at SEA 31. M.Smith for 69 yards, TOUCHDOWN.",
             "endLine": 100,
+            "id": 1596,
             "players": [
                 null,
                 "P.Manning",
@@ -37,6 +39,7 @@
         {
             "description": "(4:26) (Shotgun) R.Wilson pass deep left to D.Baldwin to DEN 6 for 37 yards (C.Bailey).",
             "endLine": 94,
+            "id": 729,
             "players": [
                 null,
                 "C.Bailey",
@@ -54,6 +57,7 @@
         {
             "description": "S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 33 for 32 yards (C.Maragos). FUMBLES (C.Maragos), RECOVERED by SEA-S.Hauschka at DEN 36. S.Hauschka to DEN 36 for no gain (B.Marshall). The Replay Assistant challenged the fumble ruling, and the play was REVERSED. S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 33 for 32 yards (C.Maragos).",
             "endLine": 67,
+            "id": 1634,
             "players": [
                 "S.Hauschka",
                 "C.Maragos",
@@ -70,6 +74,7 @@
         {
             "description": "(14:08) P.Harvin left end pushed ob at DEN 31 for 30 yards (D.Ihenacho). End around.",
             "endLine": 69,
+            "id": 162,
             "players": [
                 null,
                 "P.Harvin",
@@ -86,6 +91,7 @@
         {
             "description": "S.Hauschka kicks 66 yards from SEA 35 to DEN -1. T.Holliday to DEN 23 for 24 yards (H.Farwell, D.Baldwin).",
             "endLine": 77,
+            "id": 2083,
             "players": [
                 "H.Farwell",
                 "S.Hauschka",
@@ -103,6 +109,7 @@
         {
             "description": "(12:37) (Shotgun) R.Wilson pass deep middle to J.Kearse to DEN 10 for 24 yards (T.Carter).",
             "endLine": 90,
+            "id": 3193,
             "players": [
                 "",
                 "T.Carter",
@@ -120,6 +127,7 @@
         {
             "description": "(6:08) (No Huddle, Shotgun) P.Manning pass deep left to D.Thomas to SEA 21 for 23 yards (B.Maxwell). FUMBLES (B.Maxwell), RECOVERED by SEA-M.Smith at SEA 20. M.Smith to SEA 27 for 7 yards (J.Thomas). PENALTY on DEN-O.Franklin, Unnecessary Roughness, 15 yards, enforced at SEA 27.",
             "endLine": 21,
+            "id": 2577,
             "players": [
                 "P.Manning",
                 "D.Thomas",
@@ -139,6 +147,7 @@
         {
             "description": "(3:11) (Shotgun) R.Wilson pass short right to J.Kearse for 23 yards, TOUCHDOWN.",
             "endLine": 100,
+            "id": 2747,
             "players": [
                 null,
                 "J.Kearse",
@@ -155,6 +164,7 @@
         {
             "description": "(:29) (No Huddle, Shotgun) P.Manning pass short left to W.Welker pushed ob at SEA 14 for 22 yards (E.Thomas).",
             "endLine": 14,
+            "id": 2966,
             "players": [
                 null,
                 "P.Manning",
@@ -172,6 +182,7 @@
         {
             "description": "S.Hauschka kicks 71 yards from SEA 35 to DEN -6. T.Holliday to DEN 14 for 20 yards (D.Coleman, J.Lane).",
             "endLine": 86,
+            "id": 61,
             "players": [
                 "S.Hauschka",
                 "T.Holliday",
@@ -189,6 +200,7 @@
         {
             "description": "B.Colquitt kicks 64 yards from DEN 20 to SEA 16. G.Tate to SEA 36 for 20 yards (B.Marshall, N.Irving).",
             "endLine": 36,
+            "id": 119,
             "players": [
                 "B.Colquitt",
                 "G.Tate",
@@ -206,6 +218,7 @@
         {
             "description": "(3:58) R.Wilson pass deep right to R.Lockette to DEN 23 for 19 yards (D.R-Cromartie).",
             "endLine": 77,
+            "id": 2723,
             "players": [
                 null,
                 "D.R-Cromartie",
@@ -223,6 +236,7 @@
         {
             "description": "(2:49) (Shotgun) P.Manning pass deep left to D.Thomas to SEA 43 for 19 yards (B.Maxwell) [C.McDonald].",
             "endLine": 43,
+            "id": 1754,
             "players": [
                 null,
                 "P.Manning",
@@ -241,6 +255,7 @@
         {
             "description": "(10:38) M.Lynch right guard to SEA 26 for 18 yards (M.Adams, D.Ihenacho).",
             "endLine": 26,
+            "id": 2388,
             "players": [
                 null,
                 "M.Adams",
@@ -258,6 +273,7 @@
         {
             "description": "(11:23) P.Manning pass short middle to D.Thomas to DEN 45 for 17 yards (E.Thomas) [C.Avril]. SEA-W.Thurmond was injured during the play.  D.Thomas 13 receptions, new Super Bowl record.",
             "endLine": 55,
+            "id": 3364,
             "players": [
                 "",
                 "P.Manning",
@@ -276,6 +292,7 @@
         {
             "description": "S.Hauschka kicks 66 yards from SEA 35 to DEN -1. T.Holliday to DEN 16 for 17 yards (K.Chancellor, J.Lane). SEA-K.Chancellor was injured during the play.",
             "endLine": 84,
+            "id": 1219,
             "players": [
                 "S.Hauschka",
                 "T.Holliday",
@@ -293,6 +310,7 @@
         {
             "description": "(7:26) (Shotgun) R.Wilson scrambles left tackle pushed ob at DEN 33 for 16 yards (M.Adams).",
             "endLine": 67,
+            "id": 3578,
             "players": [
                 "M.Adams",
                 "R.Wilson"
@@ -308,6 +326,7 @@
         {
             "description": "(7:40) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to SEA 43 for 16 yards (W.Thurmond) [C.Clemons].",
             "endLine": 43,
+            "id": 1428,
             "players": [
                 null,
                 "P.Manning",
@@ -326,6 +345,7 @@
         {
             "description": "(:59) P.Harvin left end pushed ob at DEN 22 for 15 yards (M.Adams). End around.",
             "endLine": 78,
+            "id": 991,
             "players": [
                 null,
                 "M.Adams",
@@ -342,6 +362,7 @@
         {
             "description": "(14:36) (No Huddle, Shotgun) P.Manning pass short left to W.Welker to DEN 37 for 14 yards (B.Wagner).",
             "endLine": 63,
+            "id": 2127,
             "players": [
                 null,
                 "P.Manning",
@@ -359,6 +380,7 @@
         {
             "description": "(1:59) (Shotgun) P.Manning pass short middle to C.Anderson to DEN 38 for 14 yards (B.Irvin, H.Farwell). P.Manning finishes with 34 completions, new Super Bowl record.",
             "endLine": 62,
+            "id": 3878,
             "players": [
                 "",
                 "P.Manning",
@@ -377,6 +399,7 @@
         {
             "description": "(:03) (No Huddle, Shotgun) P.Manning pass short left to D.Thomas for 14 yards, TOUCHDOWN.",
             "endLine": 0,
+            "id": 2990,
             "players": [
                 null,
                 "P.Manning",
@@ -393,6 +416,7 @@
         {
             "description": "(12:34) (Shotgun) R.Wilson pass short middle to J.Kearse to DEN 18 for 12 yards (M.Adams).",
             "endLine": 82,
+            "id": 256,
             "players": [
                 null,
                 "M.Adams",
@@ -410,6 +434,7 @@
         {
             "description": "(1:28) (No Huddle, Shotgun) P.Manning pass short left to W.Welker to SEA 47 for 12 yards (B.Wagner).",
             "endLine": 47,
+            "id": 2918,
             "players": [
                 null,
                 "P.Manning",
@@ -427,6 +452,7 @@
         {
             "description": "(5:09) R.Wilson pass short right to L.Willson pushed ob at DEN 43 for 12 yards (M.Adams).",
             "endLine": 57,
+            "id": 2673,
             "players": [
                 null,
                 "M.Adams",
@@ -444,6 +470,7 @@
         {
             "description": "S.Hauschka kicks 64 yards from SEA 35 to DEN 1. T.Holliday to DEN 13 for 12 yards (M.Robinson, R.Lockette).",
             "endLine": 87,
+            "id": 3253,
             "players": [
                 "M.Robinson",
                 "S.Hauschka",
@@ -461,6 +488,7 @@
         {
             "description": "(1:02) (No Huddle, Shotgun) P.Manning pass short middle to J.Tamme to SEA 36 for 11 yards (E.Thomas).",
             "endLine": 36,
+            "id": 2942,
             "players": [
                 null,
                 "P.Manning",
@@ -478,6 +506,7 @@
         {
             "description": "(2:06) P.Manning pass short middle to J.Thomas to SEA 27 for 11 yards (R.Sherman, K.Chancellor).",
             "endLine": 27,
+            "id": 1802,
             "players": [
                 null,
                 "P.Manning",
@@ -496,6 +525,7 @@
         {
             "description": "(6:37) (No Huddle, Shotgun) P.Manning pass short middle to D.Thomas to SEA 44 for 10 yards (E.Thomas, B.Wagner).",
             "endLine": 44,
+            "id": 2553,
             "players": [
                 null,
                 "P.Manning",
@@ -514,6 +544,7 @@
         {
             "description": "(11:55) (Shotgun) R.Wilson pass short right to D.Baldwin for 10 yards, TOUCHDOWN.",
             "endLine": 100,
+            "id": 3217,
             "players": [
                 "",
                 "D.Baldwin",
@@ -530,6 +561,7 @@
         {
             "description": "(14:39) (Shotgun) R.Wilson pass short right to Z.Miller to DEN 48 for 10 yards (D.Trevathan, D.Ihenacho).",
             "endLine": 52,
+            "id": 3113,
             "players": [
                 "Z.Miller",
                 "D.Ihenacho",
@@ -547,6 +579,7 @@
         {
             "description": "(7:17) J.Ryan punts 45 yards to DEN 36, Center-C.Gresham. E.Decker to DEN 45 for 9 yards (M.Smith, R.Lockette).",
             "endLine": 55,
+            "id": 2507,
             "players": [
                 "J.Ryan",
                 "E.Decker",
@@ -564,6 +597,7 @@
         {
             "description": "(7:04) (No Huddle, Shotgun) P.Manning pass short right to D.Thomas to SEA 34 for 9 yards (M.Bennett).",
             "endLine": 34,
+            "id": 1452,
             "players": [
                 "P.Manning",
                 "M.Bennett",
@@ -580,6 +614,7 @@
         {
             "description": "(7:50) (Shotgun) R.Wilson pass short left to G.Tate ran ob at SEA 40 for 9 yards.",
             "endLine": 40,
+            "id": 586,
             "players": [
                 null,
                 "G.Tate",
@@ -596,6 +631,7 @@
         {
             "description": "(4:13) (No Huddle, Shotgun) K.Moreno left guard to SEA 35 for 9 yards (E.Thomas, K.Chancellor).",
             "endLine": 35,
+            "id": 1575,
             "players": [
                 "K.Moreno",
                 "K.Chancellor",
@@ -612,6 +648,7 @@
         {
             "description": "(2:08) (No Huddle, Shotgun) P.Manning pass short middle to J.Thomas to DEN 21 for 8 yards (K.Chancellor, W.Thurmond).",
             "endLine": 79,
+            "id": 2861,
             "players": [
                 "P.Manning",
                 "W.Thurmond",
@@ -629,6 +666,7 @@
         {
             "description": "(13:57) R.Wilson pass short left to G.Tate to DEN 40 for 8 yards (P.Lenon, M.Jackson). DEN-P.Lenon was injured during the play.",
             "endLine": 60,
+            "id": 3137,
             "players": [
                 "P.Lenon",
                 "G.Tate",
@@ -646,6 +684,7 @@
         {
             "description": "(10:13) (No Huddle, Shotgun) P.Manning pass short left to D.Thomas to DEN 37 for 7 yards (B.Maxwell, E.Thomas).",
             "endLine": 63,
+            "id": 1313,
             "players": [
                 "P.Manning",
                 "E.Thomas",
@@ -663,6 +702,7 @@
         {
             "description": "(7:18) R.Wilson pass short right to M.Robinson to SEA 47 for 7 yards (D.Trevathan).",
             "endLine": 47,
+            "id": 610,
             "players": [
                 "M.Robinson",
                 "R.Wilson",
@@ -679,6 +719,7 @@
         {
             "description": "(1:16) (Shotgun) P.Manning pass short middle to K.Moreno to SEA 19 for 7 yards (K.Chancellor, B.Wagner).",
             "endLine": 19,
+            "id": 1914,
             "players": [
                 null,
                 "P.Manning",
@@ -697,6 +738,7 @@
         {
             "description": "(6:08) (No Huddle, Shotgun) P.Manning pass deep left to D.Thomas to SEA 21 for 23 yards (B.Maxwell). FUMBLES (B.Maxwell), RECOVERED by SEA-M.Smith at SEA 20. M.Smith to SEA 27 for 7 yards (J.Thomas). PENALTY on DEN-O.Franklin, Unnecessary Roughness, 15 yards, enforced at SEA 27.",
             "endLine": 27,
+            "id": 2578,
             "players": [
                 "P.Manning",
                 "D.Thomas",
@@ -716,6 +758,7 @@
         {
             "description": "(13:59) (No Huddle, Shotgun) P.Manning pass short middle to K.Moreno to DEN 44 for 7 yards (B.Wagner, K.Wright).",
             "endLine": 56,
+            "id": 2173,
             "players": [
                 "P.Manning",
                 "K.Moreno",
@@ -733,6 +776,7 @@
         {
             "description": "(10:29) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to SEA 47 for 7 yards (C.McDonald).",
             "endLine": 47,
+            "id": 3415,
             "players": [
                 "P.Manning",
                 "W.Welker",
@@ -749,6 +793,7 @@
         {
             "description": "(13:34) (Shotgun) R.Wilson pass short right to D.Baldwin to DEN 5 for 7 yards (P.Lenon).",
             "endLine": 95,
+            "id": 1107,
             "players": [
                 "P.Lenon",
                 "D.Baldwin",
@@ -765,6 +810,7 @@
         {
             "description": "(:40) (Shotgun) C.Anderson up the middle to DEN 47 for 6 yards (M.Smith).",
             "endLine": 53,
+            "id": 3927,
             "players": [
                 "M.Smith",
                 "C.Anderson"
@@ -780,6 +826,7 @@
         {
             "description": "(11:54) (Shotgun) P.Manning pass short right to D.Thomas to DEN 22 for 6 yards (K.Wright).",
             "endLine": 78,
+            "id": 1244,
             "players": [
                 "P.Manning",
                 "D.Thomas",
@@ -796,6 +843,7 @@
         {
             "description": "(13:33) (No Huddle, Shotgun) P.Manning pass short right to E.Decker to 50 for 6 yards (R.Sherman, K.Chancellor).",
             "endLine": 50,
+            "id": 2197,
             "players": [
                 null,
                 "P.Manning",
@@ -814,6 +862,7 @@
         {
             "description": "(15:00) M.Lynch up the middle to DEN 11 for 6 yards (M.Jackson, D.Trevathan).",
             "endLine": 89,
+            "id": 1060,
             "players": [
                 null,
                 "M.Lynch",
@@ -831,6 +880,7 @@
         {
             "description": "(9:48) R.Turbin left tackle to DEN 47 for 6 yards (D.Ihenacho, M.Unrein).",
             "endLine": 53,
+            "id": 3483,
             "players": [
                 "M.Unrein",
                 "D.Ihenacho",
@@ -847,6 +897,7 @@
         {
             "description": "(13:33) (Shotgun) R.Wilson pass short right to D.Baldwin pushed ob at DEN 34 for 6 yards (C.Bailey).",
             "endLine": 66,
+            "id": 3164,
             "players": [
                 "",
                 "C.Bailey",
@@ -864,6 +915,7 @@
         {
             "description": "(13:14) (Shotgun) R.Wilson pass short left to J.Kearse to DEN 30 for 6 yards (D.Ihenacho).",
             "endLine": 70,
+            "id": 232,
             "players": [
                 "D.Ihenacho",
                 "J.Kearse",
@@ -880,6 +932,7 @@
         {
             "description": "(1:48) (No Huddle, Shotgun) P.Manning pass short right to K.Moreno to SEA 21 for 6 yards (T.McDaniel).",
             "endLine": 21,
+            "id": 1867,
             "players": [
                 "P.Manning",
                 "T.McDaniel",
@@ -896,6 +949,7 @@
         {
             "description": "(5:53) (Shotgun) R.Wilson pass short middle to D.Baldwin to DEN 48 for 6 yards (C.Bailey).",
             "endLine": 52,
+            "id": 655,
             "players": [
                 null,
                 "C.Bailey",
@@ -913,6 +967,7 @@
         {
             "description": "(11:21) (Shotgun) R.Wilson left end pushed ob at DEN 14 for 5 yards (D.Ihenacho).",
             "endLine": 86,
+            "id": 301,
             "players": [
                 "D.Ihenacho",
                 "R.Wilson"
@@ -928,6 +983,7 @@
         {
             "description": "(10:55) (Shotgun) R.Wilson scrambles left end pushed ob at DEN 9 for 5 yards (D.Ihenacho). Seattle challenged the first down ruling, and the play was Upheld. (Timeout #1.)",
             "endLine": 91,
+            "id": 322,
             "players": [
                 null,
                 "D.Ihenacho",
@@ -944,6 +1000,7 @@
         {
             "description": "(5:16) (Shotgun) R.Wilson pass short right to P.Harvin to DEN 43 for 5 yards (C.Bailey).",
             "endLine": 57,
+            "id": 679,
             "players": [
                 "C.Bailey",
                 "P.Harvin",
@@ -960,6 +1017,7 @@
         {
             "description": "(:19) (Shotgun) R.Wilson pass short middle to L.Willson to DEN 17 for 5 yards (N.Irving).",
             "endLine": 83,
+            "id": 1016,
             "players": [
                 "N.Irving",
                 "R.Wilson",
@@ -976,6 +1034,7 @@
         {
             "description": "(10:42) (Shotgun) K.Moreno right tackle to DEN 30 for 5 yards (M.Smith, R.Sherman).",
             "endLine": 70,
+            "id": 1292,
             "players": [
                 null,
                 "K.Moreno",
@@ -993,6 +1052,7 @@
         {
             "description": "(8:30) R.Turbin right guard to DEN 39 for 5 yards (D.Trevathan).",
             "endLine": 61,
+            "id": 3525,
             "players": [
                 "",
                 "R.Turbin",
@@ -1009,6 +1069,7 @@
         {
             "description": "(2:49) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to SEA 38 for 5 yards (B.Wagner).",
             "endLine": 38,
+            "id": 1778,
             "players": [
                 "P.Manning",
                 "W.Welker",
@@ -1025,6 +1086,7 @@
         {
             "description": "(2:16) (Shotgun) P.Manning pass short middle to W.Welker to DEN 25 for 5 yards (K.Chancellor).",
             "endLine": 75,
+            "id": 904,
             "players": [
                 "P.Manning",
                 "W.Welker",
@@ -1041,6 +1103,7 @@
         {
             "description": "(3:16) (Shotgun) P.Manning pass short middle to J.Thomas to DEN 38 for 5 yards (K.Chancellor, B.Wagner).",
             "endLine": 62,
+            "id": 1708,
             "players": [
                 "P.Manning",
                 "K.Chancellor",
@@ -1058,6 +1121,7 @@
         {
             "description": "(13:03) (No Huddle, Shotgun) P.Manning pass short left to D.Thomas to SEA 46 for 4 yards (B.Irvin, K.Chancellor). SEA-R.Sherman was injured during the play.",
             "endLine": 46,
+            "id": 2221,
             "players": [
                 "P.Manning",
                 "K.Chancellor",
@@ -1075,6 +1139,7 @@
         {
             "description": "(1:01) (Shotgun) M.Lynch up the middle to SEA 23 for 4 yards (M.Jackson, W.Woodyard).",
             "endLine": 23,
+            "id": 1977,
             "players": [
                 "M.Lynch",
                 "W.Woodyard",
@@ -1091,6 +1156,7 @@
         {
             "description": "(3:44) R.Turbin up the middle to DEN 26 for 3 yards (T.Knighton, J.Mincey).",
             "endLine": 74,
+            "id": 3768,
             "players": [
                 "J.Mincey",
                 "T.Knighton",
@@ -1107,6 +1173,7 @@
         {
             "description": "(5:19) (Shotgun) M.Ball right end to DEN 34 for 3 yards (M.Smith).",
             "endLine": 66,
+            "id": 3671,
             "players": [
                 "M.Smith",
                 "M.Ball"
@@ -1122,6 +1189,7 @@
         {
             "description": "(5:55) M.Lynch right tackle to SEA 45 for 3 yards (T.Knighton, J.Mincey).",
             "endLine": 45,
+            "id": 2623,
             "players": [
                 "J.Mincey",
                 "M.Lynch",
@@ -1138,6 +1206,7 @@
         {
             "description": "(2:43) (No Huddle, Shotgun) P.Manning pass short middle to W.Welker to DEN 13 for 3 yards (K.Wright).",
             "endLine": 87,
+            "id": 2837,
             "players": [
                 "P.Manning",
                 "W.Welker",
@@ -1154,6 +1223,7 @@
         {
             "description": "(6:48) (Shotgun) R.Turbin right tackle to DEN 30 for 3 yards (S.Williams, S.Phillips). SEA-M.Unger was injured during the play.",
             "endLine": 70,
+            "id": 3604,
             "players": [
                 "S.Phillips",
                 "R.Turbin",
@@ -1170,6 +1240,7 @@
         {
             "description": "(14:43) M.Lynch up the middle to SEA 39 for 3 yards (S.Williams, D.Trevathan).",
             "endLine": 39,
+            "id": 141,
             "players": [
                 "M.Lynch",
                 "D.Trevathan",
@@ -1186,6 +1257,7 @@
         {
             "description": "(10:21) (Shotgun) K.Moreno left tackle to DEN 38 for 3 yards (C.Avril, C.Clemons).",
             "endLine": 62,
+            "id": 455,
             "players": [
                 "C.Clemons",
                 "C.Avril",
@@ -1202,6 +1274,7 @@
         {
             "description": "(11:27) (No Huddle) P.Manning pass short left to D.Thomas to DEN 25 for 3 yards (B.Maxwell, B.Wagner).",
             "endLine": 75,
+            "id": 1268,
             "players": [
                 "P.Manning",
                 "D.Thomas",
@@ -1219,6 +1292,7 @@
         {
             "description": "(8:54) (Shotgun) R.Turbin right guard to SEA 19 for 3 yards (M.Jackson, T.Knighton).",
             "endLine": 19,
+            "id": 2462,
             "players": [
                 "T.Knighton",
                 "R.Turbin",
@@ -1235,6 +1309,7 @@
         {
             "description": "(12:45) (Shotgun) P.Manning pass short middle to D.Thomas to SEA 43 for 3 yards (K.Wright).",
             "endLine": 43,
+            "id": 2253,
             "players": [
                 "P.Manning",
                 "D.Thomas",
@@ -1251,6 +1326,7 @@
         {
             "description": "(1:47) (No Huddle, Shotgun) K.Moreno left end to DEN 27 for 2 yards (C.Clemons, C.McDonald). FUMBLES (C.Clemons), recovered by DEN-Z.Beadles at DEN 23. Z.Beadles to DEN 23 for no gain (E.Thomas). Officially, a rush for -2 yards.",
             "endLine": 72,
+            "id": 928,
             "players": [
                 null,
                 "C.Clemons",
@@ -1270,6 +1346,7 @@
         {
             "description": "(9:07) (Shotgun) R.Turbin up the middle to DEN 44 for 3 yards (R.Ayers).",
             "endLine": 56,
+            "id": 3504,
             "players": [
                 "R.Ayers",
                 "R.Turbin"
@@ -1285,6 +1362,7 @@
         {
             "description": "(1:19) (No Huddle, Shotgun) C.Anderson left guard to DEN 41 for 3 yards (B.Mebane, M.Smith).",
             "endLine": 59,
+            "id": 3906,
             "players": [
                 "B.Mebane",
                 "M.Smith",
@@ -1301,6 +1379,7 @@
         {
             "description": "(8:27) M.Lynch right guard to SEA 31 for 3 yards (N.Irving, D.Ihenacho).",
             "endLine": 31,
+            "id": 565,
             "players": [
                 "M.Lynch",
                 "N.Irving",
@@ -1317,6 +1396,7 @@
         {
             "description": "(9:22) (No Huddle, Shotgun) P.Manning pass short middle to J.Thomas to DEN 43 for 3 yards (B.Wagner, W.Thurmond).",
             "endLine": 57,
+            "id": 500,
             "players": [
                 null,
                 "P.Manning",
@@ -1335,6 +1415,7 @@
         {
             "description": "(9:53) (No Huddle, Shotgun) P.Manning pass short middle to D.Thomas to DEN 40 for 2 yards (K.Chancellor).",
             "endLine": 60,
+            "id": 476,
             "players": [
                 "P.Manning",
                 "K.Chancellor",
@@ -1351,6 +1432,7 @@
         {
             "description": "(3:22) (Shotgun) M.Lynch right guard to DEN 14 for 2 yards (S.Phillips, W.Woodyard).",
             "endLine": 86,
+            "id": 785,
             "players": [
                 "S.Phillips",
                 "M.Lynch",
@@ -1367,6 +1449,7 @@
         {
             "description": "(9:36) (No Huddle, Shotgun) K.Moreno left guard to DEN 39 for 2 yards (B.Mebane, K.Wright).",
             "endLine": 61,
+            "id": 1337,
             "players": [
                 "B.Mebane",
                 "K.Moreno",
@@ -1383,6 +1466,7 @@
         {
             "description": "(5:53) (No Huddle, Shotgun) M.Ball left guard to SEA 32 for 2 yards (M.Smith, C.McDonald).",
             "endLine": 32,
+            "id": 1497,
             "players": [
                 null,
                 "C.McDonald",
@@ -1400,6 +1484,7 @@
         {
             "description": "(2:05) (Shotgun) R.Turbin left tackle to DEN 24 for 2 yards (T.Knighton, D.Trevathan).",
             "endLine": 76,
+            "id": 3840,
             "players": [
                 "",
                 "T.Knighton",
@@ -1417,6 +1502,7 @@
         {
             "description": "(1:10) (No Huddle, Shotgun) P.Manning pass deep middle intended for J.Thomas INTERCEPTED by K.Chancellor [C.Avril] at DEN 39. K.Chancellor to DEN 37 for 2 yards (J.Thomas).",
             "endLine": 63,
+            "id": 965,
             "players": [
                 null,
                 "P.Manning",
@@ -1435,6 +1521,7 @@
         {
             "description": "(8:57) (No Huddle, Shotgun) P.Manning pass short right to D.Thomas to DEN 40 for 1 yard (K.Wright).",
             "endLine": 60,
+            "id": 1358,
             "players": [
                 null,
                 "P.Manning",
@@ -1452,6 +1539,7 @@
         {
             "description": "(4:42) M.Lynch up the middle to DEN 42 for 1 yard (N.Irving, D.Trevathan).",
             "endLine": 58,
+            "id": 2702,
             "players": [
                 "M.Lynch",
                 "N.Irving",
@@ -1468,6 +1556,7 @@
         {
             "description": "(:42) (No Huddle, Shotgun) M.Lynch up the middle to SEA 24 for 1 yard (M.Jackson, S.Phillips).",
             "endLine": 24,
+            "id": 1998,
             "players": [
                 "S.Phillips",
                 "M.Lynch",
@@ -1484,6 +1573,7 @@
         {
             "description": "(7:05) (Shotgun) M.Ball right tackle to DEN 46 for 1 yard (C.McDonald, M.Smith).",
             "endLine": 54,
+            "id": 2532,
             "players": [
                 "C.McDonald",
                 "M.Smith",
@@ -1500,6 +1590,7 @@
         {
             "description": "(11:02) (Shotgun) P.Manning pass short right to M.Ball to DEN 46 for 1 yard (M.Smith).",
             "endLine": 54,
+            "id": 3391,
             "players": [
                 "P.Manning",
                 "M.Smith",
@@ -1516,6 +1607,7 @@
         {
             "description": "(8:10) (Shotgun) P.Manning pass short right to M.Ball to DEN 41 for 1 yard (C.McDonald, M.Bennett).",
             "endLine": 59,
+            "id": 1404,
             "players": [
                 "P.Manning",
                 "M.Bennett",
@@ -1533,6 +1625,7 @@
         {
             "description": "(12:08) M.Lynch left guard for 1 yard, TOUCHDOWN.",
             "endLine": 100,
+            "id": 1186,
             "players": [
                 null,
                 "M.Lynch"
@@ -1548,6 +1641,7 @@
         {
             "description": "(10:00) M.Lynch left tackle to SEA 26 for no gain (D.Trevathan).",
             "endLine": 26,
+            "id": 2409,
             "players": [
                 "M.Lynch",
                 "D.Trevathan"
@@ -1563,6 +1657,7 @@
         {
             "description": "(9:24) R.Wilson scrambles up the middle ran ob at SEA 48 for 22 yards (D.R-Cromartie). PENALTY on SEA-R.Okung, Offensive Holding, 10 yards, enforced at SEA 26 - No Play.",
             "endLine": 26,
+            "id": 2430,
             "players": [
                 "R.Okung"
             ],
@@ -1577,6 +1672,7 @@
         {
             "description": "(4:40) R.Wilson pass incomplete short left to L.Willson. Flea-Flicker play involving M.Lynch. R.Wilson laterals ball to M.Lynch who laterals back to R.Wilson.",
             "endLine": 57,
+            "id": 703,
             "players": [
                 "R.Wilson",
                 "L.Willson"
@@ -1592,6 +1688,7 @@
         {
             "description": "(7:58) (Shotgun) R.Wilson pass short right to G.Tate to SEA 19 for no gain (W.Woodyard).",
             "endLine": 19,
+            "id": 2483,
             "players": [
                 null,
                 "W.Woodyard",
@@ -1609,6 +1706,7 @@
         {
             "description": "(8:45) B.Colquitt punts 29 yards to SEA 28, Center-A.Brewer, fair catch by G.Tate.",
             "endLine": 28,
+            "id": 524,
             "players": [
                 "B.Colquitt",
                 "G.Tate"
@@ -1624,6 +1722,7 @@
         {
             "description": "(12:57) (Shotgun) R.Wilson pass incomplete short right to G.Tate (T.Carter). PENALTY on DEN-T.Carter, Defensive Pass Interference, 4 yards, enforced at DEN 5 - No Play.",
             "endLine": 95,
+            "id": 1131,
             "players": [
                 null,
                 "T.Carter"
@@ -1639,6 +1738,7 @@
         {
             "description": "(12:49) M.Lynch left tackle to DEN 1 for no gain (M.Adams, D.Trevathan).",
             "endLine": 99,
+            "id": 1165,
             "players": [
                 "M.Adams",
                 "M.Lynch",
@@ -1655,6 +1755,7 @@
         {
             "description": "(3:45) M.Lynch up the middle to DEN 8 for -2 yards (N.Irving). PENALTY on SEA-M.Unger, Offensive Holding, 10 yards, enforced at DEN 6 - No Play.",
             "endLine": 94,
+            "id": 753,
             "players": [
                 "M.Unger"
             ],
@@ -1669,6 +1770,7 @@
         {
             "description": "(2:54) (No Huddle, Shotgun) P.Manning pass incomplete short left to E.Decker.",
             "endLine": 62,
+            "id": 1732,
             "players": [
                 "P.Manning",
                 "E.Decker"
@@ -1684,6 +1786,7 @@
         {
             "description": "S.Hauschka extra point is GOOD, Center-C.Gresham, Holder-J.Ryan.",
             "endLine": 98,
+            "id": 1203,
             "players": [
                 "S.Hauschka"
             ],
@@ -1698,6 +1801,7 @@
         {
             "description": "(5:20) R.Wilson pass incomplete short left to L.Willson.",
             "endLine": 45,
+            "id": 2644,
             "players": [
                 "R.Wilson",
                 "L.Willson"
@@ -1713,6 +1817,7 @@
         {
             "description": "(8:31) R.Wilson pass incomplete short right to G.Tate (M.Jackson).",
             "endLine": 28,
+            "id": 543,
             "players": [
                 "G.Tate",
                 "R.Wilson",
@@ -1729,6 +1834,7 @@
         {
             "description": "(2:33) (Shotgun) R.Wilson pass incomplete short left to P.Harvin. Denver challenged the backward pass ruling, and the play was Upheld. (Timeout #1.)",
             "endLine": 86,
+            "id": 806,
             "players": [
                 null,
                 "P.Harvin",
@@ -1745,6 +1851,7 @@
         {
             "description": "(1:55) (Shotgun) P.Manning pass incomplete deep middle to J.Thomas.",
             "endLine": 27,
+            "id": 1844,
             "players": [
                 "P.Manning",
                 "J.Thomas"
@@ -1760,6 +1867,7 @@
         {
             "description": "(2:27) (Shotgun) R.Wilson pass incomplete short middle to J.Kearse (N.Irving).",
             "endLine": 86,
+            "id": 844,
             "players": [
                 null,
                 "N.Irving",
@@ -1777,6 +1885,7 @@
         {
             "description": "S.Hauschka extra point is GOOD, Center-C.Gresham, Holder-J.Ryan.",
             "endLine": 98,
+            "id": 2767,
             "players": [
                 "S.Hauschka"
             ],
@@ -1791,6 +1900,7 @@
         {
             "description": "S.Hauschka kicks 65 yards from SEA 35 to end zone, Touchback.",
             "endLine": 80,
+            "id": 2783,
             "players": [
                 null,
                 "S.Hauschka"
@@ -1806,6 +1916,7 @@
         {
             "description": "(2:58) (No Huddle, Shotgun) P.Manning pass short middle to M.Ball to DEN 24 for 4 yards (K.Chancellor). PENALTY on DEN-C.Clark, Offensive Holding, 10 yards, enforced at DEN 20 - No Play.",
             "endLine": 80,
+            "id": 2802,
             "players": [
                 "C.Clark"
             ],
@@ -1820,6 +1931,7 @@
         {
             "description": "(1:18) (No Huddle, Shotgun) PENALTY on DEN-L.Vasquez, False Start, 5 yards, enforced at SEA 21 - No Play.",
             "endLine": 21,
+            "id": 1891,
             "players": [
                 "L.Vasquez"
             ],
@@ -1834,6 +1946,7 @@
         {
             "description": "(2:21) S.Hauschka 33 yard field goal is GOOD, Center-C.Gresham, Holder-J.Ryan.",
             "endLine": 86,
+            "id": 866,
             "players": [
                 "S.Hauschka"
             ],
@@ -1848,6 +1961,7 @@
         {
             "description": "(1:34) (No Huddle, Shotgun) P.Manning pass incomplete deep left to D.Thomas (B.Maxwell) [C.McDonald]. PENALTY on SEA-B.Maxwell, Defensive Pass Interference, 20 yards, enforced at DEN 21 - No Play.",
             "endLine": 79,
+            "id": 2885,
             "players": [
                 null,
                 "B.Maxwell"
@@ -1863,6 +1977,7 @@
         {
             "description": "Timeout #2 by SEA at 01:06.",
             "endLine": 50,
+            "id": 1938,
             "players": [
                 null
             ],
@@ -1877,6 +1992,7 @@
         {
             "description": "(1:06) (Shotgun) P.Manning pass incomplete short left to D.Thomas (C.Clemons).",
             "endLine": 19,
+            "id": 1955,
             "players": [
                 null,
                 "P.Manning",
@@ -1894,6 +2010,7 @@
         {
             "description": "S.Hauschka kicks 65 yards from SEA 35 to end zone, Touchback.",
             "endLine": 80,
+            "id": 885,
             "players": [
                 null,
                 "S.Hauschka"
@@ -1909,6 +2026,7 @@
         {
             "description": "(10:25) (Field Goal formation) PENALTY on SEA-J.Sweezy, False Start, 4 yards, enforced at DEN 9 - No Play.",
             "endLine": 91,
+            "id": 377,
             "players": [
                 "J.Sweezy"
             ],
@@ -1923,6 +2041,7 @@
         {
             "description": "TWO-POINT CONVERSION ATTEMPT. P.Manning pass to W.Welker is complete. ATTEMPT SUCCEEDS.",
             "endLine": 2,
+            "id": 3010,
             "players": [
                 "P.Manning",
                 "W.Welker"
@@ -1938,6 +2057,7 @@
         {
             "description": " 43?? F, Humidity: 75%, Wind: NNW 10 mph M.Prater kicks onside 13 yards from DEN 35 to DEN 48. Z.Miller (didn't try to advance) to DEN 48 for no gain (J.Tamme).",
             "endLine": 52,
+            "id": 3059,
             "players": [
                 "M.Prater",
                 "J.Tamme",
@@ -1954,6 +2074,7 @@
         {
             "description": "(14:59) R.Turbin left end pushed ob at DEN 15 for 33 yards (M.Adams). PENALTY on SEA-A.Bailey, Offensive Holding, 10 yards, enforced at DEN 48 - No Play.",
             "endLine": 52,
+            "id": 3081,
             "players": [
                 "A.Bailey"
             ],
@@ -1968,6 +2089,7 @@
         {
             "description": "(10:25) S.Hauschka 31 yard field goal is GOOD, Center-C.Gresham, Holder-J.Ryan.",
             "endLine": 87,
+            "id": 406,
             "players": [
                 "S.Hauschka"
             ],
@@ -1982,6 +2104,7 @@
         {
             "description": "(2:14) (Shotgun) T.Jackson pass incomplete short right to R.Lockette.",
             "endLine": 74,
+            "id": 3818,
             "players": [
                 "",
                 "T.Jackson",
@@ -1998,6 +2121,7 @@
         {
             "description": "(8:18) (No Huddle, Shotgun) P.Manning pass incomplete deep middle to D.Thomas.",
             "endLine": 60,
+            "id": 1382,
             "players": [
                 "P.Manning",
                 "D.Thomas"
@@ -2013,6 +2137,7 @@
         {
             "description": "(14:40) (Shotgun) P.Manning pass incomplete short right to W.Welker.",
             "endLine": 77,
+            "id": 2105,
             "players": [
                 "P.Manning",
                 "W.Welker"
@@ -2028,6 +2153,7 @@
         {
             "description": "S.Hauschka kicks 65 yards from SEA 35 to end zone, Touchback. PENALTY on SEA-R.Lockette, Unnecessary Roughness, 15 yards, enforced at DEN 20.",
             "endLine": 80,
+            "id": 425,
             "players": [
                 null,
                 "S.Hauschka",
@@ -2044,6 +2170,7 @@
         {
             "description": "S.Hauschka extra point is GOOD, Center-C.Gresham, Holder-J.Ryan.",
             "endLine": 98,
+            "id": 3237,
             "players": [
                 "S.Hauschka"
             ],
@@ -2058,6 +2185,7 @@
         {
             "description": "(14:07) (No Huddle, Shotgun) P.Manning pass incomplete deep right to E.Decker.",
             "endLine": 63,
+            "id": 2151,
             "players": [
                 "P.Manning",
                 "E.Decker"
@@ -2073,6 +2201,7 @@
         {
             "description": "(11:38) (Shotgun) P.Manning pass incomplete short right to E.Decker (C.Avril).",
             "endLine": 87,
+            "id": 3283,
             "players": [
                 "P.Manning",
                 "C.Avril",
@@ -2089,6 +2218,7 @@
         {
             "description": "(11:34) (No Huddle, Shotgun) P.Manning pass incomplete short right to D.Thomas (R.Sherman, E.Thomas). SEA-R.Sherman was injured during the play.",
             "endLine": 87,
+            "id": 3305,
             "players": [
                 "P.Manning",
                 "E.Thomas",
@@ -2106,6 +2236,7 @@
         {
             "description": "(11:28) (Shotgun) P.Manning pass incomplete short right to D.Thomas. PENALTY on SEA-W.Thurmond, Defensive Pass Interference, 15 yards, enforced at DEN 13 - No Play.",
             "endLine": 87,
+            "id": 3331,
             "players": [
                 "",
                 "W.Thurmond"
@@ -2121,6 +2252,7 @@
         {
             "description": "(13:22) R.Wilson pass incomplete short right to Z.Miller.",
             "endLine": 64,
+            "id": 210,
             "players": [
                 "Z.Miller",
                 "R.Wilson"
@@ -2136,6 +2268,7 @@
         {
             "description": "END GAME",
             "endLine": 50,
+            "id": 3948,
             "players": [],
             "startLine": 50,
             "team": "",
@@ -2148,6 +2281,7 @@
         {
             "description": "(6:30) (Shotgun) M.Ball up the middle to SEA 34 for no gain (C.Avril, B.Wagner).",
             "endLine": 34,
+            "id": 1476,
             "players": [
                 "C.Avril",
                 "B.Wagner",
@@ -2164,6 +2298,7 @@
         {
             "description": "(9:59) (No Huddle, Shotgun) P.Manning pass incomplete short left to E.Decker.",
             "endLine": 47,
+            "id": 3439,
             "players": [
                 "",
                 "P.Manning",
@@ -2180,6 +2315,7 @@
         {
             "description": "(9:55) (No Huddle, Shotgun) P.Manning pass incomplete short middle to M.Ball.",
             "endLine": 47,
+            "id": 3461,
             "players": [
                 "",
                 "P.Manning",
@@ -2196,6 +2332,7 @@
         {
             "description": "(13:44) (Shotgun) PENALTY on SEA-R.Okung, False Start, 5 yards, enforced at DEN 31 - No Play.",
             "endLine": 69,
+            "id": 183,
             "players": [
                 "R.Okung"
             ],
@@ -2210,6 +2347,7 @@
         {
             "description": "(12:09) (No Huddle, Shotgun) PENALTY on SEA-R.Bryant, Neutral Zone Infraction, 5 yards, enforced at SEA 43 - No Play.",
             "endLine": 43,
+            "id": 2277,
             "players": [
                 null,
                 "R.Bryant"
@@ -2225,6 +2363,7 @@
         {
             "description": "(11:47) (Shotgun) P.Manning pass incomplete deep right to D.Thomas.",
             "endLine": 38,
+            "id": 2300,
             "players": [
                 "P.Manning",
                 "D.Thomas"
@@ -2240,6 +2379,7 @@
         {
             "description": "(7:49) R.Turbin right tackle to DEN 33 for 6 yards (R.Ayers, M.Jackson). PENALTY on SEA-Z.Miller, Offensive Holding, 10 yards, enforced at DEN 39 - No Play.",
             "endLine": 61,
+            "id": 3546,
             "players": [
                 "Z.Miller"
             ],
@@ -2254,6 +2394,7 @@
         {
             "description": "(11:38) (No Huddle, Shotgun) P.Manning pass incomplete deep left to W.Welker (K.Chancellor).",
             "endLine": 38,
+            "id": 2322,
             "players": [
                 "P.Manning",
                 "W.Welker",
@@ -2270,6 +2411,7 @@
         {
             "description": "(3:01) SEA #7 - T.Jackson, at quarterback. R.Turbin right end to DEN 26 for no gain (D.Trevathan, D.Ihenacho).",
             "endLine": 74,
+            "id": 3789,
             "players": [
                 "D.Ihenacho",
                 "R.Turbin",
@@ -2286,6 +2428,7 @@
         {
             "description": "(6:13) R.Turbin right tackle to DEN 30 for no gain (D.Trevathan, S.Phillips).",
             "endLine": 70,
+            "id": 3628,
             "players": [
                 "",
                 "S.Phillips",
@@ -2303,6 +2446,7 @@
         {
             "description": "(5:27) R.Wilson pass incomplete short right to R.Turbin.",
             "endLine": 70,
+            "id": 3649,
             "players": [
                 "",
                 "R.Wilson",
@@ -2319,6 +2463,7 @@
         {
             "description": "(10:54) B.Colquitt punts 31 yards to SEA 8, Center-A.Brewer, fair catch by G.Tate.",
             "endLine": 8,
+            "id": 2365,
             "players": [
                 "B.Colquitt",
                 "G.Tate"
@@ -2334,6 +2479,7 @@
         {
             "description": "(5:04) (Shotgun) P.Manning pass incomplete deep right to D.Thomas. PENALTY on DEN-Z.Beadles, Tripping, 10 yards, enforced at SEA 32 - No Play.",
             "endLine": 32,
+            "id": 1518,
             "players": [
                 "Z.Beadles"
             ],
@@ -2348,6 +2494,7 @@
         {
             "description": "(4:05) (No Huddle, Shotgun) P.Manning pass incomplete deep middle to D.Thomas.",
             "endLine": 70,
+            "id": 3713,
             "players": [
                 "",
                 "P.Manning",
@@ -2364,6 +2511,7 @@
         {
             "description": "S.Hauschka extra point is GOOD, Center-C.Gresham, Holder-J.Ryan.",
             "endLine": 98,
+            "id": 2067,
             "players": [
                 "S.Hauschka"
             ],
@@ -2378,6 +2526,7 @@
         {
             "description": "(11:32) (Shotgun) M.Ball up the middle to SEA 39 for -1 yards (K.Wright).",
             "endLine": 39,
+            "id": 2344,
             "players": [
                 null,
                 "K.Wright",
@@ -2394,6 +2543,7 @@
         {
             "description": "(14:23) M.Lynch right end to DEN 12 for -1 yards (D.Trevathan).",
             "endLine": 88,
+            "id": 1082,
             "players": [
                 null,
                 "M.Lynch",
@@ -2410,6 +2560,7 @@
         {
             "description": "(6:35) (Shotgun) M.Lynch left guard to SEA 46 for -1 yards (M.Unrein, J.Mincey).",
             "endLine": 46,
+            "id": 634,
             "players": [
                 null,
                 "J.Mincey",
@@ -2427,6 +2578,7 @@
         {
             "description": "(12:01) M.Lynch left tackle to DEN 19 for -1 yards (T.Knighton, J.Mincey).",
             "endLine": 81,
+            "id": 280,
             "players": [
                 null,
                 "J.Mincey",
@@ -2444,6 +2596,7 @@
         {
             "description": "(3:52) (Shotgun) P.Manning sacked at DEN 23 for -7 yards (C.Clemons). FUMBLES (C.Clemons), RECOVERED by SEA-C.McDonald at DEN 29. C.McDonald to DEN 29 for no gain (C.Clark). Officially, a sack for 1 yard.",
             "endLine": 72,
+            "id": 3735,
             "players": [
                 "",
                 "P.Manning",
@@ -2462,6 +2615,7 @@
         {
             "description": "(4:56) P.Manning pass short right to J.Tamme to SEA 44 for -2 yards (B.Mebane, M.Smith).",
             "endLine": 44,
+            "id": 1551,
             "players": [
                 "P.Manning",
                 "B.Mebane",
@@ -2479,6 +2633,7 @@
         {
             "description": "(4:45) (No Huddle, Shotgun) M.Ball right end to DEN 30 for -4 yards (O.Schofield, M.Smith).",
             "endLine": 70,
+            "id": 3692,
             "players": [
                 "",
                 "O.Schofield",
@@ -2496,6 +2651,7 @@
         {
             "description": "(14:53) (Shotgun) P.Manning Aborted. M.Ramirez FUMBLES at DEN 14, recovered by DEN-K.Moreno at DEN -8. K.Moreno tackled in End Zone, SAFETY (C.Avril). Penalty on DEN-P.Manning, Illegal Motion, declined.",
             "endLine": 100,
+            "id": 83,
             "players": [
                 "P.Manning",
                 "M.Ramirez",
