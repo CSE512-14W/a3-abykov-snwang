@@ -320,16 +320,17 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
 
       // fade out unselected plays
       playBars.exit().transition().duration(100)
-        .style("fill-opacity", 0);
+        //.style("fill-opacity", 0)
+        .style("display", "none");
 
       // resize and move all plays, then fade in the ones that were not previously
       // selected
       var resizeMoveDuration = 800,
           resizeMoveDelay = 100;
-      //if (previousSelectionSize == 0) {
-        //resizeMoveDuration = 10,
-        //resizeMoveDelay = 10;
-      //}
+      if (previousSelectionSize == 0) {
+        resizeMoveDuration = 10,
+        resizeMoveDelay = 10;
+      }
       playBars
         .transition().duration(resizeMoveDuration).delay(resizeMoveDelay)
         .call(setUpStake)
@@ -337,7 +338,8 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
           return teamColors(d[1].team);
         })
         .transition().duration(100)
-        .style("fill-opacity", 1);
+        //.style("fill-opacity", 1);
+        .style("display", null);
 
       previousSelectionSize = playData.length;
 
