@@ -45,7 +45,7 @@ botHeight -= 1.25 * margin.top;
 var teams = ["SEA", "DEN"];
 var teamColors = d3.scale.ordinal()
   .domain(teams)
-  .range(["steelblue", "#c35a2b"]);
+  .range(["#081b30", "#c35a2b"]);
 
 // scale for bar length
 var length = d3.scale.linear()
