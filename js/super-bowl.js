@@ -639,6 +639,7 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
     .attr("width", x(0) - x(-10) - 1);
 
   // add all the plays
-  addPlays(topPlays);
+
+  addPlays(topPlays.sort(function (a,b) { return (a[1].id < b[1].id) ? -1 : (a[1].id > b[1].id) ? 1 : 0;}));
 // --------------------------- BOTTOM --------------------------
 }
