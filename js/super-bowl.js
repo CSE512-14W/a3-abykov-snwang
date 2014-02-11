@@ -47,6 +47,173 @@ var teamColors = d3.scale.ordinal()
   .domain(teams)
   .range(["steelblue", "#c35a2b"]);
 
+// scale for bar length
+var length = d3.scale.linear()
+                .domain([0, 100])
+                .range([0, width * (5/6)]);
+
+// scale for Seahawks yard lines
+var x = d3.scale.linear()
+  .domain([-10, 110])
+  .range([0, width]);
+// scale for Broncos yard lines (display only)
+var xInverted = d3.scale.linear()
+  .domain([110, -10])
+  .range([0, width]);
+// scale for field height
+var y = d3.scale.linear()
+  .domain([0, 100])
+  .range([0, botHeight]);
+
+addPlays = addPlaysWithSmartTransitions(x);
+// smart transitions currently not working and thus disabled
+function addPlaysWithSmartTransitions(xScale) {
+  var previousSelectionSize = 0;
+  return function (playData) {
+    // margin below the top yard lines and above the bottom yard lines
+    var playMargin = 10;
+
+    // Recalculate bar heights
+    var dataLength = playData.length;
+    var barHeight = (botHeight - 2*playMargin) / dataLength;
+    // Make sure the bars don't get too big
+    var betweenPlayMargin = 0;
+    if (barHeight > 0.05 * botHeight) {
+      barHeight = Math.round(0.05 * botHeight);
+      betweenPlayMargin = Math.floor((botHeight   - barHeight * dataLength) / (dataLength + 1));
+      playMargin = betweenPlayMargin;
+    }
+
+    // functions to create left and right stakes
+    var tipWidth = 7;
+
+    var leftStake = function (d, i, width) {
+        var leftEnd = Math.round(x(d[1].endLine)),
+            x1 = leftEnd + width,
+            y1 = playMargin + i * (barHeight + betweenPlayMargin),
+            x2 = leftEnd + Math.round(
+            length(
+              Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
+            )),
+            y2 = y1,
+            x3 = x2,
+            y3 = y1 + barHeight - 1,
+            x4 = x1,
+            y4 = y1 + barHeight - 1,
+            x5 = leftEnd,
+            y5 = (y1 + y4) / 2;
+        return "M " + x1 + " " + y1 +
+          " L " + x2 + " " + y2 +
+          " L " + x3 + " " + y3 +
+          " L " + x4 + " " + y4 +
+          " L " + x5 + " " + y5 +
+          " z";
+    }
+    var rightStake = function (d, i, width) {
+        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
+        var yardageModifier = (d[1].yards > 0) ? -1 : 1;
+        var leftEnd = 0;
+        if (teamModifier * yardageModifier > 0)
+          leftEnd = Math.round(x(d[1].startLine));
+        else
+          leftEnd = Math.round(x(d[1].endLine)) + tipWidth;
+        var barWidth = Math.round(
+            length(
+              Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
+            )) - tipWidth;
+        var triangleLeftEnd = leftEnd + barWidth;
+        var x1 = triangleLeftEnd,
+            y1 = playMargin + i * (barHeight + betweenPlayMargin),
+            x2 = leftEnd,
+            y2 = y1,
+            x3 = x2,
+            y3 = y1 + barHeight - 1,
+            x4 = x1,
+            y4 = y3,
+            x5 = triangleLeftEnd + width,
+            y5 = (y1 + y4) / 2
+        return "M " + x1 + " " + y1 +
+          " L " + x2 + " " + y2 +
+          " L " + x3 + " " + y3 +
+          " L " + x4 + " " + y4 +
+          " L " + x5 + " " + y5 +
+          " z";
+    }
+
+    var makeStake = function (width) {
+      return function (d, i) {
+        if (d[1].endLine < d[1].startLine)
+          return leftStake(d, i, width);
+        else
+          return rightStake(d, i, width);
+      };
+    }
+
+    var setUpStake = function (sel) {
+      sel.attr("class", "bar")
+        .attr("id", function (d) { return d[1].id })
+        .attr("d", makeStake(tipWidth))
+        .attr("text", function (d) { return d[1].description; })
+        .style("fill", function (d) { return teamColors(d[1].team); });
+    };
+
+    // data join on play description
+    var playBars = bottomChart.selectAll(".bar").data(playData, function (d) {
+      return d ? d[1].id : this.select("path").id;
+    });
+
+    // fade out unselected plays
+    playBars.exit().transition().duration(100)
+      .style("fill-opacity", 0);
+
+    // resize and move all plays, then fade in the ones that were not previously
+    // selected
+    var resizeMoveDuration = 800,
+        resizeMoveDelay = 100;
+    //if (previousSelectionSize == 0) {
+      //resizeMoveDuration = 10,
+      //resizeMoveDelay = 10;
+    //}
+    playBars
+      .transition().duration(resizeMoveDuration).delay(resizeMoveDelay)
+      .call(setUpStake)
+      .style("fill", function (d) {
+        return teamColors(d[1].team);
+      })
+      .transition().duration(100)
+      .style("fill-opacity", 1);
+
+    previousSelectionSize = playData.length;
+
+    // only gets run at initial setup
+    playBars.enter().append("path")
+      .on("mouseover", function (d) {
+          // Show a tooltip and highlight the related players
+          tip.show(d);
+          var players = d[1].players;
+          for (var i = 0; i < players.length; i++) {
+            rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                      .style("fill", selectedColor);
+          }
+        })
+        .on("mouseout", function (d) {
+          tip.hide(d);
+          var players = d[1].players;
+          for (var i = 0; i < players.length; i++) {
+            rectangles.filter(function (rd) { return rd.rtext === players[i] })
+                      .style("fill", function (rd) {
+                        if (rd.rselected) {
+                          return selectedColor;
+                        } else {
+                          return notSelectedColor;
+                        }
+                      });
+          }
+        })
+        .call(setUpStake);
+  };
+}
+
 // Load in data about the player positions and stats
 queue()
   .defer(d3.json, "data/player-positions.json")
@@ -314,23 +481,6 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
 
 // --------------------------- BOTTOM --------------------------
        
-  // scale for bar length
-  var length = d3.scale.linear()
-                  .domain([0, 100])
-                  .range([0, width * (5/6)]);
-
-  // scale for Seahawks yard lines
-  var x = d3.scale.linear()
-    .domain([-10, 110])
-    .range([0, width]);
-  // scale for Broncos yard lines (display only)
-  var xInverted = d3.scale.linear()
-    .domain([110, -10])
-    .range([0, width]);
-  // scale for field height
-  var y = d3.scale.linear()
-    .domain([0, 100])
-    .range([0, botHeight]);
 
   var types = ["pass", "run", "interception", "fumble", "kickoff", "punt"];
   var typeColors = d3.scale.category10()
@@ -487,139 +637,5 @@ function drawElements(err, playerPositions, playerStats, topPlays) {
 
   // add all the plays
   addPlays(topPlays);
-  
-  function addPlays(playData) {
-    // margin below the top yard lines and above the bottom yard lines
-    var playMargin = 10;
-
-    // Recalculate bar heights
-    var dataLength = playData.length;
-    var barHeight = (botHeight - 2*playMargin) / dataLength;
-    // Make sure the bars don't get too big
-    var betweenPlayMargin = 0;
-    if (barHeight > 0.05 * botHeight) {
-      barHeight = Math.round(0.05 * botHeight);
-      betweenPlayMargin = Math.floor((botHeight   - barHeight * dataLength) / (dataLength + 1));
-      playMargin = betweenPlayMargin;
-    }
-
-    // Remove any old bars
-    bottomChart.selectAll(".bar").remove();
-
-    var tipWidth = 7;
-    var playBars = bottomChart.selectAll(".bar").data(playData);
-    playBars.enter().append("g").attr("class", "bar");
-    // add full bar for each play
-    playBars.append("rect")
-      .attr("class", "bar")
-      .attr("x", function (d) {
-        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
-        var yardageModifier = (d[1].yards > 0) ? -1 : 1;
-        if (teamModifier * yardageModifier > 0)
-          return Math.round(x(d[1].startLine));
-        else
-          return Math.round(x(d[1].endLine)) + tipWidth;
-      })
-      .attr("y", function (d, i) { return playMargin + i * (barHeight + betweenPlayMargin); })
-      .attr("height", barHeight - 1)
-      .attr("width", function (d) {
-        return Math.round(
-            length(
-              Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
-            )) - tipWidth;
-      })
-      .attr("text", function (d) { return d[1].description; })
-      .attr("fill", function (d) { return teamColors(d[1].team); })
-      .on("mouseover", function (d) {
-        // Show a tooltip and highlight the related players
-        tip.show(d);
-        var players = d[1].players;
-        for (var i = 0; i < players.length; i++) {
-          rectangles.filter(function (rd) { return rd.rtext === players[i] })
-                    .style("fill", selectedColor);
-        }
-      })
-      .on("mouseout", function (d) {
-        tip.hide(d);
-        var players = d[1].players;
-        for (var i = 0; i < players.length; i++) {
-          rectangles.filter(function (rd) { return rd.rtext === players[i] })
-                    .style("fill", function (rd) {
-                      if (rd.rselected) {
-                        return selectedColor;
-                      } else {
-                        return notSelectedColor;
-                      }
-                    });
-        }
-      });
-
-    // functions to create triangle tips
-    var leftTriangle = function (d, i, width) {
-        var leftEnd = Math.round(x(d[1].endLine)),
-            x1 = leftEnd + width,
-            y1 = playMargin + i * (barHeight + betweenPlayMargin),
-            x2 = x1,
-            y2 = y1 + barHeight - 1,
-            x3 = leftEnd,
-            y3 = (y1 + y2) / 2;
-        return "M " + x1 + " " + y1 + " L " + x2 + " " + y2 + " L " + x3 + " " + y3 + " z";
-    }
-    var rightTriangle = function (d, i, width) {
-        var teamModifier = (d[1].team === "SEA") ? -1 : 1;
-        var yardageModifier = (d[1].yards > 0) ? -1 : 1;
-        var leftEnd = 0;
-        if (teamModifier * yardageModifier > 0)
-          leftEnd = Math.round(x(d[1].startLine));
-        else
-          leftEnd = Math.round(x(d[1].endLine)) + tipWidth;
-        var barWidth = Math.round(
-            length(
-              Math.abs(d[1].endLine - Math.min(Math.max(d[1].startLine, 0), 100))
-            )) - tipWidth;
-        var triangleLeftEnd = leftEnd + barWidth;
-        var x1 = triangleLeftEnd,
-            y1 = playMargin + i * (barHeight + betweenPlayMargin),
-            x2 = x1,
-            y2 = y1 + barHeight - 1,
-            x3 = triangleLeftEnd + width,
-            y3 = (y1 + y2) / 2;
-        return "M " + x1 + " " + y1 + " L " + x2 + " " + y2 + " L " + x3 + " " + y3 + " z";
-    }
-    var makeTriangle = function (width) {
-      return function (d, i) {
-        if (d[1].endLine < d[1].startLine)
-          return leftTriangle(d, i, width);
-        else
-          return rightTriangle(d, i, width);
-      };
-    }
-
-    // add tip at the location of the end of the play
-    playBars.append("path")
-      .attr("d", makeTriangle(tipWidth))
-      .attr("fill", function (d) { return teamColors(d[1].team) })
-      .on("mouseover", function (d) {
-        // Show a tooltip and highlight the related players
-        var players = d[1].players;
-        for (var i = 0; i < players.length; i++) {
-          rectangles.filter(function (rd) { return rd.rtext === players[i] })
-                    .style("fill", selectedColor);
-        }
-      })
-      .on("mouseout", function (d) {
-        var players = d[1].players;
-        for (var i = 0; i < players.length; i++) {
-          rectangles.filter(function (rd) { return rd.rtext === players[i] })
-                    .style("fill", function (rd) {
-                      if (rd.rselected) {
-                        return selectedColor;
-                      } else {
-                        return notSelectedColor;
-                      }
-                    });
-        }
-      });
-  }
 // --------------------------- BOTTOM --------------------------
 }
